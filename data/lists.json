@@ -1,28 +1,77 @@
 {
-  "version": 1,
-  "exportedAt": "2026-09-16T12:00:00Z",
-  "lists": [
+  "exportedAt" : "2026-09-16T17:26:56Z",
+  "lists" : [
     {
-      "id": "demo-german-basics",
-      "title": "Demo · German basics",
-      "cards": [
-        { "id": "demo-1", "question": "der Schmetterling", "answer": "the butterfly" },
-        { "id": "demo-2", "question": "zuverlässig", "answer": "reliable" },
-        { "id": "demo-3", "question": "die Umgebung", "answer": "the surroundings" },
-        { "id": "demo-4", "question": "sich erinnern", "answer": "to remember" },
-        { "id": "demo-5", "question": "wahrscheinlich", "answer": "probably" },
-        { "id": "demo-6", "question": "die Gewohnheit", "answer": "the habit" }
-      ]
-    },
-    {
-      "id": "demo-english",
-      "title": "Demo · English idioms",
-      "cards": [
-        { "id": "demo-7", "question": "to call it a day", "answer": "to stop working" },
-        { "id": "demo-8", "question": "under the weather", "answer": "feeling ill" },
-        { "id": "demo-9", "question": "on the same page", "answer": "in agreement" },
-        { "id": "demo-10", "question": "a piece of cake", "answer": "very easy" }
-      ]
+      "cards" : [
+        {
+          "answer" : "mens",
+          "id" : "1e3a53a3-c885-4c87-ac5c-c1b3a0cf8262",
+          "question" : "ανθρωπος"
+        },
+        {
+          "answer" : "want, immers, namelijk",
+          "id" : "fa09df01-4519-41b7-aa14-2eb19a840e0e",
+          "question" : "γαρ"
+        },
+        {
+          "answer" : "land, aarde",
+          "id" : "ce24362d-2440-42b4-82c6-fdc5ac1ff9df",
+          "question" : "γη"
+        },
+        {
+          "answer" : "en, maar",
+          "id" : "733e367e-13c8-4bf3-9b46-cd3fdf2138f3",
+          "question" : "δε, δ’"
+        },
+        {
+          "answer" : "boom",
+          "id" : "73baf509-a93d-4a35-bd72-053aa2c946b9",
+          "question" : "δενδρον"
+        },
+        {
+          "answer" : "(zij/er) zijn, bestaan",
+          "id" : "1d66fc3c-8a4d-4fb1-8785-7b08ceda5aaa",
+          "question" : "εισι(ν)"
+        },
+        {
+          "answer" : "daar",
+          "id" : "f619ec93-53a8-4625-8c08-457d73701a0e",
+          "question" : "ενταυθα bijw"
+        },
+        {
+          "answer" : "daarna",
+          "id" : "b7f38c97-039d-4531-9c64-7e8283baa2d0",
+          "question" : "επειτα bijw"
+        },
+        {
+          "answer" : "werk, taak, daad",
+          "id" : "e5912eb3-8aa1-4593-a79a-fda412717d06",
+          "question" : "εργον"
+        },
+        {
+          "answer" : "(hij/zij/het/er) is, bestaat",
+          "id" : "ea6fd314-dede-4b1c-96ec-7a5bd4d8ba5e",
+          "question" : "εστι(ν)"
+        },
+        {
+          "answer" : "godin",
+          "id" : "e3735184-ac50-405e-be5c-50966c4f1894",
+          "question" : "θεα"
+        },
+        {
+          "answer" : "god",
+          "id" : "93b51036-be46-4018-95c0-016e7171e91c",
+          "question" : "θεος"
+        },
+        {
+          "answer" : "en, ook, zelfs",
+          "id" : "74ceecc2-2398-4b71-9c77-beb94982cf9d",
+          "question" : "και"
+        }
+      ],
+      "id" : "84697cdc-13f4-4a4b-8063-b9d8fda614cf",
+      "title" : "Grieks T&M ‘kai’"
     }
-  ]
+  ],
+  "version" : 1
 }
