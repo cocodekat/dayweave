@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "exportedAt": "2026-09-16T12:00:00Z",
+  "lists": [
+    {
+      "id": "demo-german-basics",
+      "title": "Demo · German basics",
+      "cards": [
+        { "id": "demo-1", "question": "der Schmetterling", "answer": "the butterfly" },
+        { "id": "demo-2", "question": "zuverlässig", "answer": "reliable" },
+        { "id": "demo-3", "question": "die Umgebung", "answer": "the surroundings" },
+        { "id": "demo-4", "question": "sich erinnern", "answer": "to remember" },
+        { "id": "demo-5", "question": "wahrscheinlich", "answer": "probably" },
+        { "id": "demo-6", "question": "die Gewohnheit", "answer": "the habit" }
+      ]
+    },
+    {
+      "id": "demo-english",
+      "title": "Demo · English idioms",
+      "cards": [
+        { "id": "demo-7", "question": "to call it a day", "answer": "to stop working" },
+        { "id": "demo-8", "question": "under the weather", "answer": "feeling ill" },
+        { "id": "demo-9", "question": "on the same page", "answer": "in agreement" },
+        { "id": "demo-10", "question": "a piece of cake", "answer": "very easy" }
+      ]
+    }
+  ]
+}

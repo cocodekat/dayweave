@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#16131f">
+  <meta name="description" content="Practise shared Dayflow flashcard lists in a clean, focused space.">
+  <title>Dayflow Learn</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cfc'/%3E%3Crect x='15' y='17' width='34' height='25' rx='7' fill='white' opacity='.45'/%3E%3Crect x='11' y='23' width='42' height='27' rx='8' fill='white'/%3E%3Cpath d='M23 36h18' stroke='%237c5cfc' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Dayflow Learn home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>Dayflow <b>Learn</b></span>
+    </a>
+    <div class="header-meta">
+      <div class="mini-stat"><strong id="headerMastered">0</strong><span>mastered</span></div>
+      <button class="icon-button" id="themeButton" type="button" aria-label="Switch appearance">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="panel library-panel" aria-label="Flashcard lists">
+      <div class="segmented" role="tablist" aria-label="Learn sections">
+        <button class="segment active" id="libraryTab" role="tab" aria-selected="true">Library</button>
+        <button class="segment" id="historyTab" role="tab" aria-selected="false">History</button>
+      </div>
+
+      <section id="libraryView">
+        <div class="section-heading">
+          <div><span class="eyebrow">Shared lists</span><h1>Choose a deck</h1></div>
+          <span class="count-pill" id="listCount">0</span>
+        </div>
+        <p class="quiet desktop-hint">Drag a list to the practice deck, or click to browse its cards.</p>
+        <div class="list-stack" id="listStack"></div>
+      </section>
+
+      <section id="historyView" hidden>
+        <div class="section-heading">
+          <div><span class="eyebrow">On this device</span><h1>Your history</h1></div>
+        </div>
+        <div class="history-stack" id="historyStack"></div>
+      </section>
+    </aside>
+
+    <section class="practice-column" aria-label="Practice deck">
+      <div class="practice-intro">
+        <span class="eyebrow">Practice deck</span>
+        <h2>What are we learning?</h2>
+      </div>
+
+      <div class="drop-deck" id="dropDeck" tabindex="0" role="button" aria-label="Practice deck. Select or drop a list here.">
+        <div class="deck-layers" aria-hidden="true"><i></i><i></i></div>
+        <div class="drop-content">
+          <span class="drop-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h10.5A2.5 2.5 0 0 1 19 7v10.5M5 8h10.5a2.5 2.5 0 0 1 2.5 2.5V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2Z"/></svg>
+          </span>
+          <strong id="deckTitle">Drop a list here</strong>
+          <span id="deckSubtitle">or add individual cards from a list</span>
+        </div>
+      </div>
+
+      <div class="deck-actions">
+        <button class="secondary-button" id="weakButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m15.4-6.4-2.1 2.1M7.7 16.3l-2.1 2.1m12.8 0-2.1-2.1M7.7 7.7 5.6 5.6M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+          Practise weak words
+        </button>
+        <div class="start-actions">
+          <button class="text-button" id="clearButton" type="button" hidden>Clear</button>
+          <button class="primary-button" id="startButton" type="button" disabled>Start practice</button>
+        </div>
+      </div>
+
+      <div class="progress-card">
+        <div class="progress-copy"><strong>Learning pulse</strong><span id="pulseText">Finish a round to see your progress.</span></div>
+        <div class="progress-ring" id="progressRing"><span id="accuracyValue">—</span></div>
+      </div>
+    </section>
+
+    <aside class="panel cards-panel" aria-label="Cards in selected list">
+      <div class="section-heading card-heading">
+        <div><span class="eyebrow">Words</span><h2 id="selectedListTitle">Select a list</h2></div>
+        <button class="small-button" id="addAllButton" type="button" hidden>Add all</button>
+      </div>
+      <p class="quiet" id="cardPanelHint">Pick a list to see every question and answer.</p>
+      <div class="word-stack" id="wordStack"></div>
+    </aside>
+  </main>
+
+  <footer><span>Dayflow Learn</span><span>Progress stays on this device.</span></footer>
+
+  <div class="practice-overlay" id="practiceOverlay" hidden>
+    <div class="practice-shell" role="dialog" aria-modal="true" aria-labelledby="roundTitle">
+      <div class="round-bar">
+        <button class="icon-button overlay-close" id="closeRoundButton" type="button" aria-label="Close practice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <div class="round-title"><strong id="roundTitle">Practice</strong><span id="roundCounter">1 of 1</span></div>
+        <div class="round-score" id="liveScore">0 correct</div>
+      </div>
+      <div class="round-progress"><i id="roundProgress"></i></div>
+
+      <button class="study-card" id="studyCard" type="button" aria-label="Reveal answer">
+        <span class="card-side-label" id="sideLabel">Question</span>
+        <strong id="questionText"></strong>
+        <span class="answer-divider" id="answerDivider" hidden></span>
+        <span class="answer-text" id="answerText" hidden></span>
+        <span class="reveal-hint" id="revealHint">Tap to reveal</span>
+      </button>
+
+      <div class="answer-actions" id="answerActions" hidden>
+        <button class="again-button" id="againButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8v5h5M5.2 13a7 7 0 1 0 1.6-6.6L4 9"/></svg>
+          Again
+        </button>
+        <button class="correct-button" id="correctButton" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+          Got it
+        </button>
+      </div>
+
+      <div class="round-summary" id="roundSummary" hidden>
+        <span class="summary-spark">✦</span>
+        <h2>Round complete</h2>
+        <p id="summaryScore"></p>
+        <button class="primary-button" id="finishButton" type="button">Back to the library</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
