@@ -95,15 +95,15 @@ function renderLists() {
 
 function renderCards() {
   const list = state.lists.find(item => item.id === state.selectedListId);
-  els.selectedListTitle.textContent = list?.title || "Select a list";
+  els.selectedListTitle.textContent = list?.title || "Choose your words";
   els.addAllButton.hidden = !list?.cards.length;
-  els.cardPanelHint.textContent = list ? `${list.cards.length} shared card${list.cards.length === 1 ? "" : "s"}. Tap + to mix individual words.` : "Pick a list to see every question and answer.";
+  els.cardPanelHint.textContent = list ? `Choose a few words below, or tap “Use all”.` : "Choose a list first.";
   if (!list) { els.wordStack.innerHTML = ""; return; }
   els.wordStack.innerHTML = list.cards.map(card => {
     const added = queueHas(card.id);
     return `<article class="word-card">
       <div class="word-copy"><strong>${escapeHTML(card.question)}</strong><span>${escapeHTML(card.answer)}</span></div>
-      <button class="add-card-button ${added ? "added" : ""}" type="button" data-card-id="${escapeAttr(card.id)}" aria-label="${added ? "Remove" : "Add"} ${escapeAttr(card.question)} ${added ? "from" : "to"} practice">${added ? icons.check : icons.plus}</button>
+      <button class="add-card-button ${added ? "added" : ""}" type="button" data-card-id="${escapeAttr(card.id)}" aria-label="${added ? "Remove" : "Add"} ${escapeAttr(card.question)} ${added ? "from" : "to"} practice">${added ? `${icons.check}<span>Added</span>` : `${icons.plus}<span>Add</span>`}</button>
     </article>`;
   }).join("");
   els.wordStack.querySelectorAll("[data-card-id]").forEach(button => button.addEventListener("click", () => toggleCard(button.dataset.cardId)));
@@ -112,8 +112,8 @@ function renderCards() {
 function renderQueue() {
   const count = state.queue.length;
   els.dropDeck.classList.toggle("ready", count > 0);
-  els.deckTitle.textContent = count ? `${count} card${count === 1 ? "" : "s"} ready` : "Drop a list here";
-  els.deckSubtitle.textContent = count ? queueName() : "or add individual cards from a list";
+  els.deckTitle.textContent = count ? `${count} word${count === 1 ? "" : "s"} ready` : "No words selected yet";
+  els.deckSubtitle.textContent = count ? queueName() : "Choose a list, then add the words you want.";
   els.startButton.disabled = count === 0;
   els.clearButton.hidden = count === 0;
 }
@@ -352,8 +352,6 @@ els.addAllButton.addEventListener("click", () => addList(state.selectedListId));
 els.clearButton.addEventListener("click", () => { state.queue = []; renderCards(); renderQueue(); });
 els.startButton.addEventListener("click", () => startRound());
 els.weakButton.addEventListener("click", prepareWeakWords);
-els.dropDeck.addEventListener("click", () => { if (state.selectedListId) addList(state.selectedListId); });
-els.dropDeck.addEventListener("keydown", event => { if ((event.key === "Enter" || event.key === " ") && state.selectedListId) { event.preventDefault(); addList(state.selectedListId); } });
 els.dropDeck.addEventListener("dragover", event => { event.preventDefault(); els.dropDeck.classList.add("drag-over"); });
 els.dropDeck.addEventListener("dragleave", () => els.dropDeck.classList.remove("drag-over"));
 els.dropDeck.addEventListener("drop", event => {
@@ -377,6 +375,6 @@ document.addEventListener("keydown", event => {
   else if (state.round.revealed && event.key === "2") answer(true);
 });
 
-setMobileView("practice");
+setMobileView("library");
 setTheme(localStorage.getItem("dayweaveLearnTheme") || localStorage.getItem("dayflowLearnTheme") || "dark");
 loadLists();

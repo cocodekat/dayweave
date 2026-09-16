@@ -16,7 +16,6 @@
   <header class="topbar">
     <a class="brand" href="#" aria-label="Dayweave Learn home">
       <span class="brand-mark" aria-hidden="true"><span></span></span>
-      <span>Dayweave <b>Learn</b></span>
     </a>
     <div class="header-meta">
       <div class="mini-stat"><strong id="headerMastered">0</strong><span>mastered</span></div>
@@ -35,10 +34,10 @@
 
       <section id="libraryView">
         <div class="section-heading">
-          <div><span class="eyebrow">Your classroom</span><h1>Pick a deck</h1></div>
+          <div><span class="eyebrow">Step 1</span><h1>Choose a list</h1></div>
           <span class="count-pill" id="listCount">0</span>
         </div>
-        <p class="quiet desktop-hint">Drag a list to the practice deck, or click to browse its cards.</p>
+        <p class="quiet desktop-hint">Open a list to choose what you want to practise.</p>
         <div class="list-stack" id="listStack"></div>
       </section>
 
@@ -52,11 +51,11 @@
 
     <section class="practice-column" aria-label="Practice deck">
       <div class="practice-intro">
-        <span class="eyebrow">Ready when you are</span>
-        <h2>What shall we learn?</h2>
+        <span class="eyebrow">Step 3</span>
+        <h2>Ready to practise?</h2>
       </div>
 
-      <div class="drop-deck" id="dropDeck" tabindex="0" role="button" aria-label="Practice deck. Select or drop a list here.">
+      <div class="drop-deck" id="dropDeck" aria-live="polite">
         <div class="deck-layers" aria-hidden="true"><i></i><i></i></div>
         <div class="drop-content">
           <span class="drop-icon">
@@ -86,8 +85,8 @@
 
     <aside class="panel cards-panel" aria-label="Cards in selected list">
       <div class="section-heading card-heading">
-        <div><span class="eyebrow">Words</span><h2 id="selectedListTitle">Select a list</h2></div>
-        <button class="small-button" id="addAllButton" type="button" hidden>Add all</button>
+        <div><span class="eyebrow">Step 2</span><h2 id="selectedListTitle">Choose your words</h2></div>
+        <button class="small-button" id="addAllButton" type="button" hidden>Use all</button>
       </div>
       <p class="quiet" id="cardPanelHint">Pick a list to see every question and answer.</p>
       <div class="word-stack" id="wordStack"></div>
@@ -95,9 +94,9 @@
   </main>
 
   <nav class="mobile-nav" aria-label="Learn navigation">
-    <button type="button" data-mobile-target="library" aria-label="Show lists"><span aria-hidden="true">▤</span>Lists</button>
-    <button type="button" data-mobile-target="practice" class="active" aria-label="Show practice deck"><span aria-hidden="true">✦</span>Deck</button>
-    <button type="button" data-mobile-target="cards" aria-label="Show selected words"><span aria-hidden="true">A</span>Words</button>
+    <button type="button" data-mobile-target="library" class="active" aria-label="Show lists"><span aria-hidden="true">1</span>Lists</button>
+    <button type="button" data-mobile-target="cards" aria-label="Show selected words"><span aria-hidden="true">2</span>Words</button>
+    <button type="button" data-mobile-target="practice" aria-label="Show practice"><span aria-hidden="true">3</span>Practice</button>
   </nav>
 
   <footer><span>Dayweave Learn</span><span>Progress stays on this device.</span></footer>
