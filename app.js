@@ -2,8 +2,8 @@ const state = {
   lists: [],
   selectedListId: null,
   queue: [],
-  history: readLocal("dayflowLearnHistory", []),
-  stats: readLocal("dayflowLearnStats", {}),
+  history: readLocal("dayweaveLearnHistory", readLocal("dayflowLearnHistory", [])),
+  stats: readLocal("dayweaveLearnStats", readLocal("dayflowLearnStats", {})),
   round: null,
 };
 
@@ -42,7 +42,7 @@ async function loadLists() {
     showToast("The shared lists could not be loaded.");
   }
   renderAll();
-  if (state.lists[0]) selectList(state.lists[0].id);
+  if (state.lists[0]) selectList(state.lists[0].id, false);
 }
 
 function normalizeList(list, listIndex) {
@@ -87,7 +87,7 @@ function renderLists() {
     button.addEventListener("click", () => selectList(button.dataset.listId));
     button.addEventListener("dragstart", event => {
       event.dataTransfer.effectAllowed = "copy";
-      event.dataTransfer.setData("text/dayflow-list", button.dataset.listId);
+      event.dataTransfer.setData("text/dayweave-list", button.dataset.listId);
       event.dataTransfer.setData("text/plain", button.dataset.listId);
     });
   });
@@ -162,18 +162,20 @@ function renderProgress() {
   els.pulseText.textContent = `${attempts} answer${attempts === 1 ? "" : "s"} · ${mastered} mastered`;
 }
 
-function selectList(id) {
+function selectList(id, navigate = true) {
   state.selectedListId = id;
   renderLists();
   renderCards();
+  if (navigate && window.matchMedia("(max-width: 760px)").matches) setMobileView("cards");
 }
 
 function addList(id) {
   const list = state.lists.find(item => item.id === id);
   if (!list) return;
   state.queue = list.cards.slice();
-  selectList(id);
+  selectList(id, false);
   renderQueue();
+  setMobileView("practice");
   showToast(`${list.title} is ready to practise.`);
 }
 
@@ -259,7 +261,7 @@ function answer(correct) {
   if (correct) stat.correct += 1; else stat.incorrect += 1;
   stat.lastPracticed = new Date().toISOString();
   state.stats[card.id] = stat;
-  writeLocal("dayflowLearnStats", state.stats);
+  writeLocal("dayweaveLearnStats", state.stats);
   round.index += 1;
   round.revealed = false;
   renderRound();
@@ -277,7 +279,7 @@ function saveRound() {
     results: state.round.results
   });
   state.history = state.history.slice(0, 100);
-  writeLocal("dayflowLearnHistory", state.history);
+  writeLocal("dayweaveLearnHistory", state.history);
   renderHistory();
   renderProgress();
 }
@@ -310,7 +312,16 @@ function switchTab(showHistory) {
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem("dayflowLearnTheme", theme);
+  localStorage.setItem("dayweaveLearnTheme", theme);
+}
+
+function setMobileView(view) {
+  document.body.dataset.mobileView = view;
+  document.querySelectorAll("[data-mobile-target]").forEach(button => {
+    const active = button.dataset.mobileTarget === view;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-current", active ? "page" : "false");
+  });
 }
 
 function showToast(message) {
@@ -348,13 +359,16 @@ els.dropDeck.addEventListener("dragleave", () => els.dropDeck.classList.remove("
 els.dropDeck.addEventListener("drop", event => {
   event.preventDefault();
   els.dropDeck.classList.remove("drag-over");
-  addList(event.dataTransfer.getData("text/dayflow-list") || event.dataTransfer.getData("text/plain"));
+  addList(event.dataTransfer.getData("text/dayweave-list") || event.dataTransfer.getData("text/plain"));
 });
 els.studyCard.addEventListener("click", revealAnswer);
 els.againButton.addEventListener("click", () => answer(false));
 els.correctButton.addEventListener("click", () => answer(true));
 els.closeRoundButton.addEventListener("click", closeRound);
 els.finishButton.addEventListener("click", finishRound);
+document.querySelectorAll("[data-mobile-target]").forEach(button => {
+  button.addEventListener("click", () => setMobileView(button.dataset.mobileTarget));
+});
 document.addEventListener("keydown", event => {
   if (els.practiceOverlay.hidden || !state.round) return;
   if (event.key === "Escape") closeRound();
@@ -363,5 +377,6 @@ document.addEventListener("keydown", event => {
   else if (state.round.revealed && event.key === "2") answer(true);
 });
 
-setTheme(localStorage.getItem("dayflowLearnTheme") || "dark");
+setMobileView("practice");
+setTheme(localStorage.getItem("dayweaveLearnTheme") || localStorage.getItem("dayflowLearnTheme") || "dark");
 loadLists();
