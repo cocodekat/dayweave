@@ -1,289 +1,1259 @@
 {
-  "exportedAt" : "2026-09-17T07:05:09Z",
-  "lists" : [
+  "exportedAt": "2026-09-17T07:10:47.830Z",
+  "lists": [
     {
-      "cards" : [
+      "cards": [
         {
-          "answer" : "mens",
-          "id" : "1e3a53a3-c885-4c87-ac5c-c1b3a0cf8262",
-          "question" : "ανθρωπος"
+          "answer": "mens",
+          "id": "1e3a53a3-c885-4c87-ac5c-c1b3a0cf8262",
+          "question": "ανθρωπος"
         },
         {
-          "answer" : "want, immers, namelijk",
-          "id" : "fa09df01-4519-41b7-aa14-2eb19a840e0e",
-          "question" : "γαρ"
+          "answer": "want, immers, namelijk",
+          "id": "fa09df01-4519-41b7-aa14-2eb19a840e0e",
+          "question": "γαρ"
         },
         {
-          "answer" : "land, aarde",
-          "id" : "ce24362d-2440-42b4-82c6-fdc5ac1ff9df",
-          "question" : "γη"
+          "answer": "land, aarde",
+          "id": "ce24362d-2440-42b4-82c6-fdc5ac1ff9df",
+          "question": "γη"
         },
         {
-          "answer" : "en, maar",
-          "id" : "733e367e-13c8-4bf3-9b46-cd3fdf2138f3",
-          "question" : "δε, δ’"
+          "answer": "en, maar",
+          "id": "733e367e-13c8-4bf3-9b46-cd3fdf2138f3",
+          "question": "δε, δ’"
         },
         {
-          "answer" : "boom",
-          "id" : "73baf509-a93d-4a35-bd72-053aa2c946b9",
-          "question" : "δενδρον"
+          "answer": "boom",
+          "id": "73baf509-a93d-4a35-bd72-053aa2c946b9",
+          "question": "δενδρον"
         },
         {
-          "answer" : "(zij/er) zijn, bestaan",
-          "id" : "1d66fc3c-8a4d-4fb1-8785-7b08ceda5aaa",
-          "question" : "εισι(ν)"
+          "answer": "(zij/er) zijn, bestaan",
+          "id": "1d66fc3c-8a4d-4fb1-8785-7b08ceda5aaa",
+          "question": "εισι(ν)"
         },
         {
-          "answer" : "daar",
-          "id" : "f619ec93-53a8-4625-8c08-457d73701a0e",
-          "question" : "ενταυθα bijw"
+          "answer": "daar",
+          "id": "f619ec93-53a8-4625-8c08-457d73701a0e",
+          "question": "ενταυθα bijw"
         },
         {
-          "answer" : "daarna",
-          "id" : "b7f38c97-039d-4531-9c64-7e8283baa2d0",
-          "question" : "επειτα bijw"
+          "answer": "daarna",
+          "id": "b7f38c97-039d-4531-9c64-7e8283baa2d0",
+          "question": "επειτα bijw"
         },
         {
-          "answer" : "werk, taak, daad",
-          "id" : "e5912eb3-8aa1-4593-a79a-fda412717d06",
-          "question" : "εργον"
+          "answer": "werk, taak, daad",
+          "id": "e5912eb3-8aa1-4593-a79a-fda412717d06",
+          "question": "εργον"
         },
         {
-          "answer" : "(hij/zij/het/er) is, bestaat",
-          "id" : "ea6fd314-dede-4b1c-96ec-7a5bd4d8ba5e",
-          "question" : "εστι(ν)"
+          "answer": "(hij/zij/het/er) is, bestaat",
+          "id": "ea6fd314-dede-4b1c-96ec-7a5bd4d8ba5e",
+          "question": "εστι(ν)"
         },
         {
-          "answer" : "godin",
-          "id" : "e3735184-ac50-405e-be5c-50966c4f1894",
-          "question" : "θεα"
+          "answer": "godin",
+          "id": "e3735184-ac50-405e-be5c-50966c4f1894",
+          "question": "θεα"
         },
         {
-          "answer" : "god",
-          "id" : "93b51036-be46-4018-95c0-016e7171e91c",
-          "question" : "θεος"
+          "answer": "god",
+          "id": "93b51036-be46-4018-95c0-016e7171e91c",
+          "question": "θεος"
         },
         {
-          "answer" : "en, ook, zelfs",
-          "id" : "74ceecc2-2398-4b71-9c77-beb94982cf9d",
-          "question" : "και"
+          "answer": "en, ook, zelfs",
+          "id": "74ceecc2-2398-4b71-9c77-beb94982cf9d",
+          "question": "και"
         }
       ],
-      "id" : "84697cdc-13f4-4a4b-8063-b9d8fda614cf",
-      "title" : "Grieks T&M ‘kai’"
+      "id": "84697cdc-13f4-4a4b-8063-b9d8fda614cf",
+      "title": "Grieks T&M ‘kai’"
     },
     {
-      "cards" : [
+      "cards": [
         {
-          "answer" : "maar",
-          "id" : "56254216-26b9-4ee9-b1d0-5e8857c0980e",
-          "question" : "aber"
+          "answer": "maar",
+          "id": "56254216-26b9-4ee9-b1d0-5e8857c0980e",
+          "question": "aber"
         },
         {
-          "answer" : "populair",
-          "id" : "951bd5c6-4800-48a2-8b9b-606850280a09",
-          "question" : "beliebt"
+          "answer": "populair",
+          "id": "951bd5c6-4800-48a2-8b9b-606850280a09",
+          "question": "beliebt"
         },
         {
-          "answer" : "er is / er zijn",
-          "id" : "74cb9eb0-7a41-47ee-96e5-c63340d36479",
-          "question" : "es gibt"
+          "answer": "er is / er zijn",
+          "id": "74cb9eb0-7a41-47ee-96e5-c63340d36479",
+          "question": "es gibt"
         },
         {
-          "answer" : "de fiets",
-          "id" : "4bed44f3-aeaf-47aa-871f-3b40268e8117",
-          "question" : "das Fahrrad | die Fahrräder"
+          "answer": "de fiets",
+          "id": "4bed44f3-aeaf-47aa-871f-3b40268e8117",
+          "question": "das Fahrrad | die Fahrräder"
         },
         {
-          "answer" : "het gebouw",
-          "id" : "46a772a5-da94-44cd-8105-781ceebea779",
-          "question" : "das Gebäude | die Gebäude"
+          "answer": "het gebouw",
+          "id": "46a772a5-da94-44cd-8105-781ceebea779",
+          "question": "das Gebäude | die Gebäude"
         },
         {
-          "answer" : "graag",
-          "id" : "df0604b1-fa3f-4939-a5db-2abe8b97b31c",
-          "question" : "gern"
+          "answer": "graag",
+          "id": "df0604b1-fa3f-4939-a5db-2abe8b97b31c",
+          "question": "gern"
         },
         {
-          "answer" : "groot",
-          "id" : "3fc65b57-872a-4c4c-8bb2-131bc3e7dd04",
-          "question" : "groß"
+          "answer": "groot",
+          "id": "3fc65b57-872a-4c4c-8bb2-131bc3e7dd04",
+          "question": "groß"
         },
         {
-          "answer" : "de hoofdstad",
-          "id" : "8f266e83-30d0-48e2-9859-a182df7eab82",
-          "question" : "die Hauptstadt | die Hauptstädte"
+          "answer": "de hoofdstad",
+          "id": "8f266e83-30d0-48e2-9859-a182df7eab82",
+          "question": "die Hauptstadt | die Hauptstädte"
         },
         {
-          "answer" : "hoog",
-          "id" : "053beef0-4ee5-490a-972f-13d8e7af0acf",
-          "question" : "hoch"
+          "answer": "hoog",
+          "id": "053beef0-4ee5-490a-972f-13d8e7af0acf",
+          "question": "hoch"
         },
         {
-          "answer" : "altijd",
-          "id" : "7009b88a-2cf2-4885-88f5-5f39c9a4d566",
-          "question" : "immer"
+          "answer": "altijd",
+          "id": "7009b88a-2cf2-4885-88f5-5f39c9a4d566",
+          "question": "immer"
         },
         {
-          "answer" : "elk/ieder jaar",
-          "id" : "81a90a82-3e5a-43c7-959d-958d9ce9348c",
-          "question" : "jedes Jahr"
+          "answer": "elk/ieder jaar",
+          "id": "81a90a82-3e5a-43c7-959d-958d9ce9348c",
+          "question": "jedes Jahr"
         },
         {
-          "answer" : "de mensen",
-          "id" : "7abebf8b-ac0f-45f2-b3c0-c8b04a835c9f",
-          "question" : "die Leute"
+          "answer": "de mensen",
+          "id": "7abebf8b-ac0f-45f2-b3c0-c8b04a835c9f",
+          "question": "die Leute"
         },
         {
-          "answer" : "mooi",
-          "id" : "6fa6fcf7-c34e-4461-9ba2-237801bf9834",
-          "question" : "schön"
+          "answer": "mooi",
+          "id": "6fa6fcf7-c34e-4461-9ba2-237801bf9834",
+          "question": "schön"
         },
         {
-          "answer" : "de straat",
-          "id" : "ba4ffcc9-c59c-4c31-a51c-26d6281e3a66",
-          "question" : "die Straße | die Straßen"
+          "answer": "de straat",
+          "id": "ba4ffcc9-c59c-4c31-a51c-26d6281e3a66",
+          "question": "die Straße | die Straßen"
         },
         {
-          "answer" : "super/leuk",
-          "id" : "78e69f44-b68d-4af3-96c3-9e51a0879f19",
-          "question" : "toll"
+          "answer": "super/leuk",
+          "id": "78e69f44-b68d-4af3-96c3-9e51a0879f19",
+          "question": "toll"
         },
         {
-          "answer" : "de wereld",
-          "id" : "5e27bc0b-02ba-452c-ae93-c0b1d16b6bea",
-          "question" : "die Welt | die Welten"
+          "answer": "de wereld",
+          "id": "5e27bc0b-02ba-452c-ae93-c0b1d16b6bea",
+          "question": "die Welt | die Welten"
         },
         {
-          "answer" : "belangrijk",
-          "id" : "ebac070a-5d85-4b36-a071-5bebf6d96e91",
-          "question" : "wichtig"
+          "answer": "belangrijk",
+          "id": "ebac070a-5d85-4b36-a071-5bebf6d96e91",
+          "question": "wichtig"
         },
         {
-          "answer" : "laten zien",
-          "id" : "5ea9746b-4d3a-4481-bf11-3ffa2b3852a1",
-          "question" : "zeigen"
+          "answer": "laten zien",
+          "id": "5ea9746b-4d3a-4481-bf11-3ffa2b3852a1",
+          "question": "zeigen"
         },
         {
-          "answer" : "de dierentuin",
-          "id" : "6bf5f9c6-027c-445b-a3d0-88183b5a0bcf",
-          "question" : "der Zoo | die Zoos"
+          "answer": "de dierentuin",
+          "id": "6bf5f9c6-027c-445b-a3d0-88183b5a0bcf",
+          "question": "der Zoo | die Zoos"
         },
         {
-          "answer" : "te",
-          "id" : "fcb6357f-07ab-4f49-ae0d-043d33d1bd05",
-          "question" : "zu"
+          "answer": "te",
+          "id": "fcb6357f-07ab-4f49-ae0d-043d33d1bd05",
+          "question": "zu"
         }
       ],
-      "id" : "c1287215-ea07-4cf3-9793-7ab66d8d9e9f",
-      "title" : "Lektion 1 (DE → NL)"
+      "id": "c1287215-ea07-4cf3-9793-7ab66d8d9e9f",
+      "title": "Lektion 1 (DE → NL)"
     },
     {
-      "cards" : [
+      "cards": [
         {
-          "answer" : "aber",
-          "id" : "ebb52d5d-2dd8-466d-af68-fdb634f50513",
-          "question" : "maar"
+          "answer": "aber",
+          "id": "ebb52d5d-2dd8-466d-af68-fdb634f50513",
+          "question": "maar"
         },
         {
-          "answer" : "beliebt",
-          "id" : "b4a215ab-6d5e-4218-9ac9-5c0dfd581726",
-          "question" : "populair"
+          "answer": "beliebt",
+          "id": "b4a215ab-6d5e-4218-9ac9-5c0dfd581726",
+          "question": "populair"
         },
         {
-          "answer" : "es gibt",
-          "id" : "04433cc3-463a-41c8-a444-7ca602521f9c",
-          "question" : "er is / er zijn"
+          "answer": "es gibt",
+          "id": "04433cc3-463a-41c8-a444-7ca602521f9c",
+          "question": "er is / er zijn"
         },
         {
-          "answer" : "das Fahrrad | die Fahrräder",
-          "id" : "dde526d7-00eb-43e5-8619-393b52383735",
-          "question" : "de fiets"
+          "answer": "das Fahrrad | die Fahrräder",
+          "id": "dde526d7-00eb-43e5-8619-393b52383735",
+          "question": "de fiets"
         },
         {
-          "answer" : "das Gebäude | die Gebäude",
-          "id" : "1317ece2-9a92-4db4-9819-b38f096aa8f4",
-          "question" : "het gebouw"
+          "answer": "das Gebäude | die Gebäude",
+          "id": "1317ece2-9a92-4db4-9819-b38f096aa8f4",
+          "question": "het gebouw"
         },
         {
-          "answer" : "gern",
-          "id" : "12bedf7f-adf9-457f-b4eb-e313da79f32e",
-          "question" : "graag"
+          "answer": "gern",
+          "id": "12bedf7f-adf9-457f-b4eb-e313da79f32e",
+          "question": "graag"
         },
         {
-          "answer" : "groß",
-          "id" : "c317bfe7-7148-415c-b707-64035e64513e",
-          "question" : "groot"
+          "answer": "groß",
+          "id": "c317bfe7-7148-415c-b707-64035e64513e",
+          "question": "groot"
         },
         {
-          "answer" : "die Hauptstadt | die Hauptstädte",
-          "id" : "6e420390-f024-4aae-8de6-5b9c67e9a7dc",
-          "question" : "de hoofdstad"
+          "answer": "die Hauptstadt | die Hauptstädte",
+          "id": "6e420390-f024-4aae-8de6-5b9c67e9a7dc",
+          "question": "de hoofdstad"
         },
         {
-          "answer" : "hoch",
-          "id" : "a0fda94c-9d53-405d-8ecc-5e147567e216",
-          "question" : "hoog"
+          "answer": "hoch",
+          "id": "a0fda94c-9d53-405d-8ecc-5e147567e216",
+          "question": "hoog"
         },
         {
-          "answer" : "immer",
-          "id" : "9331713a-bf36-4383-b9b8-91e1af3fe8ee",
-          "question" : "altijd"
+          "answer": "immer",
+          "id": "9331713a-bf36-4383-b9b8-91e1af3fe8ee",
+          "question": "altijd"
         },
         {
-          "answer" : "jedes Jahr",
-          "id" : "9433a2ed-a24e-48da-8787-322a14060978",
-          "question" : "elk/ieder jaar"
+          "answer": "jedes Jahr",
+          "id": "9433a2ed-a24e-48da-8787-322a14060978",
+          "question": "elk/ieder jaar"
         },
         {
-          "answer" : "die Leute",
-          "id" : "ad7c1904-d87d-45c4-aabe-fbcbe800645f",
-          "question" : "de mensen"
+          "answer": "die Leute",
+          "id": "ad7c1904-d87d-45c4-aabe-fbcbe800645f",
+          "question": "de mensen"
         },
         {
-          "answer" : "schön",
-          "id" : "0cd6608a-9705-4a57-a74d-3fdb694d7ae2",
-          "question" : "mooi"
+          "answer": "schön",
+          "id": "0cd6608a-9705-4a57-a74d-3fdb694d7ae2",
+          "question": "mooi"
         },
         {
-          "answer" : "die Straße | die Straßen",
-          "id" : "31e2ea34-4f13-4f47-8ba7-3b9c0e37f0b2",
-          "question" : "de straat"
+          "answer": "die Straße | die Straßen",
+          "id": "31e2ea34-4f13-4f47-8ba7-3b9c0e37f0b2",
+          "question": "de straat"
         },
         {
-          "answer" : "toll",
-          "id" : "a43b33d7-3b20-4b62-8c49-30c4ea2eef93",
-          "question" : "super/leuk"
+          "answer": "toll",
+          "id": "a43b33d7-3b20-4b62-8c49-30c4ea2eef93",
+          "question": "super/leuk"
         },
         {
-          "answer" : "die Welt | die Welten",
-          "id" : "b39ba13f-9596-43f4-ab18-ac1c31603547",
-          "question" : "de wereld"
+          "answer": "die Welt | die Welten",
+          "id": "b39ba13f-9596-43f4-ab18-ac1c31603547",
+          "question": "de wereld"
         },
         {
-          "answer" : "wichtig",
-          "id" : "880d5b4f-ccdc-4274-b7c8-c1a73a25546d",
-          "question" : "belangrijk"
+          "answer": "wichtig",
+          "id": "880d5b4f-ccdc-4274-b7c8-c1a73a25546d",
+          "question": "belangrijk"
         },
         {
-          "answer" : "zeigen",
-          "id" : "609b5db8-b3ae-4f62-a01c-609a34064bbc",
-          "question" : "laten zien"
+          "answer": "zeigen",
+          "id": "609b5db8-b3ae-4f62-a01c-609a34064bbc",
+          "question": "laten zien"
         },
         {
-          "answer" : "der Zoo | die Zoos",
-          "id" : "68c14e47-010f-4bba-9ad0-d824af8e8812",
-          "question" : "de dierentuin"
+          "answer": "der Zoo | die Zoos",
+          "id": "68c14e47-010f-4bba-9ad0-d824af8e8812",
+          "question": "de dierentuin"
         },
         {
-          "answer" : "zu",
-          "id" : "8eb903ae-44d5-4a67-9c2b-91b0d4607ed4",
-          "question" : "te"
+          "answer": "zu",
+          "id": "8eb903ae-44d5-4a67-9c2b-91b0d4607ed4",
+          "question": "te"
         }
       ],
-      "id" : "c575c32a-c232-47f5-b9f0-f08e09d9d462",
-      "title" : "Lektion 1 (NL → DE)"
+      "id": "c575c32a-c232-47f5-b9f0-f08e09d9d462",
+      "title": "Lektion 1 (NL → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "Wer?",
+          "id": "0a626b18-d5e9-43a2-b9ca-1c2b0a85efa2",
+          "question": "Wie?"
+        },
+        {
+          "answer": "Woher?",
+          "id": "5aad5d37-769c-403e-be35-c468ca52d9d7",
+          "question": "Waarvandaan?"
+        },
+        {
+          "answer": "Wie?",
+          "id": "7a0f0592-daa1-4bcb-9d10-52a6ed2f6552",
+          "question": "Hoe?"
+        },
+        {
+          "answer": "Wohin?",
+          "id": "963ba0d0-fdac-4191-a8c0-0482f9afc25a",
+          "question": "Waarheen?"
+        },
+        {
+          "answer": "Was?",
+          "id": "e0e710ec-21bf-4e9c-99eb-ab088aedc665",
+          "question": "Wat?"
+        },
+        {
+          "answer": "Wann?",
+          "id": "33a98799-4406-470e-96af-c3f13e038f04",
+          "question": "Wanneer?"
+        },
+        {
+          "answer": "Wo?",
+          "id": "634c09c2-a946-4c46-910b-7125267b6ebb",
+          "question": "Waar?"
+        },
+        {
+          "answer": "Welch-?",
+          "id": "b305548d-5999-4b1f-9ca2-03fa28dfa33b",
+          "question": "Welk(e)?"
+        },
+        {
+          "answer": "Warum?",
+          "id": "e0b3e5d6-6fc4-42ed-9462-b6588f53de6e",
+          "question": "Waarom?"
+        },
+        {
+          "answer": "Wie viel-?",
+          "id": "65bac0f3-0858-4f0a-b796-ad21ec6b91ff",
+          "question": "Hoeveel?"
+        }
+      ],
+      "id": "0439c556-66a1-4b1d-a659-40acddbb24d2",
+      "title": "Vraagwoorden (NL → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "Wie?",
+          "id": "9f6fcde1-9f74-445e-830b-a7127fc31467",
+          "question": "Wer?"
+        },
+        {
+          "answer": "Waarvandaan?",
+          "id": "ca9d82cd-2a33-4fbb-9196-9fcd6d8dd375",
+          "question": "Woher?"
+        },
+        {
+          "answer": "Hoe?",
+          "id": "147ef109-574f-465e-b662-d8c6dfc5abe6",
+          "question": "Wie?"
+        },
+        {
+          "answer": "Waarheen?",
+          "id": "63ab6d2c-2f8b-4a99-8578-bba3cc940eab",
+          "question": "Wohin?"
+        },
+        {
+          "answer": "Wat?",
+          "id": "a30aef99-8f25-4ee8-9c8c-b0c35e956958",
+          "question": "Was?"
+        },
+        {
+          "answer": "Wanneer?",
+          "id": "1527974f-3863-4e79-8095-aa5e744403d6",
+          "question": "Wann?"
+        },
+        {
+          "answer": "Waar?",
+          "id": "524e006f-4081-413b-a6d6-f31d486b56d2",
+          "question": "Wo?"
+        },
+        {
+          "answer": "Welk(e)?",
+          "id": "ecb12b3b-0e0d-4e7b-81df-a62440c5d9c9",
+          "question": "Welch-?"
+        },
+        {
+          "answer": "Waarom?",
+          "id": "749d6d6e-3d20-4b70-a145-50fefc43d008",
+          "question": "Warum?"
+        },
+        {
+          "answer": "Hoeveel?",
+          "id": "a9553722-f7c6-4433-841e-79997b5ccbc6",
+          "question": "Wie viel-?"
+        }
+      ],
+      "id": "2c871007-98e1-4cce-9593-655b3cbb5084",
+      "title": "Vraagwoorden (DE → NL)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "bekijken",
+          "id": "ecca32e1-4304-4950-a4b7-031fb0e90763",
+          "question": "ansehen"
+        },
+        {
+          "answer": "bovendien",
+          "id": "097c0123-ca0d-4827-bbe0-034aca5567cb",
+          "question": "außerdem"
+        },
+        {
+          "answer": "het station",
+          "id": "b47269f3-aa3a-4085-aacd-c652feddb0c1",
+          "question": "der Bahnhof | die Bahnhöfe"
+        },
+        {
+          "answer": "het beroep",
+          "id": "6d9b386a-7749-4b72-8ab3-df91e29d02f7",
+          "question": "der Beruf | die Berufe"
+        },
+        {
+          "answer": "daarom",
+          "id": "83d1dee2-ae88-43d0-9a14-160e9bc00b1c",
+          "question": "daher"
+        },
+        {
+          "answer": "winnen",
+          "id": "66d5eeca-427b-433a-9e53-dcd7252bfccc",
+          "question": "gewinnen"
+        },
+        {
+          "answer": "de reden",
+          "id": "edb2dd4e-5a5a-4415-a59a-a7bd3c29a95b",
+          "question": "der Grund | die Gründe"
+        },
+        {
+          "answer": "vaak",
+          "id": "28d201d5-8eb8-46a2-8ae3-7302d4645652",
+          "question": "häufig"
+        },
+        {
+          "answer": "vandaag",
+          "id": "5d36109f-5829-4850-a178-bd383e022599",
+          "question": "heute"
+        },
+        {
+          "answer": "iedere dag",
+          "id": "95ff829a-65d6-4aed-9b4a-f0ee411d9bc7",
+          "question": "jeden Tag"
+        },
+        {
+          "answer": "de achternaam",
+          "id": "91873e55-e9cd-4d1f-8ac6-5eb5f57a31af",
+          "question": "der Nachname | die Nachnamen"
+        },
+        {
+          "answer": "noemen",
+          "id": "f3de0226-7a65-4319-8b5b-7222160f6bf2",
+          "question": "nennen"
+        },
+        {
+          "answer": "alleen maar",
+          "id": "befdd55a-884a-4c98-adb2-1d77307816f2",
+          "question": "nur"
+        },
+        {
+          "answer": "zonder",
+          "id": "77974b9a-2de7-4de2-b6d2-494b87b6362d",
+          "question": "ohne"
+        },
+        {
+          "answer": "het plein",
+          "id": "6b4a7111-e634-4f10-af8d-a1997979413c",
+          "question": "der Platz | die Plätze"
+        },
+        {
+          "answer": "het kasteel",
+          "id": "d4856ea0-dc58-45be-bfb2-66a7bb1b2489",
+          "question": "das Schloss | die Schlösser"
+        },
+        {
+          "answer": "al",
+          "id": "64cfd16c-1b05-4ab8-8cf6-cda8c7434194",
+          "question": "schon"
+        },
+        {
+          "answer": "de voornaam",
+          "id": "e56a6de1-5611-4f1f-856f-287758d7ff13",
+          "question": "der Vorname | die Vornamen"
+        },
+        {
+          "answer": "eerst",
+          "id": "6ac1f00f-ba46-433d-a56d-b9ff5bd79488",
+          "question": "zuerst"
+        },
+        {
+          "answer": "samen",
+          "id": "5eacfee6-97bf-4a60-ba40-6af15ecc659f",
+          "question": "zusammen"
+        }
+      ],
+      "id": "b4456a3b-0656-4f13-9388-e77f7c7aa5cd",
+      "title": "Lektion 2 (DE → NL)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "ansehen",
+          "id": "d09db4fb-5139-4d94-95a4-654cac4d1344",
+          "question": "bekijken"
+        },
+        {
+          "answer": "außerdem",
+          "id": "7082f376-f002-47a6-9761-5a6dbe929809",
+          "question": "bovendien"
+        },
+        {
+          "answer": "der Bahnhof | die Bahnhöfe",
+          "id": "bf3db3ac-dda5-466f-a797-cdf5896e327a",
+          "question": "het station"
+        },
+        {
+          "answer": "der Beruf | die Berufe",
+          "id": "f959c7d4-4e78-40e6-9612-2acfc68de466",
+          "question": "het beroep"
+        },
+        {
+          "answer": "daher",
+          "id": "5559b5a3-0f09-4820-9eb3-3da657db47b6",
+          "question": "daarom"
+        },
+        {
+          "answer": "gewinnen",
+          "id": "b8d74a7e-3073-47e9-99b0-1e5010a4653d",
+          "question": "winnen"
+        },
+        {
+          "answer": "der Grund | die Gründe",
+          "id": "59650c2f-2072-4547-b708-94c0c9a3ccdc",
+          "question": "de reden"
+        },
+        {
+          "answer": "häufig",
+          "id": "245be988-44e1-4b3e-8f2d-86f1b92bf088",
+          "question": "vaak"
+        },
+        {
+          "answer": "heute",
+          "id": "518f9236-8cb8-404c-ba6a-704d0f35b585",
+          "question": "vandaag"
+        },
+        {
+          "answer": "jeden Tag",
+          "id": "274d7c26-4450-4930-8dd3-aab325e2b6cd",
+          "question": "iedere dag"
+        },
+        {
+          "answer": "der Nachname | die Nachnamen",
+          "id": "a44acf87-a779-45b7-b4a1-873a828a058e",
+          "question": "de achternaam"
+        },
+        {
+          "answer": "nennen",
+          "id": "bf45e33d-1d31-4448-9106-05e9613f385a",
+          "question": "noemen"
+        },
+        {
+          "answer": "nur",
+          "id": "a9754ca3-615c-4e0c-a34f-e3fdd15eb779",
+          "question": "alleen maar"
+        },
+        {
+          "answer": "ohne",
+          "id": "a58dcdfe-c0b9-421e-baa4-d361a166eb91",
+          "question": "zonder"
+        },
+        {
+          "answer": "der Platz | die Plätze",
+          "id": "ed051201-ef77-4e3c-98b6-bfe95d1b32ba",
+          "question": "het plein"
+        },
+        {
+          "answer": "das Schloss | die Schlösser",
+          "id": "d0cde169-bbfa-471e-9665-db1ad0ef26ce",
+          "question": "het kasteel"
+        },
+        {
+          "answer": "schon",
+          "id": "86cc2f1b-82b0-4feb-a0e2-e31a64118039",
+          "question": "al"
+        },
+        {
+          "answer": "der Vorname | die Vornamen",
+          "id": "7eefaa80-34e6-4f06-a066-55fe21398536",
+          "question": "de voornaam"
+        },
+        {
+          "answer": "zuerst",
+          "id": "bcd0c6e7-90d3-4a50-99f7-14672d2f1583",
+          "question": "eerst"
+        },
+        {
+          "answer": "zusammen",
+          "id": "c9a7d806-2cfa-48ed-8630-93dfd8dd9c6b",
+          "question": "samen"
+        }
+      ],
+      "id": "41e7fca3-2c56-46b8-bb24-d3cc3e589c72",
+      "title": "Lektion 2 (NL → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "null",
+          "id": "f0659a5e-8078-4d6e-9fef-d8e4056fc758",
+          "question": "0"
+        },
+        {
+          "answer": "eins",
+          "id": "0df57ec2-8859-4e7e-827c-d6c3db482a13",
+          "question": "1"
+        },
+        {
+          "answer": "zwei",
+          "id": "97a21936-9101-46c9-b734-4750ccf2e307",
+          "question": "2"
+        },
+        {
+          "answer": "drei",
+          "id": "b6490d84-e284-4023-a040-7c6592dff529",
+          "question": "3"
+        },
+        {
+          "answer": "vier",
+          "id": "7e970a31-dbe8-42ac-9538-60ffa3e5b75a",
+          "question": "4"
+        },
+        {
+          "answer": "fünf",
+          "id": "85068c64-bcf4-41ff-a5e2-e53327f9886d",
+          "question": "5"
+        },
+        {
+          "answer": "sechs",
+          "id": "3ffca379-3a33-45b3-8565-875de2a0e63b",
+          "question": "6"
+        },
+        {
+          "answer": "sieben",
+          "id": "3ab603ee-7508-4629-999a-70fe54f29daf",
+          "question": "7"
+        },
+        {
+          "answer": "acht",
+          "id": "aed07cd7-fd5e-4405-b8ab-eafc262d482a",
+          "question": "8"
+        },
+        {
+          "answer": "neun",
+          "id": "b8c966e8-0644-444e-96a9-91216f8deef7",
+          "question": "9"
+        },
+        {
+          "answer": "zehn",
+          "id": "176d3fe4-e59d-498e-8274-e411ed7c5d68",
+          "question": "10"
+        },
+        {
+          "answer": "elf",
+          "id": "917d6fdf-b76d-4faf-8e50-3462657530d6",
+          "question": "11"
+        },
+        {
+          "answer": "zwölf",
+          "id": "9b844311-6b4e-4cc7-a532-3d55a0198f83",
+          "question": "12"
+        },
+        {
+          "answer": "dreizehn",
+          "id": "e1325985-5daa-46f6-9a1b-9fed1d7237cf",
+          "question": "13"
+        },
+        {
+          "answer": "vierzehn",
+          "id": "2d870d9c-2893-40b5-9922-2e5b7f3c78f6",
+          "question": "14"
+        },
+        {
+          "answer": "fünfzehn",
+          "id": "638c111f-46ba-4383-a522-5694f6543e45",
+          "question": "15"
+        },
+        {
+          "answer": "sechzehn",
+          "id": "bfa6f33e-c1c6-48ae-8dd4-dacfbaf9526b",
+          "question": "16"
+        },
+        {
+          "answer": "siebzehn",
+          "id": "ac1c2a11-ecd8-43de-a05f-aa9eda5421d9",
+          "question": "17"
+        },
+        {
+          "answer": "achtzehn",
+          "id": "bbf61065-a04b-4938-8b54-62dd9d6bca22",
+          "question": "18"
+        },
+        {
+          "answer": "neunzehn",
+          "id": "d5186a35-ab6d-4835-a108-2f2e864cb6db",
+          "question": "19"
+        },
+        {
+          "answer": "zwanzig",
+          "id": "0ac6c846-0a2f-4e00-82f6-048675a3d934",
+          "question": "20"
+        },
+        {
+          "answer": "einundzwanzig",
+          "id": "6cd38723-81ec-4c39-8bdc-3963cd91ff9c",
+          "question": "21"
+        },
+        {
+          "answer": "siebenundzwanzig",
+          "id": "eddf4cc9-9a66-493b-a225-e100905a312d",
+          "question": "27"
+        },
+        {
+          "answer": "dreißig",
+          "id": "0beeaaee-5f38-41ac-b9b5-68041a791e9e",
+          "question": "30"
+        },
+        {
+          "answer": "vierzig",
+          "id": "bf22d0ce-813f-4483-9cde-61be577915b5",
+          "question": "40"
+        },
+        {
+          "answer": "fünfzig",
+          "id": "514ccd5a-93c0-42d4-a419-a8cae71b3a35",
+          "question": "50"
+        }
+      ],
+      "id": "516dc26e-c2bb-4401-bc98-8190114380b4",
+      "title": "Getallen (cijfer → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "0",
+          "id": "9a1706e7-2bb2-433f-802c-088e08777099",
+          "question": "null"
+        },
+        {
+          "answer": "1",
+          "id": "6c31de67-4f8e-4549-9c05-668b4b90591c",
+          "question": "eins"
+        },
+        {
+          "answer": "2",
+          "id": "55319007-7d06-4a13-ada0-3a287ddcb0aa",
+          "question": "zwei"
+        },
+        {
+          "answer": "3",
+          "id": "ef60a4dc-e9b5-4c39-9cee-916b36f21f54",
+          "question": "drei"
+        },
+        {
+          "answer": "4",
+          "id": "a13d8df6-089e-4761-8795-1b5a39f510ae",
+          "question": "vier"
+        },
+        {
+          "answer": "5",
+          "id": "a5e0080c-f5e4-4368-8fc6-cfbbcd6f77fb",
+          "question": "fünf"
+        },
+        {
+          "answer": "6",
+          "id": "b26e38c5-63ae-4381-a798-5b7311a5a3c0",
+          "question": "sechs"
+        },
+        {
+          "answer": "7",
+          "id": "4472855f-e42f-4f94-9c1e-034e53902e0e",
+          "question": "sieben"
+        },
+        {
+          "answer": "8",
+          "id": "0293deca-9a8d-42a1-ad5a-3b71641436ab",
+          "question": "acht"
+        },
+        {
+          "answer": "9",
+          "id": "eedfb06c-ce62-482e-8dec-bab875a7ee68",
+          "question": "neun"
+        },
+        {
+          "answer": "10",
+          "id": "68ecf81e-65dc-461e-8d64-e111e68d28ae",
+          "question": "zehn"
+        },
+        {
+          "answer": "11",
+          "id": "8559a4e0-8f34-4e22-b65c-aad04dbffc39",
+          "question": "elf"
+        },
+        {
+          "answer": "12",
+          "id": "80ec85d1-9f73-41ca-9bef-adcad4adc36e",
+          "question": "zwölf"
+        },
+        {
+          "answer": "13",
+          "id": "e05f818f-1529-40ac-a427-6d5e933338d6",
+          "question": "dreizehn"
+        },
+        {
+          "answer": "14",
+          "id": "a1049d8f-6675-4900-a990-0a25a6b97e93",
+          "question": "vierzehn"
+        },
+        {
+          "answer": "15",
+          "id": "9cb07d5f-c21b-47dd-bb64-6a675de1c17f",
+          "question": "fünfzehn"
+        },
+        {
+          "answer": "16",
+          "id": "ea7f26b4-ec7d-4f95-af9e-eeb468073318",
+          "question": "sechzehn"
+        },
+        {
+          "answer": "17",
+          "id": "7f949539-5c05-42d7-8f18-eea54c19a96c",
+          "question": "siebzehn"
+        },
+        {
+          "answer": "18",
+          "id": "22749477-0956-430b-b64b-f000831d6c48",
+          "question": "achtzehn"
+        },
+        {
+          "answer": "19",
+          "id": "6a46fc89-d6e5-46a3-a46f-7fda575de68f",
+          "question": "neunzehn"
+        },
+        {
+          "answer": "20",
+          "id": "67067e65-bf7b-469f-903b-976020d5c1e4",
+          "question": "zwanzig"
+        },
+        {
+          "answer": "21",
+          "id": "392e6199-4b1e-46e4-be53-b6918f701996",
+          "question": "einundzwanzig"
+        },
+        {
+          "answer": "27",
+          "id": "07bf3594-f9e1-4b4b-9b2e-1ec30c3c0328",
+          "question": "siebenundzwanzig"
+        },
+        {
+          "answer": "30",
+          "id": "f26ec158-98b4-45db-96ce-f40ef99ae295",
+          "question": "dreißig"
+        },
+        {
+          "answer": "40",
+          "id": "d13c0e22-76ba-4f0e-8839-f66a8d605cc3",
+          "question": "vierzig"
+        },
+        {
+          "answer": "50",
+          "id": "b816435c-d9e0-4581-89e7-f9a5d3641fb5",
+          "question": "fünfzig"
+        }
+      ],
+      "id": "bca797ff-4849-4a59-8bc3-cb372281d223",
+      "title": "Getallen (DE → cijfer)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "hebben",
+          "id": "aa00e8e0-33db-4a4b-8117-25a212ce6b61",
+          "question": "haben"
+        },
+        {
+          "answer": "ik heb",
+          "id": "f674135d-5cf3-4c8b-be01-ae9abd8cada9",
+          "question": "ich habe"
+        },
+        {
+          "answer": "jij hebt",
+          "id": "8c25ddf9-d10a-4f22-aaa1-22c13cc036bf",
+          "question": "du hast"
+        },
+        {
+          "answer": "hij/zij/het/men heeft",
+          "id": "1e76c848-d856-4c6d-bc35-1e2de06471ef",
+          "question": "er/sie/es/man hat"
+        },
+        {
+          "answer": "wij hebben",
+          "id": "7621b4f5-f160-4553-9a8d-23a65ca17040",
+          "question": "wir haben"
+        },
+        {
+          "answer": "jullie hebben",
+          "id": "33bc34ea-4423-4d36-bab0-77d96473e71c",
+          "question": "ihr habt"
+        },
+        {
+          "answer": "zij hebben / u hebt",
+          "id": "41b7789d-2656-4e48-89af-e43d889f0996",
+          "question": "sie/Sie haben"
+        },
+        {
+          "answer": "zijn",
+          "id": "3188572a-5f9c-44af-b480-507fca7c8fe4",
+          "question": "sein"
+        },
+        {
+          "answer": "ik ben",
+          "id": "946441fa-8179-44e0-95ac-2cb59e6ba0c3",
+          "question": "ich bin"
+        },
+        {
+          "answer": "jij bent",
+          "id": "ff7c4bf8-0b25-4990-be98-caf15d94c03d",
+          "question": "du bist"
+        },
+        {
+          "answer": "hij/zij/het/men is",
+          "id": "b27baa4f-aaba-4996-becd-bf7aa4c35c67",
+          "question": "er/sie/es/man ist"
+        },
+        {
+          "answer": "wij zijn",
+          "id": "288d2cb3-717e-43ee-9a62-7ae53640d5cc",
+          "question": "wir sind"
+        },
+        {
+          "answer": "jullie zijn",
+          "id": "7d286790-95f0-4beb-9f7e-773ce15e4709",
+          "question": "ihr seid"
+        },
+        {
+          "answer": "zij zijn / u bent",
+          "id": "8f27a27e-a03e-4b01-886f-726d495c65c4",
+          "question": "sie/Sie sind"
+        }
+      ],
+      "id": "b7652f52-d9b0-46fd-aaf5-4034ae08b7d9",
+      "title": "Werkwoorden · haben & sein (DE → NL)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "haben",
+          "id": "946ef348-8648-491b-9f00-aa2d1889e212",
+          "question": "hebben"
+        },
+        {
+          "answer": "ich habe",
+          "id": "f2e6e928-dbca-461d-8f70-7f1c1cad20ba",
+          "question": "ik heb"
+        },
+        {
+          "answer": "du hast",
+          "id": "2f585b2b-9b56-47d5-959e-6ed04ea6e815",
+          "question": "jij hebt"
+        },
+        {
+          "answer": "er/sie/es/man hat",
+          "id": "4990020e-4efd-49c7-8bbf-0af8857dbfde",
+          "question": "hij/zij/het/men heeft"
+        },
+        {
+          "answer": "wir haben",
+          "id": "5eaddb0e-3551-4191-a856-49d36e40b46c",
+          "question": "wij hebben"
+        },
+        {
+          "answer": "ihr habt",
+          "id": "873f15c1-e365-4502-b864-9e2f63187b73",
+          "question": "jullie hebben"
+        },
+        {
+          "answer": "sie/Sie haben",
+          "id": "8466c7d2-7646-45ce-9ac8-585f7b3161e0",
+          "question": "zij hebben / u hebt"
+        },
+        {
+          "answer": "sein",
+          "id": "9ff45bb2-d653-4285-a1d0-4d73cb5aeb24",
+          "question": "zijn"
+        },
+        {
+          "answer": "ich bin",
+          "id": "6c788cd6-07c1-4533-b8c9-6ef451fdaa89",
+          "question": "ik ben"
+        },
+        {
+          "answer": "du bist",
+          "id": "e84ff2ed-0548-4056-bc3e-e48393fe5d96",
+          "question": "jij bent"
+        },
+        {
+          "answer": "er/sie/es/man ist",
+          "id": "cf1c8c48-f620-4757-8f1d-a9dc2dba8314",
+          "question": "hij/zij/het/men is"
+        },
+        {
+          "answer": "wir sind",
+          "id": "e0db254d-7c68-4e33-a2cb-0ac69f562903",
+          "question": "wij zijn"
+        },
+        {
+          "answer": "ihr seid",
+          "id": "ee962ab2-0974-408a-a032-16421630fe81",
+          "question": "jullie zijn"
+        },
+        {
+          "answer": "sie/Sie sind",
+          "id": "9f2b013d-c3e4-433b-9295-0e06a013e04a",
+          "question": "zij zijn / u bent"
+        }
+      ],
+      "id": "f7720653-2f81-41ee-8ffb-e3fa4af95d05",
+      "title": "Werkwoorden · haben & sein (NL → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "der Bruder | die Brüder",
+          "id": "42f80066-38fe-4995-855a-53bb3f68bf3e",
+          "question": "de broer"
+        },
+        {
+          "answer": "das Einzelkind | die Einzelkinder",
+          "id": "a8b0922c-4105-434d-8af9-4e02d5fa8b89",
+          "question": "het enig kind"
+        },
+        {
+          "answer": "die Eltern",
+          "id": "66a19835-75c7-45ba-826b-3cd7020af64f",
+          "question": "de ouders"
+        },
+        {
+          "answer": "der Enkel | die Enkel; die Enkelin | die Enkelinnen",
+          "id": "733f6f1f-0ac5-40da-bffe-ebf6389181b8",
+          "question": "het kleinkind"
+        },
+        {
+          "answer": "die Geschwister",
+          "id": "ba31f982-232f-4cbf-8aa4-1d13bd122cec",
+          "question": "de broers en zussen"
+        },
+        {
+          "answer": "die Großeltern",
+          "id": "4035c77d-ef66-42f7-b6d1-5e337caf10cf",
+          "question": "de grootouders"
+        },
+        {
+          "answer": "die Großmutter | die Großmütter",
+          "id": "4c405a94-bd5a-4c46-87e7-cccb47747d5c",
+          "question": "de grootmoeder"
+        },
+        {
+          "answer": "der Großvater | die Großväter",
+          "id": "760cc96b-9870-4c04-9213-c86550ac9b27",
+          "question": "de grootvader"
+        },
+        {
+          "answer": "der Halbbruder | die Halbbrüder",
+          "id": "e380fa33-5487-40fe-a482-7022dfb1c338",
+          "question": "de halfbroer"
+        },
+        {
+          "answer": "die Halbschwester | die Halbschwestern",
+          "id": "105cdd89-b151-4586-830a-987c2ddef415",
+          "question": "de halfzus"
+        },
+        {
+          "answer": "die Mutter | die Mütter",
+          "id": "6fe1ae0e-df6c-48eb-aa8a-b2e7ad6d91ca",
+          "question": "de moeder"
+        },
+        {
+          "answer": "der Neffe | die Neffen",
+          "id": "1c8a0f30-cc01-44d0-ae68-9d56f274486a",
+          "question": "de neef"
+        },
+        {
+          "answer": "die Nichte | die Nichten",
+          "id": "eec6eece-eabe-4aea-913d-d5c7f29562f9",
+          "question": "de nicht"
+        },
+        {
+          "answer": "der Onkel | die Onkel",
+          "id": "0821b2f6-b746-4310-9f51-1dd29aed9a52",
+          "question": "de oom"
+        },
+        {
+          "answer": "die Tante | die Tanten",
+          "id": "3a6b1cd0-8c30-4c46-86b0-78463eed7f8b",
+          "question": "de tante"
+        },
+        {
+          "answer": "die Tochter | die Töchter",
+          "id": "62df6cf1-71f4-44d1-a2ed-3ff07e5c7806",
+          "question": "de dochter"
+        },
+        {
+          "answer": "die Schwester | die Schwestern",
+          "id": "e8b93ca2-35eb-4334-80fb-ca81ff11c0a8",
+          "question": "de zus"
+        },
+        {
+          "answer": "der Sohn | die Söhne",
+          "id": "e813d078-d5f0-413a-a022-2eb3e3fb17c5",
+          "question": "de zoon"
+        },
+        {
+          "answer": "der Vater | die Väter",
+          "id": "f10e4efb-dc1f-4ee6-b51e-e005c8617c4f",
+          "question": "de vader"
+        },
+        {
+          "answer": "geschieden",
+          "id": "8618e43c-319a-4f9c-b523-b84482a6733e",
+          "question": "gescheiden"
+        },
+        {
+          "answer": "verheiratet",
+          "id": "9a69bc25-ef2c-45ff-8b75-b49fe35734eb",
+          "question": "getrouwd"
+        }
+      ],
+      "id": "c66ca3dc-80e4-4556-8de3-396018dcc86d",
+      "title": "Lektion 3 (NL → DE)"
+    },
+    {
+      "cards": [
+        {
+          "answer": "de broer",
+          "id": "027689db-f4a2-48fe-bb2b-395dd1a80d78",
+          "question": "der Bruder | die Brüder"
+        },
+        {
+          "answer": "het enig kind",
+          "id": "5cf51b6e-d401-4bbc-9888-74c33b45f0c6",
+          "question": "das Einzelkind | die Einzelkinder"
+        },
+        {
+          "answer": "de ouders",
+          "id": "60607bae-6685-4d9d-82b1-bfb32e00d5ce",
+          "question": "die Eltern"
+        },
+        {
+          "answer": "het kleinkind",
+          "id": "1ef9849b-6a9d-45db-b31f-17df3dc6c5c7",
+          "question": "der Enkel | die Enkel; die Enkelin | die Enkelinnen"
+        },
+        {
+          "answer": "de broers en zussen",
+          "id": "6560ee28-2126-4416-acc0-8b909ab963ac",
+          "question": "die Geschwister"
+        },
+        {
+          "answer": "de grootouders",
+          "id": "7151d618-32a8-4ba8-a959-db5573393ceb",
+          "question": "die Großeltern"
+        },
+        {
+          "answer": "de grootmoeder",
+          "id": "925d50b6-6509-46f0-b009-3eaeb0319c29",
+          "question": "die Großmutter | die Großmütter"
+        },
+        {
+          "answer": "de grootvader",
+          "id": "cd5cd4ea-a5d8-4a68-9c5e-f2aacfb922b1",
+          "question": "der Großvater | die Großväter"
+        },
+        {
+          "answer": "de halfbroer",
+          "id": "686ff883-66c4-4b62-bc66-68534ebd5a2d",
+          "question": "der Halbbruder | die Halbbrüder"
+        },
+        {
+          "answer": "de halfzus",
+          "id": "7b388f1f-00f7-4439-8d15-4b982c20809c",
+          "question": "die Halbschwester | die Halbschwestern"
+        },
+        {
+          "answer": "de moeder",
+          "id": "b08f8f9b-2721-4f22-adc0-08d3cec2a307",
+          "question": "die Mutter | die Mütter"
+        },
+        {
+          "answer": "de neef",
+          "id": "058d0098-7b53-457b-80da-219ddc13ac96",
+          "question": "der Neffe | die Neffen"
+        },
+        {
+          "answer": "de nicht",
+          "id": "f8a44b86-5179-4395-bb56-ccd341be3314",
+          "question": "die Nichte | die Nichten"
+        },
+        {
+          "answer": "de oom",
+          "id": "a8b7aac1-b374-49ce-ab49-77b283695f6b",
+          "question": "der Onkel | die Onkel"
+        },
+        {
+          "answer": "de tante",
+          "id": "2dbbf1b0-e831-4eb7-ad09-74a6ae9b739d",
+          "question": "die Tante | die Tanten"
+        },
+        {
+          "answer": "de dochter",
+          "id": "5617316e-5741-4603-bb78-4905670a34c0",
+          "question": "die Tochter | die Töchter"
+        },
+        {
+          "answer": "de zus",
+          "id": "8d58c322-9f06-45bb-8576-a0455de058ac",
+          "question": "die Schwester | die Schwestern"
+        },
+        {
+          "answer": "de zoon",
+          "id": "dac3c142-f2f1-4987-92f6-79f9523d5315",
+          "question": "der Sohn | die Söhne"
+        },
+        {
+          "answer": "de vader",
+          "id": "33e78804-a58f-4d57-b5bc-f5bffdad90e0",
+          "question": "der Vater | die Väter"
+        },
+        {
+          "answer": "gescheiden",
+          "id": "c334c390-c09f-404e-8fcc-a73b8761f68d",
+          "question": "geschieden"
+        },
+        {
+          "answer": "getrouwd",
+          "id": "91aa5388-dffd-4eeb-9b01-e7cae54c585b",
+          "question": "verheiratet"
+        }
+      ],
+      "id": "d2c9251f-8946-4f91-8556-b08b05859b68",
+      "title": "Lektion 3 (DE → NL)"
     }
   ],
-  "version" : 1
+  "version": 1
 }
