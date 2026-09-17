@@ -2,6 +2,8 @@ const state = {
   lists: [],
   selectedListId: null,
   queue: [],
+  queueLabel: null,
+  openSubjects: new Set(["duits"]),
   history: readLocal("dayweaveLearnHistory", readLocal("dayflowLearnHistory", [])),
   stats: readLocal("dayweaveLearnStats", readLocal("dayflowLearnStats", {})),
   round: null,
@@ -19,6 +21,7 @@ const els = Object.fromEntries([
 
 const icons = {
   stack: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 9 8-5 8 5-8 5-8-5Zm0 4 8 5 8-5M4 17l8 5 8-5"/></svg>`,
+  folder: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5A2.5 2.5 0 0 1 6 4h4l2 2h6A2.5 2.5 0 0 1 20.5 8.5v8A2.5 2.5 0 0 1 18 19H6a2.5 2.5 0 0 1-2.5-2.5v-10Z"/></svg>`,
   plus: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>`,
   check: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>`
 };
@@ -62,6 +65,25 @@ function normalizeList(list, listIndex) {
 function allCards() { return state.lists.flatMap(list => list.cards); }
 function queueHas(id) { return state.queue.some(card => card.id === id); }
 
+function subjectFor(list) {
+  const title = list.title.toLocaleLowerCase();
+  if (title.includes("grieks") || title.includes("greek") || /[\u0370-\u03ff]/i.test(list.title)) return { id: "grieks", name: "Grieks" };
+  if (title.includes("engels") || title.includes("english")) return { id: "engels", name: "Engels" };
+  if (["lektion", "vraagwoorden", "getallen", "werkwoorden", "duits", "german"].some(word => title.includes(word))) return { id: "duits", name: "Duits" };
+  return { id: "overig", name: "Overig" };
+}
+
+function groupedSubjects() {
+  const grouped = new Map();
+  state.lists.forEach(list => {
+    const subject = subjectFor(list);
+    if (!grouped.has(subject.id)) grouped.set(subject.id, { ...subject, lists: [] });
+    grouped.get(subject.id).lists.push(list);
+  });
+  const order = ["duits", "grieks", "engels", "overig"];
+  return [...grouped.values()].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+}
+
 function renderAll() {
   renderLists();
   renderCards();
@@ -71,17 +93,41 @@ function renderAll() {
 }
 
 function renderLists() {
-  els.listCount.textContent = state.lists.length;
+  const subjects = groupedSubjects();
+  els.listCount.textContent = subjects.length;
   if (!state.lists.length) {
     els.listStack.innerHTML = `<div class="empty-state">No lists have been published yet.<br>Check back after your classmate shares one.</div>`;
     return;
   }
-  els.listStack.innerHTML = state.lists.map(list => `
-    <button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
-      <span class="list-icon">${icons.stack}</span>
-      <span class="list-copy"><strong>${escapeHTML(list.title)}</strong><span>${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span>
-      <span class="chevron">›</span>
-    </button>`).join("");
+  els.listStack.innerHTML = subjects.map(subject => {
+    const isOpen = state.openSubjects.has(subject.id);
+    const cardCount = subject.lists.reduce((sum, list) => sum + list.cards.length, 0);
+    return `<section class="subject-folder ${isOpen ? "open" : ""}">
+      <div class="subject-row">
+        <button class="subject-header" type="button" data-subject-toggle="${escapeAttr(subject.id)}" aria-expanded="${isOpen}" aria-controls="subject-${escapeAttr(subject.id)}">
+          <span class="subject-icon">${icons.folder}</span>
+          <span class="subject-copy"><strong>${escapeHTML(subject.name)}</strong><span>${subject.lists.length} list${subject.lists.length === 1 ? "" : "s"} · ${cardCount} cards</span></span>
+          <span class="folder-chevron" aria-hidden="true">›</span>
+        </button>
+        <button class="subject-all-button" type="button" data-subject-all="${escapeAttr(subject.id)}" aria-label="Practise all ${escapeAttr(subject.name)} words">All</button>
+      </div>
+      <div class="subject-lists" id="subject-${escapeAttr(subject.id)}" ${isOpen ? "" : "hidden"}>
+        ${subject.lists.map(list => `
+          <button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
+            <span class="list-icon">${icons.stack}</span>
+            <span class="list-copy"><strong>${escapeHTML(list.title)}</strong><span>${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span>
+            <span class="chevron">›</span>
+          </button>`).join("")}
+      </div>
+    </section>`;
+  }).join("");
+
+  els.listStack.querySelectorAll("[data-subject-toggle]").forEach(button => {
+    button.addEventListener("click", () => toggleSubject(button.dataset.subjectToggle));
+  });
+  els.listStack.querySelectorAll("[data-subject-all]").forEach(button => {
+    button.addEventListener("click", () => addSubject(button.dataset.subjectAll));
+  });
 
   els.listStack.querySelectorAll("[data-list-id]").forEach(button => {
     button.addEventListener("click", () => selectList(button.dataset.listId));
@@ -91,6 +137,12 @@ function renderLists() {
       event.dataTransfer.setData("text/plain", button.dataset.listId);
     });
   });
+}
+
+function toggleSubject(id) {
+  if (state.openSubjects.has(id)) state.openSubjects.delete(id);
+  else state.openSubjects.add(id);
+  renderLists();
 }
 
 function renderCards() {
@@ -119,6 +171,7 @@ function renderQueue() {
 }
 
 function queueName() {
+  if (state.queueLabel) return state.queueLabel;
   const listIds = [...new Set(state.queue.map(card => card.listId))];
   if (listIds.length === 1) return state.lists.find(list => list.id === listIds[0])?.title || "Practice deck";
   return "Mixed practice";
@@ -164,6 +217,8 @@ function renderProgress() {
 
 function selectList(id, navigate = true) {
   state.selectedListId = id;
+  const list = state.lists.find(item => item.id === id);
+  if (list) state.openSubjects.add(subjectFor(list).id);
   renderLists();
   renderCards();
   if (navigate && window.matchMedia("(max-width: 760px)").matches) setMobileView("cards");
@@ -173,13 +228,26 @@ function addList(id) {
   const list = state.lists.find(item => item.id === id);
   if (!list) return;
   state.queue = list.cards.slice();
+  state.queueLabel = null;
   selectList(id, false);
   renderQueue();
   setMobileView("practice");
   showToast(`${list.title} is ready to practise.`);
 }
 
+function addSubject(id) {
+  const subject = groupedSubjects().find(item => item.id === id);
+  if (!subject) return;
+  state.queue = subject.lists.flatMap(list => list.cards);
+  state.queueLabel = `${subject.name} · all lists`;
+  renderCards();
+  renderQueue();
+  setMobileView("practice");
+  showToast(`${state.queue.length} ${subject.name} cards are ready.`);
+}
+
 function toggleCard(id) {
+  state.queueLabel = null;
   if (queueHas(id)) state.queue = state.queue.filter(card => card.id !== id);
   else {
     const card = allCards().find(item => item.id === id);
@@ -198,6 +266,7 @@ function prepareWeakWords() {
   const chosen = (ranked.length ? ranked.map(item => item.card) : shuffle(allCards())).slice(0, 20);
   if (!chosen.length) { showToast("There are no words to practise yet."); return; }
   state.queue = chosen;
+  state.queueLabel = "Weak words";
   renderQueue();
   startRound("Weak words");
 }
@@ -297,6 +366,7 @@ function finishRound() {
   els.practiceOverlay.hidden = true;
   document.body.style.overflow = "";
   state.queue = [];
+  state.queueLabel = null;
   state.round = null;
   renderAll();
 }
@@ -349,7 +419,7 @@ els.libraryTab.addEventListener("click", () => switchTab(false));
 els.historyTab.addEventListener("click", () => switchTab(true));
 els.themeButton.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "butter" ? "dark" : "butter"));
 els.addAllButton.addEventListener("click", () => addList(state.selectedListId));
-els.clearButton.addEventListener("click", () => { state.queue = []; renderCards(); renderQueue(); });
+els.clearButton.addEventListener("click", () => { state.queue = []; state.queueLabel = null; renderCards(); renderQueue(); });
 els.startButton.addEventListener("click", () => startRound());
 els.weakButton.addEventListener("click", prepareWeakWords);
 els.dropDeck.addEventListener("dragover", event => { event.preventDefault(); els.dropDeck.classList.add("drag-over"); });
