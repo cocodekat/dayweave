@@ -1,5 +1,5 @@
 {
-  "exportedAt" : "2026-09-16T17:26:56Z",
+  "exportedAt" : "2026-09-17T07:05:09Z",
   "lists" : [
     {
       "cards" : [
@@ -71,6 +71,218 @@
       ],
       "id" : "84697cdc-13f4-4a4b-8063-b9d8fda614cf",
       "title" : "Grieks T&M ‘kai’"
+    },
+    {
+      "cards" : [
+        {
+          "answer" : "maar",
+          "id" : "56254216-26b9-4ee9-b1d0-5e8857c0980e",
+          "question" : "aber"
+        },
+        {
+          "answer" : "populair",
+          "id" : "951bd5c6-4800-48a2-8b9b-606850280a09",
+          "question" : "beliebt"
+        },
+        {
+          "answer" : "er is / er zijn",
+          "id" : "74cb9eb0-7a41-47ee-96e5-c63340d36479",
+          "question" : "es gibt"
+        },
+        {
+          "answer" : "de fiets",
+          "id" : "4bed44f3-aeaf-47aa-871f-3b40268e8117",
+          "question" : "das Fahrrad | die Fahrräder"
+        },
+        {
+          "answer" : "het gebouw",
+          "id" : "46a772a5-da94-44cd-8105-781ceebea779",
+          "question" : "das Gebäude | die Gebäude"
+        },
+        {
+          "answer" : "graag",
+          "id" : "df0604b1-fa3f-4939-a5db-2abe8b97b31c",
+          "question" : "gern"
+        },
+        {
+          "answer" : "groot",
+          "id" : "3fc65b57-872a-4c4c-8bb2-131bc3e7dd04",
+          "question" : "groß"
+        },
+        {
+          "answer" : "de hoofdstad",
+          "id" : "8f266e83-30d0-48e2-9859-a182df7eab82",
+          "question" : "die Hauptstadt | die Hauptstädte"
+        },
+        {
+          "answer" : "hoog",
+          "id" : "053beef0-4ee5-490a-972f-13d8e7af0acf",
+          "question" : "hoch"
+        },
+        {
+          "answer" : "altijd",
+          "id" : "7009b88a-2cf2-4885-88f5-5f39c9a4d566",
+          "question" : "immer"
+        },
+        {
+          "answer" : "elk/ieder jaar",
+          "id" : "81a90a82-3e5a-43c7-959d-958d9ce9348c",
+          "question" : "jedes Jahr"
+        },
+        {
+          "answer" : "de mensen",
+          "id" : "7abebf8b-ac0f-45f2-b3c0-c8b04a835c9f",
+          "question" : "die Leute"
+        },
+        {
+          "answer" : "mooi",
+          "id" : "6fa6fcf7-c34e-4461-9ba2-237801bf9834",
+          "question" : "schön"
+        },
+        {
+          "answer" : "de straat",
+          "id" : "ba4ffcc9-c59c-4c31-a51c-26d6281e3a66",
+          "question" : "die Straße | die Straßen"
+        },
+        {
+          "answer" : "super/leuk",
+          "id" : "78e69f44-b68d-4af3-96c3-9e51a0879f19",
+          "question" : "toll"
+        },
+        {
+          "answer" : "de wereld",
+          "id" : "5e27bc0b-02ba-452c-ae93-c0b1d16b6bea",
+          "question" : "die Welt | die Welten"
+        },
+        {
+          "answer" : "belangrijk",
+          "id" : "ebac070a-5d85-4b36-a071-5bebf6d96e91",
+          "question" : "wichtig"
+        },
+        {
+          "answer" : "laten zien",
+          "id" : "5ea9746b-4d3a-4481-bf11-3ffa2b3852a1",
+          "question" : "zeigen"
+        },
+        {
+          "answer" : "de dierentuin",
+          "id" : "6bf5f9c6-027c-445b-a3d0-88183b5a0bcf",
+          "question" : "der Zoo | die Zoos"
+        },
+        {
+          "answer" : "te",
+          "id" : "fcb6357f-07ab-4f49-ae0d-043d33d1bd05",
+          "question" : "zu"
+        }
+      ],
+      "id" : "c1287215-ea07-4cf3-9793-7ab66d8d9e9f",
+      "title" : "Lektion 1 (DE → NL)"
+    },
+    {
+      "cards" : [
+        {
+          "answer" : "aber",
+          "id" : "ebb52d5d-2dd8-466d-af68-fdb634f50513",
+          "question" : "maar"
+        },
+        {
+          "answer" : "beliebt",
+          "id" : "b4a215ab-6d5e-4218-9ac9-5c0dfd581726",
+          "question" : "populair"
+        },
+        {
+          "answer" : "es gibt",
+          "id" : "04433cc3-463a-41c8-a444-7ca602521f9c",
+          "question" : "er is / er zijn"
+        },
+        {
+          "answer" : "das Fahrrad | die Fahrräder",
+          "id" : "dde526d7-00eb-43e5-8619-393b52383735",
+          "question" : "de fiets"
+        },
+        {
+          "answer" : "das Gebäude | die Gebäude",
+          "id" : "1317ece2-9a92-4db4-9819-b38f096aa8f4",
+          "question" : "het gebouw"
+        },
+        {
+          "answer" : "gern",
+          "id" : "12bedf7f-adf9-457f-b4eb-e313da79f32e",
+          "question" : "graag"
+        },
+        {
+          "answer" : "groß",
+          "id" : "c317bfe7-7148-415c-b707-64035e64513e",
+          "question" : "groot"
+        },
+        {
+          "answer" : "die Hauptstadt | die Hauptstädte",
+          "id" : "6e420390-f024-4aae-8de6-5b9c67e9a7dc",
+          "question" : "de hoofdstad"
+        },
+        {
+          "answer" : "hoch",
+          "id" : "a0fda94c-9d53-405d-8ecc-5e147567e216",
+          "question" : "hoog"
+        },
+        {
+          "answer" : "immer",
+          "id" : "9331713a-bf36-4383-b9b8-91e1af3fe8ee",
+          "question" : "altijd"
+        },
+        {
+          "answer" : "jedes Jahr",
+          "id" : "9433a2ed-a24e-48da-8787-322a14060978",
+          "question" : "elk/ieder jaar"
+        },
+        {
+          "answer" : "die Leute",
+          "id" : "ad7c1904-d87d-45c4-aabe-fbcbe800645f",
+          "question" : "de mensen"
+        },
+        {
+          "answer" : "schön",
+          "id" : "0cd6608a-9705-4a57-a74d-3fdb694d7ae2",
+          "question" : "mooi"
+        },
+        {
+          "answer" : "die Straße | die Straßen",
+          "id" : "31e2ea34-4f13-4f47-8ba7-3b9c0e37f0b2",
+          "question" : "de straat"
+        },
+        {
+          "answer" : "toll",
+          "id" : "a43b33d7-3b20-4b62-8c49-30c4ea2eef93",
+          "question" : "super/leuk"
+        },
+        {
+          "answer" : "die Welt | die Welten",
+          "id" : "b39ba13f-9596-43f4-ab18-ac1c31603547",
+          "question" : "de wereld"
+        },
+        {
+          "answer" : "wichtig",
+          "id" : "880d5b4f-ccdc-4274-b7c8-c1a73a25546d",
+          "question" : "belangrijk"
+        },
+        {
+          "answer" : "zeigen",
+          "id" : "609b5db8-b3ae-4f62-a01c-609a34064bbc",
+          "question" : "laten zien"
+        },
+        {
+          "answer" : "der Zoo | die Zoos",
+          "id" : "68c14e47-010f-4bba-9ad0-d824af8e8812",
+          "question" : "de dierentuin"
+        },
+        {
+          "answer" : "zu",
+          "id" : "8eb903ae-44d5-4a67-9c2b-91b0d4607ed4",
+          "question" : "te"
+        }
+      ],
+      "id" : "c575c32a-c232-47f5-b9f0-f08e09d9d462",
+      "title" : "Lektion 1 (NL → DE)"
     }
   ],
   "version" : 1
