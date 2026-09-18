@@ -1253,6 +1253,144 @@
       ],
       "id": "d2c9251f-8946-4f91-8556-b08b05859b68",
       "title": "Lektion 3 (DE → NL)"
+    },
+    {
+      "id": "latin-declension-1",
+      "title": "Latijn · 1e declinatie · uitgangen",
+      "cards": [
+        {"id":"lat-1-nom-sg","question":"Nominativus enkelvoud","answer":"-a"},
+        {"id":"lat-1-gen-sg","question":"Genitivus enkelvoud","answer":"-ae"},
+        {"id":"lat-1-dat-sg","question":"Dativus enkelvoud","answer":"-ae"},
+        {"id":"lat-1-acc-sg","question":"Accusativus enkelvoud","answer":"-am"},
+        {"id":"lat-1-abl-sg","question":"Ablativus enkelvoud","answer":"-ā"},
+        {"id":"lat-1-voc-sg","question":"Vocativus enkelvoud","answer":"-a"},
+        {"id":"lat-1-nom-pl","question":"Nominativus meervoud","answer":"-ae"},
+        {"id":"lat-1-gen-pl","question":"Genitivus meervoud","answer":"-ārum"},
+        {"id":"lat-1-dat-pl","question":"Dativus meervoud","answer":"-īs"},
+        {"id":"lat-1-acc-pl","question":"Accusativus meervoud","answer":"-ās"},
+        {"id":"lat-1-abl-pl","question":"Ablativus meervoud","answer":"-īs"},
+        {"id":"lat-1-voc-pl","question":"Vocativus meervoud","answer":"-ae"}
+      ]
+    },
+    {
+      "id": "latin-declension-2",
+      "title": "Latijn · 2e declinatie · uitgangen",
+      "cards": [
+        {"id":"lat-2-nom-sg","question":"Nominativus enkelvoud","answer":"-us / -er (m.), -um (o.)"},
+        {"id":"lat-2-gen-sg","question":"Genitivus enkelvoud","answer":"-ī"},
+        {"id":"lat-2-dat-sg","question":"Dativus enkelvoud","answer":"-ō"},
+        {"id":"lat-2-acc-sg","question":"Accusativus enkelvoud","answer":"-um"},
+        {"id":"lat-2-abl-sg","question":"Ablativus enkelvoud","answer":"-ō"},
+        {"id":"lat-2-voc-sg","question":"Vocativus enkelvoud","answer":"-e bij -us; = nominativus bij -er en onzijdig"},
+        {"id":"lat-2-nom-pl","question":"Nominativus meervoud","answer":"-ī (m.), -a (o.)"},
+        {"id":"lat-2-gen-pl","question":"Genitivus meervoud","answer":"-ōrum"},
+        {"id":"lat-2-dat-pl","question":"Dativus meervoud","answer":"-īs"},
+        {"id":"lat-2-acc-pl","question":"Accusativus meervoud","answer":"-ōs (m.), -a (o.)"},
+        {"id":"lat-2-abl-pl","question":"Ablativus meervoud","answer":"-īs"},
+        {"id":"lat-2-voc-pl","question":"Vocativus meervoud","answer":"-ī (m.), -a (o.)"}
+      ]
+    },
+    {
+      "id": "latin-declension-3",
+      "title": "Latijn · 3e declinatie · uitgangen",
+      "cards": [
+        {"id":"lat-3-nom-sg","question":"Nominativus enkelvoud","answer":"wisselend: de woordenboekvorm"},
+        {"id":"lat-3-gen-sg","question":"Genitivus enkelvoud","answer":"-is"},
+        {"id":"lat-3-dat-sg","question":"Dativus enkelvoud","answer":"-ī"},
+        {"id":"lat-3-acc-sg","question":"Accusativus enkelvoud","answer":"-em (m./v.), = nominativus (o.)"},
+        {"id":"lat-3-abl-sg","question":"Ablativus enkelvoud","answer":"-e; soms -ī bij i-stammen"},
+        {"id":"lat-3-voc-sg","question":"Vocativus enkelvoud","answer":"= nominativus"},
+        {"id":"lat-3-nom-pl","question":"Nominativus meervoud","answer":"-ēs (m./v.), -a of -ia (o.)"},
+        {"id":"lat-3-gen-pl","question":"Genitivus meervoud","answer":"-um; -ium bij i-stammen"},
+        {"id":"lat-3-dat-pl","question":"Dativus meervoud","answer":"-ibus"},
+        {"id":"lat-3-acc-pl","question":"Accusativus meervoud","answer":"-ēs/-īs (m./v.), -a of -ia (o.)"},
+        {"id":"lat-3-abl-pl","question":"Ablativus meervoud","answer":"-ibus"},
+        {"id":"lat-3-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
+      ]
+    },
+    {
+      "id": "latin-declension-4",
+      "title": "Latijn · 4e declinatie · uitgangen",
+      "cards": [
+        {"id":"lat-4-nom-sg","question":"Nominativus enkelvoud","answer":"-us (m./v.), -ū (o.)"},
+        {"id":"lat-4-gen-sg","question":"Genitivus enkelvoud","answer":"-ūs"},
+        {"id":"lat-4-dat-sg","question":"Dativus enkelvoud","answer":"-uī (m./v.), -ū (o.)"},
+        {"id":"lat-4-acc-sg","question":"Accusativus enkelvoud","answer":"-um (m./v.), -ū (o.)"},
+        {"id":"lat-4-abl-sg","question":"Ablativus enkelvoud","answer":"-ū"},
+        {"id":"lat-4-voc-sg","question":"Vocativus enkelvoud","answer":"= nominativus"},
+        {"id":"lat-4-nom-pl","question":"Nominativus meervoud","answer":"-ūs (m./v.), -ua (o.)"},
+        {"id":"lat-4-gen-pl","question":"Genitivus meervoud","answer":"-uum"},
+        {"id":"lat-4-dat-pl","question":"Dativus meervoud","answer":"-ibus"},
+        {"id":"lat-4-acc-pl","question":"Accusativus meervoud","answer":"-ūs (m./v.), -ua (o.)"},
+        {"id":"lat-4-abl-pl","question":"Ablativus meervoud","answer":"-ibus"},
+        {"id":"lat-4-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
+      ]
+    },
+    {
+      "id": "latin-declension-5",
+      "title": "Latijn · 5e declinatie · uitgangen",
+      "cards": [
+        {"id":"lat-5-nom-sg","question":"Nominativus enkelvoud","answer":"-ēs"},
+        {"id":"lat-5-gen-sg","question":"Genitivus enkelvoud","answer":"-eī / -ēī"},
+        {"id":"lat-5-dat-sg","question":"Dativus enkelvoud","answer":"-eī / -ēī"},
+        {"id":"lat-5-acc-sg","question":"Accusativus enkelvoud","answer":"-em"},
+        {"id":"lat-5-abl-sg","question":"Ablativus enkelvoud","answer":"-ē"},
+        {"id":"lat-5-voc-sg","question":"Vocativus enkelvoud","answer":"-ēs"},
+        {"id":"lat-5-nom-pl","question":"Nominativus meervoud","answer":"-ēs"},
+        {"id":"lat-5-gen-pl","question":"Genitivus meervoud","answer":"-ērum"},
+        {"id":"lat-5-dat-pl","question":"Dativus meervoud","answer":"-ēbus"},
+        {"id":"lat-5-acc-pl","question":"Accusativus meervoud","answer":"-ēs"},
+        {"id":"lat-5-abl-pl","question":"Ablativus meervoud","answer":"-ēbus"},
+        {"id":"lat-5-voc-pl","question":"Vocativus meervoud","answer":"-ēs"}
+      ]
+    },
+    {
+      "id": "greek-declension-1",
+      "title": "Grieks · 1e declinatie · uitgangen",
+      "cards": [
+        {"id":"grc-1-nom-sg","question":"Nominativus enkelvoud","answer":"-η/-α (v.), -ης/-ας (m.)"},
+        {"id":"grc-1-gen-sg","question":"Genitivus enkelvoud","answer":"-ης/-ας (v.), -ου (m.)"},
+        {"id":"grc-1-dat-sg","question":"Dativus enkelvoud","answer":"-ῃ / -ᾳ"},
+        {"id":"grc-1-acc-sg","question":"Accusativus enkelvoud","answer":"-ην / -αν"},
+        {"id":"grc-1-voc-sg","question":"Vocativus enkelvoud","answer":"-η/-α (v.), meestal -α (m.)"},
+        {"id":"grc-1-nom-pl","question":"Nominativus meervoud","answer":"-αι"},
+        {"id":"grc-1-gen-pl","question":"Genitivus meervoud","answer":"-ῶν"},
+        {"id":"grc-1-dat-pl","question":"Dativus meervoud","answer":"-αις"},
+        {"id":"grc-1-acc-pl","question":"Accusativus meervoud","answer":"-ας"},
+        {"id":"grc-1-voc-pl","question":"Vocativus meervoud","answer":"-αι"}
+      ]
+    },
+    {
+      "id": "greek-declension-2",
+      "title": "Grieks · 2e declinatie · uitgangen",
+      "cards": [
+        {"id":"grc-2-nom-sg","question":"Nominativus enkelvoud","answer":"-ος (m./v.), -ον (o.)"},
+        {"id":"grc-2-gen-sg","question":"Genitivus enkelvoud","answer":"-ου"},
+        {"id":"grc-2-dat-sg","question":"Dativus enkelvoud","answer":"-ῳ"},
+        {"id":"grc-2-acc-sg","question":"Accusativus enkelvoud","answer":"-ον"},
+        {"id":"grc-2-voc-sg","question":"Vocativus enkelvoud","answer":"-ε (m./v.), -ον (o.)"},
+        {"id":"grc-2-nom-pl","question":"Nominativus meervoud","answer":"-οι (m./v.), -α (o.)"},
+        {"id":"grc-2-gen-pl","question":"Genitivus meervoud","answer":"-ων"},
+        {"id":"grc-2-dat-pl","question":"Dativus meervoud","answer":"-οις"},
+        {"id":"grc-2-acc-pl","question":"Accusativus meervoud","answer":"-ους (m./v.), -α (o.)"},
+        {"id":"grc-2-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
+      ]
+    },
+    {
+      "id": "greek-declension-3",
+      "title": "Grieks · 3e declinatie · uitgangen",
+      "cards": [
+        {"id":"grc-3-nom-sg","question":"Nominativus enkelvoud","answer":"wisselend: de woordenboekvorm"},
+        {"id":"grc-3-gen-sg","question":"Genitivus enkelvoud","answer":"-ος"},
+        {"id":"grc-3-dat-sg","question":"Dativus enkelvoud","answer":"-ι"},
+        {"id":"grc-3-acc-sg","question":"Accusativus enkelvoud","answer":"-α of -ν (m./v.), = nominativus (o.)"},
+        {"id":"grc-3-voc-sg","question":"Vocativus enkelvoud","answer":"wisselend; vaak = nominativus"},
+        {"id":"grc-3-nom-pl","question":"Nominativus meervoud","answer":"-ες (m./v.), -α (o.)"},
+        {"id":"grc-3-gen-pl","question":"Genitivus meervoud","answer":"-ων"},
+        {"id":"grc-3-dat-pl","question":"Dativus meervoud","answer":"-σι(ν)"},
+        {"id":"grc-3-acc-pl","question":"Accusativus meervoud","answer":"-ας (m./v.), -α (o.)"},
+        {"id":"grc-3-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
+      ]
     }
   ],
   "version": 1

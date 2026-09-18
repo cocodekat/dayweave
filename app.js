@@ -68,6 +68,7 @@ function queueHas(id) { return state.queue.some(card => card.id === id); }
 function subjectFor(list) {
   const title = list.title.toLocaleLowerCase();
   if (title.includes("grieks") || title.includes("greek") || /[\u0370-\u03ff]/i.test(list.title)) return { id: "grieks", name: "Grieks" };
+  if (title.includes("latijn") || title.includes("latin")) return { id: "latijn", name: "Latijn" };
   if (title.includes("engels") || title.includes("english")) return { id: "engels", name: "Engels" };
   if (["lektion", "vraagwoorden", "getallen", "werkwoorden", "duits", "german"].some(word => title.includes(word))) return { id: "duits", name: "Duits" };
   return { id: "overig", name: "Overig" };
@@ -80,7 +81,7 @@ function groupedSubjects() {
     if (!grouped.has(subject.id)) grouped.set(subject.id, { ...subject, lists: [] });
     grouped.get(subject.id).lists.push(list);
   });
-  const order = ["duits", "grieks", "engels", "overig"];
+  const order = ["duits", "latijn", "grieks", "engels", "overig"];
   return [...grouped.values()].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
 }
 
