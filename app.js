@@ -3,6 +3,7 @@ const state = {
   selectedListId: null,
   queue: [],
   queueLabel: null,
+  practiceMode: "flashcard",
   openSubjects: new Set(["duits", "frans", "grieks"]),
   history: readLocal("dayweaveLearnHistory", readLocal("dayflowLearnHistory", [])),
   stats: readLocal("dayweaveLearnStats", readLocal("dayflowLearnStats", {})),
@@ -60,11 +61,25 @@ function normalizeList(list, listIndex) {
       question: String(card.question || ""),
       answer: String(card.answer || ""),
       exercise: ["flashcard", "typing", "listening"].includes(card.exercise) ? card.exercise : "flashcard"
-    })).filter(card => card.question && card.answer) : []
+    })).filter(card => card.question && card.answer) : [],
+    reverse: Boolean(list.reverse)
   };
 }
 
-function allCards() { return state.lists.flatMap(list => list.cards); }
+function expandedLists() {
+  const sourceLists = state.lists.flatMap(list => list.id === "french-travel-4"
+    ? [{ ...list, cards: list.cards.slice(0, 20) }, { ...list, id: "french-travel-8", title: "Unité 1 · Apprendre 8 · vocabulaire Écrire", cards: list.cards.slice(20) }]
+    : [list]);
+  return sourceLists.flatMap(list => {
+    if (!list.reverse) return [list];
+    const reverse = {
+      ...list, id: `${list.id}-nl-fr`, title: `${list.title} · NL → FR`,
+      cards: list.cards.map(card => ({ ...card, id: `${card.id}-reverse`, question: card.answer, answer: card.question, acceptedAnswers: [card.question] }))
+    };
+    return [{ ...list, title: `${list.title} · FR → NL` }, reverse];
+  });
+}
+function allCards() { return expandedLists().flatMap(list => list.cards); }
 function queueHas(id) { return state.queue.some(card => card.id === id); }
 
 function subjectFor(list) {
@@ -79,7 +94,7 @@ function subjectFor(list) {
 
 function groupedSubjects() {
   const grouped = new Map();
-  state.lists.forEach(list => {
+  expandedLists().forEach(list => {
     const subject = subjectFor(list);
     if (!grouped.has(subject.id)) grouped.set(subject.id, { ...subject, lists: [] });
     grouped.get(subject.id).lists.push(list);
@@ -150,7 +165,7 @@ function toggleSubject(id) {
 }
 
 function renderCards() {
-  const list = state.lists.find(item => item.id === state.selectedListId);
+  const list = expandedLists().find(item => item.id === state.selectedListId);
   els.selectedListTitle.textContent = list?.title || "Choose your words";
   els.addAllButton.hidden = !list?.cards.length;
   els.cardPanelHint.textContent = list ? `Choose a few words below, or tap “Use all”.` : "Choose a list first.";
@@ -177,7 +192,7 @@ function renderQueue() {
 function queueName() {
   if (state.queueLabel) return state.queueLabel;
   const listIds = [...new Set(state.queue.map(card => card.listId))];
-  if (listIds.length === 1) return state.lists.find(list => list.id === listIds[0])?.title || "Practice deck";
+  if (listIds.length === 1) return expandedLists().find(list => list.id === listIds[0])?.title || "Practice deck";
   return "Mixed practice";
 }
 
@@ -221,7 +236,7 @@ function renderProgress() {
 
 function selectList(id, navigate = true) {
   state.selectedListId = id;
-  const list = state.lists.find(item => item.id === id);
+  const list = expandedLists().find(item => item.id === id);
   if (list) state.openSubjects.add(subjectFor(list).id);
   renderLists();
   renderCards();
@@ -229,7 +244,7 @@ function selectList(id, navigate = true) {
 }
 
 function addList(id) {
-  const list = state.lists.find(item => item.id === id);
+  const list = expandedLists().find(item => item.id === id);
   if (!list) return;
   state.queue = list.cards.slice();
   state.queueLabel = null;
@@ -280,6 +295,7 @@ function startRound(forcedTitle) {
   state.round = {
     title: forcedTitle || queueName(),
     cards: shuffle(state.queue),
+    mode: state.practiceMode,
     index: 0,
     revealed: false,
     results: [],
@@ -296,7 +312,7 @@ function renderRound() {
   const complete = round.index >= round.cards.length;
   els.studyCard.hidden = complete;
   els.answerActions.hidden = complete || !round.revealed;
-  els.typingArea.hidden = complete || cardExercise(round.cards[round.index]) !== "typing" || round.revealed;
+  els.typingArea.hidden = complete || round.mode !== "open" || round.revealed;
   els.roundSummary.hidden = !complete;
   els.roundTitle.textContent = round.title;
   els.liveScore.textContent = `${round.results.filter(item => item.correct).length} correct`;
@@ -331,7 +347,7 @@ function cardExercise(card) { return card.exercise || "flashcard"; }
 function normalizeAnswer(value) {
   return String(value).toLocaleLowerCase()
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    .replace(/[’']/g, "'").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+    .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
 function checkTypedAnswer() {
@@ -467,6 +483,7 @@ els.themeButton.addEventListener("click", () => setTheme(document.documentElemen
 els.addAllButton.addEventListener("click", () => addList(state.selectedListId));
 els.clearButton.addEventListener("click", () => { state.queue = []; state.queueLabel = null; renderCards(); renderQueue(); });
 els.startButton.addEventListener("click", () => startRound());
+els.practiceMode.addEventListener("change", () => { state.practiceMode = els.practiceMode.value; });
 els.weakButton.addEventListener("click", prepareWeakWords);
 els.dropDeck.addEventListener("dragover", event => { event.preventDefault(); els.dropDeck.classList.add("drag-over"); });
 els.dropDeck.addEventListener("dragleave", () => els.dropDeck.classList.remove("drag-over"));

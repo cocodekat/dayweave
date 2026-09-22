@@ -157,6 +157,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--mint);
 .drop-content strong { font-size: clamp(1.3rem, 2.4vw, 1.75rem); letter-spacing: -.03em; }
 .drop-content > span:last-child { color: var(--muted); font-size: .9rem; }
 .deck-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.practice-mode { display: grid; gap: 7px; margin-top: 17px; }
+.practice-mode label { color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.practice-mode select { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 13px; color: var(--text); background: var(--surface); font: inherit; font-weight: 700; }
 .start-actions { display: flex; align-items: center; gap: 10px; }
 .primary-button, .secondary-button, .again-button, .correct-button, .small-button, .text-button { min-height: 44px; border: 0; border-radius: 14px; padding: 0 17px; font-weight: 800; cursor: pointer; transition: transform .2s, filter .2s, opacity .2s; }
 .primary-button { color: white; background: var(--violet-strong); box-shadow: 0 10px 22px rgba(99, 61, 221, .25); }
