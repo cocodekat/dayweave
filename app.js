@@ -3,7 +3,7 @@ const state = {
   selectedListId: null,
   queue: [],
   queueLabel: null,
-  openSubjects: new Set(["duits"]),
+  openSubjects: new Set(["duits", "frans", "grieks"]),
   history: readLocal("dayweaveLearnHistory", readLocal("dayflowLearnHistory", [])),
   stats: readLocal("dayweaveLearnStats", readLocal("dayflowLearnStats", {})),
   round: null,
@@ -16,7 +16,8 @@ const els = Object.fromEntries([
   "selectedListTitle", "addAllButton", "cardPanelHint", "wordStack", "practiceOverlay",
   "closeRoundButton", "roundTitle", "roundCounter", "liveScore", "roundProgress", "studyCard",
   "sideLabel", "questionText", "answerDivider", "answerText", "revealHint", "answerActions",
-  "againButton", "correctButton", "roundSummary", "summaryScore", "finishButton", "toast"
+  "againButton", "correctButton", "roundSummary", "summaryScore", "finishButton", "toast",
+  "typingArea", "typedAnswer", "checkAnswerButton", "listenButton", "typingFeedback"
 ].map(id => [id, document.getElementById(id)]));
 
 const icons = {
@@ -57,7 +58,8 @@ function normalizeList(list, listIndex) {
       id: String(card.id || `${id}-${cardIndex}`),
       listId: id,
       question: String(card.question || ""),
-      answer: String(card.answer || "")
+      answer: String(card.answer || ""),
+      exercise: ["flashcard", "typing", "listening"].includes(card.exercise) ? card.exercise : "flashcard"
     })).filter(card => card.question && card.answer) : []
   };
 }
@@ -68,6 +70,7 @@ function queueHas(id) { return state.queue.some(card => card.id === id); }
 function subjectFor(list) {
   const title = list.title.toLocaleLowerCase();
   if (title.includes("grieks") || title.includes("greek") || /[\u0370-\u03ff]/i.test(list.title)) return { id: "grieks", name: "Grieks" };
+  if (title.includes("frans") || title.includes("french")) return { id: "frans", name: "Frans" };
   if (title.includes("latijn") || title.includes("latin")) return { id: "latijn", name: "Latijn" };
   if (title.includes("engels") || title.includes("english")) return { id: "engels", name: "Engels" };
   if (["lektion", "vraagwoorden", "getallen", "werkwoorden", "duits", "german"].some(word => title.includes(word))) return { id: "duits", name: "Duits" };
@@ -81,7 +84,7 @@ function groupedSubjects() {
     if (!grouped.has(subject.id)) grouped.set(subject.id, { ...subject, lists: [] });
     grouped.get(subject.id).lists.push(list);
   });
-  const order = ["duits", "latijn", "grieks", "engels", "overig"];
+  const order = ["duits", "latijn", "grieks", "frans", "engels", "overig"];
   return [...grouped.values()].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
 }
 
@@ -279,7 +282,8 @@ function startRound(forcedTitle) {
     cards: shuffle(state.queue),
     index: 0,
     revealed: false,
-    results: []
+    results: [],
+    typedChecked: false
   };
   els.practiceOverlay.hidden = false;
   document.body.style.overflow = "hidden";
@@ -292,6 +296,7 @@ function renderRound() {
   const complete = round.index >= round.cards.length;
   els.studyCard.hidden = complete;
   els.answerActions.hidden = complete || !round.revealed;
+  els.typingArea.hidden = complete || cardExercise(round.cards[round.index]) !== "typing" || round.revealed;
   els.roundSummary.hidden = !complete;
   els.roundTitle.textContent = round.title;
   els.liveScore.textContent = `${round.results.filter(item => item.correct).length} correct`;
@@ -314,6 +319,46 @@ function renderRound() {
   els.revealHint.hidden = round.revealed;
   els.sideLabel.textContent = round.revealed ? "Answer" : "Question";
   els.studyCard.setAttribute("aria-label", round.revealed ? `Answer: ${card.answer}` : "Reveal answer");
+  if (!round.revealed) {
+    els.typedAnswer.value = "";
+    els.typingFeedback.textContent = "";
+    els.listenButton.hidden = cardExercise(card) !== "listening";
+  }
+}
+
+function cardExercise(card) { return card.exercise || "flashcard"; }
+
+function normalizeAnswer(value) {
+  return String(value).toLocaleLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’']/g, "'").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+function checkTypedAnswer() {
+  const round = state.round;
+  if (!round || round.revealed) return;
+  const card = round.cards[round.index];
+  const given = normalizeAnswer(els.typedAnswer.value);
+  if (!given) { els.typingFeedback.textContent = "Type an answer first."; return; }
+  const accepted = card.acceptedAnswers || [card.answer];
+  const correct = accepted.some(answer => normalizeAnswer(answer) === given);
+  els.typingFeedback.textContent = correct ? "Correct — nice work!" : "Not quite. Check the answer, then choose how it went.";
+  els.typingFeedback.classList.toggle("correct", correct);
+  if (correct) {
+    round.typedChecked = true;
+    state.round.revealed = true;
+    renderRound();
+  } else revealAnswer();
+}
+
+function speakCurrentCard() {
+  const card = state.round?.cards[state.round.index];
+  if (!card || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(card.question);
+  utterance.lang = /[\u0370-\u03ff]/.test(card.question) ? "el-GR" : "fr-FR";
+  utterance.rate = .8;
+  window.speechSynthesis.speak(utterance);
 }
 
 function revealAnswer() {
@@ -431,6 +476,9 @@ els.dropDeck.addEventListener("drop", event => {
   addList(event.dataTransfer.getData("text/dayweave-list") || event.dataTransfer.getData("text/plain"));
 });
 els.studyCard.addEventListener("click", revealAnswer);
+els.checkAnswerButton.addEventListener("click", checkTypedAnswer);
+els.typedAnswer.addEventListener("keydown", event => { if (event.key === "Enter") checkTypedAnswer(); });
+els.listenButton.addEventListener("click", speakCurrentCard);
 els.againButton.addEventListener("click", () => answer(false));
 els.correctButton.addEventListener("click", () => answer(true));
 els.closeRoundButton.addEventListener("click", closeRound);
@@ -442,6 +490,7 @@ document.addEventListener("keydown", event => {
   if (els.practiceOverlay.hidden || !state.round) return;
   if (event.key === "Escape") closeRound();
   else if (event.key === " " && !state.round.revealed) { event.preventDefault(); revealAnswer(); }
+  else if (event.key === "Enter" && !state.round.revealed) checkTypedAnswer();
   else if (state.round.revealed && event.key === "1") answer(false);
   else if (state.round.revealed && event.key === "2") answer(true);
 });
