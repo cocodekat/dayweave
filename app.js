@@ -18,7 +18,7 @@ const els = Object.fromEntries([
   "closeRoundButton", "roundTitle", "roundCounter", "liveScore", "roundProgress", "studyCard",
   "sideLabel", "questionText", "answerDivider", "answerText", "revealHint", "answerActions",
   "againButton", "correctButton", "roundSummary", "summaryScore", "finishButton", "toast",
-  "typingArea", "typedAnswer", "checkAnswerButton", "listenButton", "typingFeedback"
+  "typingArea", "typedAnswer", "checkAnswerButton", "listenButton", "typingFeedback", "practiceMode"
 ].map(id => [id, document.getElementById(id)]));
 
 const icons = {
@@ -84,8 +84,9 @@ function queueHas(id) { return state.queue.some(card => card.id === id); }
 
 function subjectFor(list) {
   const title = list.title.toLocaleLowerCase();
+  const id = String(list.id || "").toLocaleLowerCase();
   if (title.includes("grieks") || title.includes("greek") || /[\u0370-\u03ff]/i.test(list.title)) return { id: "grieks", name: "Grieks" };
-  if (title.includes("frans") || title.includes("french")) return { id: "frans", name: "Frans" };
+  if (title.includes("frans") || title.includes("french") || id.startsWith("french-")) return { id: "frans", name: "Frans" };
   if (title.includes("latijn") || title.includes("latin")) return { id: "latijn", name: "Latijn" };
   if (title.includes("engels") || title.includes("english")) return { id: "engels", name: "Engels" };
   if (["lektion", "vraagwoorden", "getallen", "werkwoorden", "duits", "german"].some(word => title.includes(word))) return { id: "duits", name: "Duits" };
@@ -101,6 +102,11 @@ function groupedSubjects() {
   });
   const order = ["duits", "latijn", "grieks", "frans", "engels", "overig"];
   return [...grouped.values()].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+}
+
+function listDisplay(list) {
+  const match = list.title.match(/^(.*) · (FR → NL|NL → FR)$/);
+  return match ? { title: match[1], direction: match[2] } : { title: list.title, direction: "" };
 }
 
 function renderAll() {
@@ -131,12 +137,15 @@ function renderLists() {
         <button class="subject-all-button" type="button" data-subject-all="${escapeAttr(subject.id)}" aria-label="Practise all ${escapeAttr(subject.name)} words">All</button>
       </div>
       <div class="subject-lists" id="subject-${escapeAttr(subject.id)}" ${isOpen ? "" : "hidden"}>
-        ${subject.lists.map(list => `
+        ${subject.lists.map(list => {
+          const display = listDisplay(list);
+          return `
           <button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
             <span class="list-icon">${icons.stack}</span>
-            <span class="list-copy"><strong>${escapeHTML(list.title)}</strong><span>${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span>
+            <span class="list-copy"><strong>${escapeHTML(display.title)}</strong><span>${display.direction ? `<b class="direction-badge">${escapeHTML(display.direction)}</b>` : ""}${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span>
             <span class="chevron">›</span>
-          </button>`).join("")}
+          </button>`;
+        }).join("")}
       </div>
     </section>`;
   }).join("");
