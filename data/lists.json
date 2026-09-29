@@ -1,76 +1,831 @@
 {
-  "exportedAt": "2026-09-17T07:10:47.830Z",
+  "exportedAt": "2026-09-29T13:58:11.905Z",
   "lists": [
     {
+      "id": "latin-start-from-zero",
+      "subject": "latin",
+      "kind": "lesson",
+      "group": "Begin hier",
+      "stage": "Stap 1",
+      "title": "Naamvallen vanaf nul",
+      "summary": "Leer eerst de begrippen voordat je de uitgangen oefent.",
       "cards": [
         {
-          "answer": "mens",
-          "id": "1e3a53a3-c885-4c87-ac5c-c1b3a0cf8262",
-          "question": "ανθρωπος"
+          "id": "latin-zero-1",
+          "question": "Wat is de nominativus?",
+          "answer": "De naamval van het onderwerp: wie of wat doet iets?"
         },
         {
-          "answer": "want, immers, namelijk",
-          "id": "fa09df01-4519-41b7-aa14-2eb19a840e0e",
-          "question": "γαρ"
+          "id": "latin-zero-2",
+          "question": "Wat is de dativus?",
+          "answer": "De naamval van het meewerkend voorwerp: aan of voor wie?"
         },
         {
-          "answer": "land, aarde",
-          "id": "ce24362d-2440-42b4-82c6-fdc5ac1ff9df",
-          "question": "γη"
+          "id": "latin-zero-3",
+          "question": "Wat is de accusativus?",
+          "answer": "De naamval van het lijdend voorwerp: wie of wat ondergaat de handeling?"
         },
         {
-          "answer": "en, maar",
-          "id": "733e367e-13c8-4bf3-9b46-cd3fdf2138f3",
-          "question": "δε, δ’"
+          "id": "latin-zero-4",
+          "question": "Wat betekent enkelvoud?",
+          "answer": "Eén persoon, dier of ding."
         },
         {
-          "answer": "boom",
-          "id": "73baf509-a93d-4a35-bd72-053aa2c946b9",
-          "question": "δενδρον"
+          "id": "latin-zero-5",
+          "question": "Wat betekent meervoud?",
+          "answer": "Meer dan één persoon, dier of ding."
         },
         {
-          "answer": "(zij/er) zijn, bestaan",
-          "id": "1d66fc3c-8a4d-4fb1-8785-7b08ceda5aaa",
-          "question": "εισι(ν)"
+          "id": "latin-zero-6",
+          "question": "Welke vier stappen gebruik je bij verbuigen?",
+          "answer": "Bepaal naamval, bepaal getal, kies verbuigingsgroep en kies de uitgang."
         },
         {
-          "answer": "daar",
-          "id": "f619ec93-53a8-4625-8c08-457d73701a0e",
-          "question": "ενταυθα bijw"
-        },
-        {
-          "answer": "daarna",
-          "id": "b7f38c97-039d-4531-9c64-7e8283baa2d0",
-          "question": "επειτα bijw"
-        },
-        {
-          "answer": "werk, taak, daad",
-          "id": "e5912eb3-8aa1-4593-a79a-fda412717d06",
-          "question": "εργον"
-        },
-        {
-          "answer": "(hij/zij/het/er) is, bestaat",
-          "id": "ea6fd314-dede-4b1c-96ec-7a5bd4d8ba5e",
-          "question": "εστι(ν)"
-        },
-        {
-          "answer": "godin",
-          "id": "e3735184-ac50-405e-be5c-50966c4f1894",
-          "question": "θεα"
-        },
-        {
-          "answer": "god",
-          "id": "93b51036-be46-4018-95c0-016e7171e91c",
-          "question": "θεος"
-        },
-        {
-          "answer": "en, ook, zelfs",
-          "id": "74ceecc2-2398-4b71-9c77-beb94982cf9d",
-          "question": "και"
+          "id": "latin-zero-7",
+          "question": "Waarvoor gebruik je de tweede woordenboekvorm?",
+          "answer": "Om de verbuigingsgroep en de stam van het woord te vinden."
         }
-      ],
-      "id": "84697cdc-13f4-4a4b-8063-b9d8fda614cf",
-      "title": "Grieks T&M ‘kai’"
+      ]
+    },
+    {
+      "id": "latin-declension-group-1",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Verbuigingsgroep 1",
+      "stage": "Stap 2",
+      "title": "Groep 1 · nom., dat. & acc.",
+      "summary": "Herken eerst naamval en getal; vul daarna de uitgang van groep 1 in.",
+      "entries": [
+        {
+          "lemma": "aqua, aquae",
+          "forms": {
+            "nominative_singular": "aqua",
+            "dative_singular": "aquae",
+            "accusative_singular": "aquam",
+            "nominative_plural": "aquae",
+            "dative_plural": "aquis",
+            "accusative_plural": "aquas"
+          }
+        },
+        {
+          "lemma": "femina, feminae",
+          "forms": {
+            "nominative_singular": "femina",
+            "dative_singular": "feminae",
+            "accusative_singular": "feminam",
+            "nominative_plural": "feminae",
+            "dative_plural": "feminis",
+            "accusative_plural": "feminas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-declension-group-2",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Verbuigingsgroep 2",
+      "stage": "Stap 2",
+      "title": "Groep 2 · nom., dat. & acc.",
+      "summary": "Oefen mannelijke én onzijdige woorden uit groep 2.",
+      "entries": [
+        {
+          "lemma": "servus, servi",
+          "forms": {
+            "nominative_singular": "servus",
+            "dative_singular": "servo",
+            "accusative_singular": "servum",
+            "nominative_plural": "servi",
+            "dative_plural": "servis",
+            "accusative_plural": "servos"
+          }
+        },
+        {
+          "lemma": "filius, filii",
+          "forms": {
+            "nominative_singular": "filius",
+            "dative_singular": "filio",
+            "accusative_singular": "filium",
+            "nominative_plural": "filii",
+            "dative_plural": "filiis",
+            "accusative_plural": "filios"
+          }
+        },
+        {
+          "lemma": "puer, pueri",
+          "forms": {
+            "nominative_singular": "puer",
+            "dative_singular": "puero",
+            "accusative_singular": "puerum",
+            "nominative_plural": "pueri",
+            "dative_plural": "pueris",
+            "accusative_plural": "pueros"
+          }
+        },
+        {
+          "lemma": "mandatum, mandati",
+          "forms": {
+            "nominative_singular": "mandatum",
+            "dative_singular": "mandato",
+            "accusative_singular": "mandatum",
+            "nominative_plural": "mandata",
+            "dative_plural": "mandatis",
+            "accusative_plural": "mandata"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-declension-group-3",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Verbuigingsgroep 3",
+      "stage": "Stap 2",
+      "title": "Groep 3 · nom., dat. & acc.",
+      "summary": "Let op de stam uit de genitivus en op onzijdige woorden.",
+      "entries": [
+        {
+          "lemma": "rex, regis",
+          "forms": {
+            "nominative_singular": "rex",
+            "dative_singular": "regi",
+            "accusative_singular": "regem",
+            "nominative_plural": "reges",
+            "dative_plural": "regibus",
+            "accusative_plural": "reges"
+          }
+        },
+        {
+          "lemma": "arbor, arboris",
+          "forms": {
+            "nominative_singular": "arbor",
+            "dative_singular": "arbori",
+            "accusative_singular": "arborem",
+            "nominative_plural": "arbores",
+            "dative_plural": "arboribus",
+            "accusative_plural": "arbores"
+          }
+        },
+        {
+          "lemma": "flumen, fluminis",
+          "forms": {
+            "nominative_singular": "flumen",
+            "dative_singular": "flumini",
+            "accusative_singular": "flumen",
+            "nominative_plural": "flumina",
+            "dative_plural": "fluminibus",
+            "accusative_plural": "flumina"
+          }
+        },
+        {
+          "lemma": "nomen, nominis",
+          "forms": {
+            "nominative_singular": "nomen",
+            "dative_singular": "nomini",
+            "accusative_singular": "nomen",
+            "nominative_plural": "nomina",
+            "dative_plural": "nominibus",
+            "accusative_plural": "nomina"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-personal-pronouns",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Persoonlijke voornaamwoorden",
+      "stage": "Stap 3",
+      "title": "Persoonlijke voornaamwoorden",
+      "summary": "1e, 2e en 3e persoon in enkelvoud en meervoud; bij de 3e persoon ook mannelijk en vrouwelijk.",
+      "entries": [
+        {
+          "lemma": "1e persoon",
+          "forms": {
+            "nominative_singular": "ego",
+            "dative_singular": "mihi",
+            "accusative_singular": "me",
+            "nominative_plural": "nos",
+            "dative_plural": "nobis",
+            "accusative_plural": "nos"
+          }
+        },
+        {
+          "lemma": "2e persoon",
+          "forms": {
+            "nominative_singular": "tu",
+            "dative_singular": "tibi",
+            "accusative_singular": "te",
+            "nominative_plural": "vos",
+            "dative_plural": "vobis",
+            "accusative_plural": "vos"
+          }
+        },
+        {
+          "lemma": "3e persoon mannelijk",
+          "forms": {
+            "nominative_singular": "is",
+            "dative_singular": "ei",
+            "accusative_singular": "eum",
+            "nominative_plural": "ei",
+            "dative_plural": "eis",
+            "accusative_plural": "eos"
+          },
+          "acceptedAnswers": {
+            "nominative_plural": [
+              "ei",
+              "ii"
+            ],
+            "dative_plural": [
+              "eis",
+              "iis"
+            ]
+          }
+        },
+        {
+          "lemma": "3e persoon vrouwelijk",
+          "forms": {
+            "nominative_singular": "ea",
+            "dative_singular": "ei",
+            "accusative_singular": "eam",
+            "nominative_plural": "eae",
+            "dative_plural": "eis",
+            "accusative_plural": "eas"
+          },
+          "acceptedAnswers": {
+            "dative_plural": [
+              "eis",
+              "iis"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-regular-verbs-lesson-1",
+      "subject": "latin",
+      "kind": "conjugation",
+      "group": "Werkwoorden",
+      "stage": "Stap 4",
+      "title": "Regelmatige werkwoorden · les 1",
+      "summary": "Infinitivus, hij/zij/het-vorm en zij-vorm (meervoud).",
+      "entries": [
+        {
+          "infinitive": "audire",
+          "thirdSingular": "audit",
+          "thirdPlural": "audiunt"
+        },
+        {
+          "infinitive": "clamare",
+          "thirdSingular": "clamat",
+          "thirdPlural": "clamant"
+        },
+        {
+          "infinitive": "iacere",
+          "thirdSingular": "iacet",
+          "thirdPlural": "iacent"
+        },
+        {
+          "infinitive": "iubere",
+          "thirdSingular": "iubet",
+          "thirdPlural": "iubent"
+        },
+        {
+          "infinitive": "lacrimare",
+          "thirdSingular": "lacrimat",
+          "thirdPlural": "lacrimant"
+        },
+        {
+          "infinitive": "necare",
+          "thirdSingular": "necat",
+          "thirdPlural": "necant"
+        },
+        {
+          "infinitive": "ponere",
+          "thirdSingular": "ponit",
+          "thirdPlural": "ponunt"
+        },
+        {
+          "infinitive": "portare",
+          "thirdSingular": "portat",
+          "thirdPlural": "portant"
+        },
+        {
+          "infinitive": "recusare",
+          "thirdSingular": "recusat",
+          "thirdPlural": "recusant"
+        },
+        {
+          "infinitive": "timere",
+          "thirdSingular": "timet",
+          "thirdPlural": "timent"
+        },
+        {
+          "infinitive": "tollere",
+          "thirdSingular": "tollit",
+          "thirdPlural": "tollunt"
+        },
+        {
+          "infinitive": "venire",
+          "thirdSingular": "venit",
+          "thirdPlural": "veniunt"
+        },
+        {
+          "infinitive": "videre",
+          "thirdSingular": "videt",
+          "thirdPlural": "vident"
+        },
+        {
+          "infinitive": "vocare",
+          "thirdSingular": "vocat",
+          "thirdPlural": "vocant"
+        }
+      ]
+    },
+    {
+      "id": "latin-regular-verbs-lesson-2",
+      "subject": "latin",
+      "kind": "conjugation",
+      "group": "Werkwoorden",
+      "stage": "Stap 4",
+      "title": "Regelmatige werkwoorden · les 2",
+      "summary": "Infinitivus, hij/zij/het-vorm en zij-vorm (meervoud).",
+      "entries": [
+        {
+          "infinitive": "accedere",
+          "thirdSingular": "accedit",
+          "thirdPlural": "accedunt"
+        },
+        {
+          "infinitive": "bibere",
+          "thirdSingular": "bibit",
+          "thirdPlural": "bibunt"
+        },
+        {
+          "infinitive": "cogitare",
+          "thirdSingular": "cogitat",
+          "thirdPlural": "cogitant"
+        },
+        {
+          "infinitive": "custodire",
+          "thirdSingular": "custodit",
+          "thirdPlural": "custodiunt"
+        },
+        {
+          "infinitive": "dare",
+          "thirdSingular": "dat",
+          "thirdPlural": "dant"
+        },
+        {
+          "infinitive": "dicere",
+          "thirdSingular": "dicit",
+          "thirdPlural": "dicunt"
+        },
+        {
+          "infinitive": "favere",
+          "thirdSingular": "favet",
+          "thirdPlural": "favent"
+        },
+        {
+          "infinitive": "praebere",
+          "thirdSingular": "praebet",
+          "thirdPlural": "praebent"
+        },
+        {
+          "infinitive": "protegere",
+          "thirdSingular": "protegit",
+          "thirdPlural": "protegunt"
+        },
+        {
+          "infinitive": "ridere",
+          "thirdSingular": "ridet",
+          "thirdPlural": "rident"
+        },
+        {
+          "infinitive": "tradere",
+          "thirdSingular": "tradit",
+          "thirdPlural": "tradunt"
+        }
+      ]
+    },
+    {
+      "id": "latin-esse",
+      "subject": "latin",
+      "kind": "conjugation",
+      "group": "Werkwoorden",
+      "stage": "Stap 4",
+      "title": "Onregelmatig werkwoord · esse",
+      "summary": "Leer deze drie vormen als één vast rijtje: esse, est, sunt.",
+      "entries": [
+        {
+          "infinitive": "esse",
+          "thirdSingular": "est",
+          "thirdPlural": "sunt"
+        }
+      ]
+    },
+    {
+      "id": "latin-vocabulary-flumen",
+      "subject": "latin",
+      "kind": "vocabulary",
+      "group": "Basiswoorden",
+      "stage": "Stap 5",
+      "title": "Basiswoorden 1 · Flumen",
+      "summary": "Alleen de woorden uit deze les op de foto.",
+      "cards": [
+        {
+          "id": "latin-v1-01",
+          "question": "ad + acc",
+          "answer": "naar, tot / bij",
+          "acceptedAnswers": [
+            "naar",
+            "tot",
+            "bij",
+            "naar, tot",
+            "naar, tot / bij"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-02",
+          "question": "aqua",
+          "answer": "water",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-03",
+          "question": "arbor, arbores",
+          "answer": "boom",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-04",
+          "question": "audire",
+          "answer": "horen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-05",
+          "question": "clamare",
+          "answer": "schreeuwen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-06",
+          "question": "et",
+          "answer": "en / ook",
+          "acceptedAnswers": [
+            "en",
+            "ook",
+            "en / ook"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-07",
+          "question": "flumen, flumina",
+          "answer": "rivier",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-08",
+          "question": "iacere",
+          "answer": "liggen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-09",
+          "question": "ibi",
+          "answer": "daar",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-10",
+          "question": "ideo",
+          "answer": "daarom",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-11",
+          "question": "in + acc",
+          "answer": "in, naar",
+          "acceptedAnswers": [
+            "in",
+            "naar",
+            "in, naar"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-12",
+          "question": "inter + acc",
+          "answer": "tussen / tijdens",
+          "acceptedAnswers": [
+            "tussen",
+            "tijdens",
+            "tussen / tijdens"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-13",
+          "question": "iubere",
+          "answer": "bevelen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-14",
+          "question": "lacrimare",
+          "answer": "huilen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-15",
+          "question": "locus",
+          "answer": "plaats",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-16",
+          "question": "mandatum",
+          "answer": "opdracht",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-17",
+          "question": "necare",
+          "answer": "doden",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-18",
+          "question": "non",
+          "answer": "niet",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-19",
+          "question": "ponere",
+          "answer": "plaatsen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-20",
+          "question": "portare",
+          "answer": "dragen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-21",
+          "question": "puer, pueri",
+          "answer": "jongen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-22",
+          "question": "recusare",
+          "answer": "weigeren",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-23",
+          "question": "rex, reges",
+          "answer": "koning",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-24",
+          "question": "servus",
+          "answer": "slaaf",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-25",
+          "question": "tamen",
+          "answer": "toch",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-26",
+          "question": "timere",
+          "answer": "vrezen, bang zijn voor",
+          "acceptedAnswers": [
+            "vrezen",
+            "bang zijn voor",
+            "vrezen, bang zijn voor"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-27",
+          "question": "tollere",
+          "answer": "optillen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-28",
+          "question": "ubi",
+          "answer": "waar",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-29",
+          "question": "venire",
+          "answer": "komen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-30",
+          "question": "videre",
+          "answer": "zien",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-31",
+          "question": "vocare",
+          "answer": "roepen / noemen",
+          "acceptedAnswers": [
+            "roepen",
+            "noemen",
+            "roepen / noemen"
+          ],
+          "exercise": "typing"
+        }
+      ]
+    },
+    {
+      "id": "latin-vocabulary-lupa",
+      "subject": "latin",
+      "kind": "vocabulary",
+      "group": "Basiswoorden",
+      "stage": "Stap 5",
+      "title": "Basiswoorden 2 · Lupa",
+      "summary": "Alleen de woorden uit deze les op de foto.",
+      "cards": [
+        {
+          "id": "latin-v2-01",
+          "question": "accedere",
+          "answer": "gaan naar / naderen",
+          "acceptedAnswers": [
+            "gaan naar",
+            "naderen",
+            "gaan naar / naderen"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-02",
+          "question": "bibere",
+          "answer": "drinken",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-03",
+          "question": "cogitare",
+          "answer": "(na)denken",
+          "acceptedAnswers": [
+            "denken",
+            "nadenken",
+            "(na)denken"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-04",
+          "question": "custodire",
+          "answer": "bewaken",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-05",
+          "question": "dare",
+          "answer": "geven",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-06",
+          "question": "deus",
+          "answer": "god",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-07",
+          "question": "dicere",
+          "answer": "zeggen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-08",
+          "question": "esse",
+          "answer": "zijn (infinitivus)",
+          "acceptedAnswers": [
+            "zijn",
+            "zijn (infinitivus)"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-09",
+          "question": "favere + dat",
+          "answer": "steun geven aan",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-10",
+          "question": "femina",
+          "answer": "vrouw",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-11",
+          "question": "filius",
+          "answer": "zoon",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-12",
+          "question": "haud",
+          "answer": "helemaal niet",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-13",
+          "question": "mater, matres",
+          "answer": "moeder",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-14",
+          "question": "nam",
+          "answer": "want",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-15",
+          "question": "nomen, nomina",
+          "answer": "naam",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-16",
+          "question": "pater, patres",
+          "answer": "vader",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-17",
+          "question": "praebere",
+          "answer": "(aan)bieden",
+          "acceptedAnswers": [
+            "aanbieden",
+            "bieden",
+            "(aan)bieden"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-18",
+          "question": "protegere",
+          "answer": "beschermen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-19",
+          "question": "ridere",
+          "answer": "lachen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-20",
+          "question": "sic",
+          "answer": "zo",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-21",
+          "question": "sicut",
+          "answer": "zoals",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-22",
+          "question": "subito",
+          "answer": "plotseling",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-23",
+          "question": "tradere",
+          "answer": "overhandigen",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-24",
+          "question": "uxor, uxores",
+          "answer": "echtgenote",
+          "exercise": "typing"
+        }
+      ]
     },
     {
       "cards": [
@@ -176,7 +931,9 @@
         }
       ],
       "id": "c1287215-ea07-4cf3-9793-7ab66d8d9e9f",
-      "title": "Lektion 1 (DE → NL)"
+      "title": "Lektion 1 (DE → NL)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -282,7 +1039,9 @@
         }
       ],
       "id": "c575c32a-c232-47f5-b9f0-f08e09d9d462",
-      "title": "Lektion 1 (NL → DE)"
+      "title": "Lektion 1 (NL → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -338,7 +1097,9 @@
         }
       ],
       "id": "0439c556-66a1-4b1d-a659-40acddbb24d2",
-      "title": "Vraagwoorden (NL → DE)"
+      "title": "Vraagwoorden (NL → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -394,7 +1155,9 @@
         }
       ],
       "id": "2c871007-98e1-4cce-9593-655b3cbb5084",
-      "title": "Vraagwoorden (DE → NL)"
+      "title": "Vraagwoorden (DE → NL)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -500,7 +1263,9 @@
         }
       ],
       "id": "b4456a3b-0656-4f13-9388-e77f7c7aa5cd",
-      "title": "Lektion 2 (DE → NL)"
+      "title": "Lektion 2 (DE → NL)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -606,7 +1371,9 @@
         }
       ],
       "id": "41e7fca3-2c56-46b8-bb24-d3cc3e589c72",
-      "title": "Lektion 2 (NL → DE)"
+      "title": "Lektion 2 (NL → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -742,7 +1509,9 @@
         }
       ],
       "id": "516dc26e-c2bb-4401-bc98-8190114380b4",
-      "title": "Getallen (cijfer → DE)"
+      "title": "Getallen (cijfer → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -878,7 +1647,9 @@
         }
       ],
       "id": "bca797ff-4849-4a59-8bc3-cb372281d223",
-      "title": "Getallen (DE → cijfer)"
+      "title": "Getallen (DE → cijfer)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -954,7 +1725,9 @@
         }
       ],
       "id": "b7652f52-d9b0-46fd-aaf5-4034ae08b7d9",
-      "title": "Werkwoorden · haben & sein (DE → NL)"
+      "title": "Werkwoorden · haben & sein (DE → NL)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -1030,7 +1803,9 @@
         }
       ],
       "id": "f7720653-2f81-41ee-8ffb-e3fa4af95d05",
-      "title": "Werkwoorden · haben & sein (NL → DE)"
+      "title": "Werkwoorden · haben & sein (NL → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -1141,7 +1916,9 @@
         }
       ],
       "id": "c66ca3dc-80e4-4556-8de3-396018dcc86d",
-      "title": "Lektion 3 (NL → DE)"
+      "title": "Lektion 3 (NL → DE)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
       "cards": [
@@ -1252,196 +2029,935 @@
         }
       ],
       "id": "d2c9251f-8946-4f91-8556-b08b05859b68",
-      "title": "Lektion 3 (DE → NL)"
+      "title": "Lektion 3 (DE → NL)",
+      "subject": "german",
+      "kind": "vocabulary"
     },
     {
-      "id": "latin-declension-1",
-      "title": "Latijn · 1e declinatie · uitgangen",
+      "id": "french-travel-1",
+      "title": "Unité 1 · Apprendre 1 · vocabulaire thématique",
+      "reverse": true,
       "cards": [
-        {"id":"lat-1-nom-sg","question":"Nominativus enkelvoud","answer":"-a"},
-        {"id":"lat-1-gen-sg","question":"Genitivus enkelvoud","answer":"-ae"},
-        {"id":"lat-1-dat-sg","question":"Dativus enkelvoud","answer":"-ae"},
-        {"id":"lat-1-acc-sg","question":"Accusativus enkelvoud","answer":"-am"},
-        {"id":"lat-1-abl-sg","question":"Ablativus enkelvoud","answer":"-ā"},
-        {"id":"lat-1-voc-sg","question":"Vocativus enkelvoud","answer":"-a"},
-        {"id":"lat-1-nom-pl","question":"Nominativus meervoud","answer":"-ae"},
-        {"id":"lat-1-gen-pl","question":"Genitivus meervoud","answer":"-ārum"},
-        {"id":"lat-1-dat-pl","question":"Dativus meervoud","answer":"-īs"},
-        {"id":"lat-1-acc-pl","question":"Accusativus meervoud","answer":"-ās"},
-        {"id":"lat-1-abl-pl","question":"Ablativus meervoud","answer":"-īs"},
-        {"id":"lat-1-voc-pl","question":"Vocativus meervoud","answer":"-ae"}
-      ]
+        {
+          "id": "fr-t1-01",
+          "question": "arriver",
+          "answer": "aankomen",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t1-02",
+          "question": "partir",
+          "answer": "vertrekken"
+        },
+        {
+          "id": "fr-t1-03",
+          "question": "voyager",
+          "answer": "reizen",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "reizen"
+          ]
+        },
+        {
+          "id": "fr-t1-04",
+          "question": "l’autoroute (f)",
+          "answer": "de autoweg"
+        },
+        {
+          "id": "fr-t1-05",
+          "question": "la destination",
+          "answer": "de bestemming"
+        },
+        {
+          "id": "fr-t1-06",
+          "question": "l’aéroport (m)",
+          "answer": "het vliegveld"
+        },
+        {
+          "id": "fr-t1-07",
+          "question": "l’avion (m)",
+          "answer": "het vliegtuig",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t1-08",
+          "question": "le train",
+          "answer": "de trein"
+        },
+        {
+          "id": "fr-t1-09",
+          "question": "la voiture",
+          "answer": "de auto"
+        },
+        {
+          "id": "fr-t1-10",
+          "question": "le bateau",
+          "answer": "de boot"
+        },
+        {
+          "id": "fr-t1-11",
+          "question": "la météo",
+          "answer": "het weerbericht"
+        },
+        {
+          "id": "fr-t1-12",
+          "question": "la Belgique",
+          "answer": "België"
+        },
+        {
+          "id": "fr-t1-13",
+          "question": "le Luxembourg",
+          "answer": "Luxemburg"
+        },
+        {
+          "id": "fr-t1-14",
+          "question": "la Suisse",
+          "answer": "Zwitserland"
+        },
+        {
+          "id": "fr-t1-15",
+          "question": "les Pays-Bas / la Hollande",
+          "answer": "Nederland"
+        },
+        {
+          "id": "fr-t1-16",
+          "question": "le Maroc",
+          "answer": "Marokko"
+        },
+        {
+          "id": "fr-t1-17",
+          "question": "la Turquie",
+          "answer": "Turkije"
+        },
+        {
+          "id": "fr-t1-18",
+          "question": "la France",
+          "answer": "Frankrijk"
+        },
+        {
+          "id": "fr-t1-19",
+          "question": "l’Espagne (f)",
+          "answer": "Spanje"
+        },
+        {
+          "id": "fr-t1-20",
+          "question": "l'Allemagne (f)",
+          "answer": "Duitsland"
+        },
+        {
+          "id": "fr-t1-21",
+          "question": "les États-Unis (m pl)",
+          "answer": "de VS"
+        },
+        {
+          "id": "fr-t1-22",
+          "question": "la bicyclette",
+          "answer": "de fiets"
+        },
+        {
+          "id": "fr-t1-23",
+          "question": "la température",
+          "answer": "de temperatuur"
+        },
+        {
+          "id": "fr-t1-24",
+          "question": "le touriste",
+          "answer": "de toerist"
+        },
+        {
+          "id": "fr-t1-25",
+          "question": "le plan",
+          "answer": "de plattegrond"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "latin-declension-2",
-      "title": "Latijn · 2e declinatie · uitgangen",
+      "id": "french-travel-2",
+      "title": "Unité 1 · Apprendre 2 · vocabulaire Lire",
+      "reverse": true,
       "cards": [
-        {"id":"lat-2-nom-sg","question":"Nominativus enkelvoud","answer":"-us / -er (m.), -um (o.)"},
-        {"id":"lat-2-gen-sg","question":"Genitivus enkelvoud","answer":"-ī"},
-        {"id":"lat-2-dat-sg","question":"Dativus enkelvoud","answer":"-ō"},
-        {"id":"lat-2-acc-sg","question":"Accusativus enkelvoud","answer":"-um"},
-        {"id":"lat-2-abl-sg","question":"Ablativus enkelvoud","answer":"-ō"},
-        {"id":"lat-2-voc-sg","question":"Vocativus enkelvoud","answer":"-e bij -us; = nominativus bij -er en onzijdig"},
-        {"id":"lat-2-nom-pl","question":"Nominativus meervoud","answer":"-ī (m.), -a (o.)"},
-        {"id":"lat-2-gen-pl","question":"Genitivus meervoud","answer":"-ōrum"},
-        {"id":"lat-2-dat-pl","question":"Dativus meervoud","answer":"-īs"},
-        {"id":"lat-2-acc-pl","question":"Accusativus meervoud","answer":"-ōs (m.), -a (o.)"},
-        {"id":"lat-2-abl-pl","question":"Ablativus meervoud","answer":"-īs"},
-        {"id":"lat-2-voc-pl","question":"Vocativus meervoud","answer":"-ī (m.), -a (o.)"}
-      ]
+        {
+          "id": "fr-t2-01",
+          "question": "le désastre",
+          "answer": "de ramp"
+        },
+        {
+          "id": "fr-t2-02",
+          "question": "le début",
+          "answer": "het begin"
+        },
+        {
+          "id": "fr-t2-03",
+          "question": "le voyage",
+          "answer": "de reis"
+        },
+        {
+          "id": "fr-t2-04",
+          "question": "rouler",
+          "answer": "rijden",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t2-05",
+          "question": "la frontière",
+          "answer": "de grens"
+        },
+        {
+          "id": "fr-t2-06",
+          "question": "le péage",
+          "answer": "de tol"
+        },
+        {
+          "id": "fr-t2-07",
+          "question": "l’arrivée (f)",
+          "answer": "de aankomst"
+        },
+        {
+          "id": "fr-t2-08",
+          "question": "avoir mal au cœur",
+          "answer": "misselijk zijn"
+        },
+        {
+          "id": "fr-t2-09",
+          "question": "garer",
+          "answer": "parkeren",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "parkeren"
+          ]
+        },
+        {
+          "id": "fr-t2-10",
+          "question": "à cause de",
+          "answer": "vanwege"
+        },
+        {
+          "id": "fr-t2-11",
+          "question": "les travaux (m pl)",
+          "answer": "de wegwerkzaamheden"
+        },
+        {
+          "id": "fr-t2-12",
+          "question": "le bouchon",
+          "answer": "de file"
+        },
+        {
+          "id": "fr-t2-13",
+          "question": "le départ",
+          "answer": "het vertrek"
+        },
+        {
+          "id": "fr-t2-14",
+          "question": "prendre un ticket",
+          "answer": "een kaartje nemen"
+        },
+        {
+          "id": "fr-t2-15",
+          "question": "le panneau",
+          "answer": "het (verkeers)bord"
+        },
+        {
+          "id": "fr-t2-16",
+          "question": "quitter",
+          "answer": "verlaten"
+        },
+        {
+          "id": "fr-t2-17",
+          "question": "la route",
+          "answer": "de weg"
+        },
+        {
+          "id": "fr-t2-18",
+          "question": "la sortie",
+          "answer": "de afrit"
+        },
+        {
+          "id": "fr-t2-19",
+          "question": "la déviation",
+          "answer": "de omleiding"
+        },
+        {
+          "id": "fr-t2-20",
+          "question": "sortir",
+          "answer": "uitgaan, naar buiten gaan",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t2-21",
+          "question": "la station-service",
+          "answer": "het tankstation"
+        },
+        {
+          "id": "fr-t2-22",
+          "question": "le retour",
+          "answer": "de terugkeer, terugreis"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "latin-declension-3",
-      "title": "Latijn · 3e declinatie · uitgangen",
+      "id": "french-travel-3",
+      "title": "Unité 1 · Apprendre 4 · vocabulaire Écouter",
+      "reverse": true,
       "cards": [
-        {"id":"lat-3-nom-sg","question":"Nominativus enkelvoud","answer":"wisselend: de woordenboekvorm"},
-        {"id":"lat-3-gen-sg","question":"Genitivus enkelvoud","answer":"-is"},
-        {"id":"lat-3-dat-sg","question":"Dativus enkelvoud","answer":"-ī"},
-        {"id":"lat-3-acc-sg","question":"Accusativus enkelvoud","answer":"-em (m./v.), = nominativus (o.)"},
-        {"id":"lat-3-abl-sg","question":"Ablativus enkelvoud","answer":"-e; soms -ī bij i-stammen"},
-        {"id":"lat-3-voc-sg","question":"Vocativus enkelvoud","answer":"= nominativus"},
-        {"id":"lat-3-nom-pl","question":"Nominativus meervoud","answer":"-ēs (m./v.), -a of -ia (o.)"},
-        {"id":"lat-3-gen-pl","question":"Genitivus meervoud","answer":"-um; -ium bij i-stammen"},
-        {"id":"lat-3-dat-pl","question":"Dativus meervoud","answer":"-ibus"},
-        {"id":"lat-3-acc-pl","question":"Accusativus meervoud","answer":"-ēs/-īs (m./v.), -a of -ia (o.)"},
-        {"id":"lat-3-abl-pl","question":"Ablativus meervoud","answer":"-ibus"},
-        {"id":"lat-3-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
-      ]
+        {
+          "id": "fr-t3-01",
+          "question": "le guichet",
+          "answer": "het loket"
+        },
+        {
+          "id": "fr-t3-02",
+          "question": "dépêche-toi !",
+          "answer": "haast je!"
+        },
+        {
+          "id": "fr-t3-03",
+          "question": "la queue",
+          "answer": "de rij"
+        },
+        {
+          "id": "fr-t3-04",
+          "question": "la direction",
+          "answer": "de richting"
+        },
+        {
+          "id": "fr-t3-05",
+          "question": "changer",
+          "answer": "overstappen"
+        },
+        {
+          "id": "fr-t3-06",
+          "question": "descendre",
+          "answer": "uitstappen",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t3-07",
+          "question": "la gare",
+          "answer": "het (trein)station"
+        },
+        {
+          "id": "fr-t3-08",
+          "question": "rater",
+          "answer": "missen"
+        },
+        {
+          "id": "fr-t3-09",
+          "question": "traverser",
+          "answer": "oversteken"
+        },
+        {
+          "id": "fr-t3-10",
+          "question": "la ligne",
+          "answer": "de lijn (metro, bus, tram)"
+        },
+        {
+          "id": "fr-t3-11",
+          "question": "l’itinéraire (m)",
+          "answer": "de reisroute"
+        },
+        {
+          "id": "fr-t3-12",
+          "question": "l’aller-simple (m)",
+          "answer": "het enkeltje"
+        },
+        {
+          "id": "fr-t3-13",
+          "question": "l’aller-retour (m)",
+          "answer": "het retourtje"
+        },
+        {
+          "id": "fr-t3-14",
+          "question": "le billet",
+          "answer": "het (trein)kaartje"
+        },
+        {
+          "id": "fr-t3-15",
+          "question": "le quai",
+          "answer": "het perron"
+        },
+        {
+          "id": "fr-t3-16",
+          "question": "la voie",
+          "answer": "het spoor"
+        },
+        {
+          "id": "fr-t3-17",
+          "question": "le retard",
+          "answer": "de vertraging"
+        },
+        {
+          "id": "fr-t3-18",
+          "question": "le vol",
+          "answer": "de vlucht"
+        },
+        {
+          "id": "fr-t3-19",
+          "question": "direct",
+          "answer": "rechtstreeks"
+        },
+        {
+          "id": "fr-t3-20",
+          "question": "occupé",
+          "answer": "bezet"
+        },
+        {
+          "id": "fr-t3-21",
+          "question": "une place debout",
+          "answer": "een staanplaats"
+        },
+        {
+          "id": "fr-t3-22",
+          "question": "une place assise",
+          "answer": "een zitplaats"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "latin-declension-4",
-      "title": "Latijn · 4e declinatie · uitgangen",
+      "id": "french-travel-4",
+      "title": "Unité 1 · Apprendre 6 · vocabulaire Parler",
+      "reverse": true,
       "cards": [
-        {"id":"lat-4-nom-sg","question":"Nominativus enkelvoud","answer":"-us (m./v.), -ū (o.)"},
-        {"id":"lat-4-gen-sg","question":"Genitivus enkelvoud","answer":"-ūs"},
-        {"id":"lat-4-dat-sg","question":"Dativus enkelvoud","answer":"-uī (m./v.), -ū (o.)"},
-        {"id":"lat-4-acc-sg","question":"Accusativus enkelvoud","answer":"-um (m./v.), -ū (o.)"},
-        {"id":"lat-4-abl-sg","question":"Ablativus enkelvoud","answer":"-ū"},
-        {"id":"lat-4-voc-sg","question":"Vocativus enkelvoud","answer":"= nominativus"},
-        {"id":"lat-4-nom-pl","question":"Nominativus meervoud","answer":"-ūs (m./v.), -ua (o.)"},
-        {"id":"lat-4-gen-pl","question":"Genitivus meervoud","answer":"-uum"},
-        {"id":"lat-4-dat-pl","question":"Dativus meervoud","answer":"-ibus"},
-        {"id":"lat-4-acc-pl","question":"Accusativus meervoud","answer":"-ūs (m./v.), -ua (o.)"},
-        {"id":"lat-4-abl-pl","question":"Ablativus meervoud","answer":"-ibus"},
-        {"id":"lat-4-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
-      ]
+        {
+          "id": "fr-t4-01",
+          "question": "le terminus",
+          "answer": "het eindpunt"
+        },
+        {
+          "id": "fr-t4-02",
+          "question": "dormir",
+          "answer": "slapen",
+          "exercise": "listening"
+        },
+        {
+          "id": "fr-t4-03",
+          "question": "fatigué(e)",
+          "answer": "vermoeid"
+        },
+        {
+          "id": "fr-t4-04",
+          "question": "assieds-toi !",
+          "answer": "ga zitten"
+        },
+        {
+          "id": "fr-t4-05",
+          "question": "la carte Navigo",
+          "answer": "de OV-chipkaart"
+        },
+        {
+          "id": "fr-t4-06",
+          "question": "être pressé",
+          "answer": "haast hebben"
+        },
+        {
+          "id": "fr-t4-07",
+          "question": "j’ouvre (ouvrir)",
+          "answer": "ik open (openen)"
+        },
+        {
+          "id": "fr-t4-08",
+          "question": "le voyageur",
+          "answer": "de reiziger"
+        },
+        {
+          "id": "fr-t4-09",
+          "question": "simple",
+          "answer": "eenvoudig"
+        },
+        {
+          "id": "fr-t4-10",
+          "question": "l’escalator (m)",
+          "answer": "de roltrap"
+        },
+        {
+          "id": "fr-t4-11",
+          "question": "de rien",
+          "answer": "geen dank"
+        },
+        {
+          "id": "fr-t4-12",
+          "question": "être en retard",
+          "answer": "te laat zijn"
+        },
+        {
+          "id": "fr-t4-13",
+          "question": "le distributeur (automatique)",
+          "answer": "de kaartjesautomaat"
+        },
+        {
+          "id": "fr-t4-14",
+          "question": "la carte bancaire",
+          "answer": "de bankpas"
+        },
+        {
+          "id": "fr-t4-15",
+          "question": "avoir envie de",
+          "answer": "zin hebben om"
+        },
+        {
+          "id": "fr-t4-16",
+          "question": "j’en ai marre",
+          "answer": "ik ben het zat"
+        },
+        {
+          "id": "fr-t4-17",
+          "question": "le trajet",
+          "answer": "het traject, de route"
+        },
+        {
+          "id": "fr-t4-18",
+          "question": "le pont",
+          "answer": "de brug"
+        },
+        {
+          "id": "fr-t4-19",
+          "question": "le carrefour",
+          "answer": "het kruispunt"
+        },
+        {
+          "id": "fr-t4-20",
+          "question": "le rondpoint",
+          "answer": "de rotonde"
+        },
+        {
+          "id": "fr-t4-21",
+          "question": "quinze jours",
+          "answer": "twee weken"
+        },
+        {
+          "id": "fr-t4-22",
+          "question": "l’avantage (m)",
+          "answer": "het voordeel"
+        },
+        {
+          "id": "fr-t4-23",
+          "question": "bronzer",
+          "answer": "bruin worden"
+        },
+        {
+          "id": "fr-t4-24",
+          "question": "la randonnée",
+          "answer": "de wandeltocht"
+        },
+        {
+          "id": "fr-t4-25",
+          "question": "profiter de",
+          "answer": "genieten van"
+        },
+        {
+          "id": "fr-t4-26",
+          "question": "revenir",
+          "answer": "terugkomen"
+        },
+        {
+          "id": "fr-t4-27",
+          "question": "faire de l’escalade",
+          "answer": "klimmen"
+        },
+        {
+          "id": "fr-t4-28",
+          "question": "c’était (être)",
+          "answer": "het was"
+        },
+        {
+          "id": "fr-t4-29",
+          "question": "j’avais (avoir)",
+          "answer": "ik had"
+        },
+        {
+          "id": "fr-t4-30",
+          "question": "tout le temps",
+          "answer": "de hele tijd"
+        },
+        {
+          "id": "fr-t4-31",
+          "question": "louer",
+          "answer": "huren"
+        },
+        {
+          "id": "fr-t4-32",
+          "question": "bref",
+          "answer": "kortom"
+        },
+        {
+          "id": "fr-t4-33",
+          "question": "les jeunes (m pl)",
+          "answer": "de jongeren"
+        },
+        {
+          "id": "fr-t4-34",
+          "question": "l’étranger (m)",
+          "answer": "het buitenland"
+        },
+        {
+          "id": "fr-t4-35",
+          "question": "rester",
+          "answer": "blijven"
+        },
+        {
+          "id": "fr-t4-36",
+          "question": "la montagne",
+          "answer": "de bergen, het gebergte"
+        },
+        {
+          "id": "fr-t4-37",
+          "question": "rencontrer",
+          "answer": "ontmoeten"
+        },
+        {
+          "id": "fr-t4-38",
+          "question": "faire du camping",
+          "answer": "kamperen"
+        },
+        {
+          "id": "fr-t4-39",
+          "question": "la tente",
+          "answer": "de tent"
+        },
+        {
+          "id": "fr-t4-40",
+          "question": "se baigner",
+          "answer": "zwemmen"
+        },
+        {
+          "id": "fr-t4-41",
+          "question": "le soleil",
+          "answer": "de zon"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "latin-declension-5",
-      "title": "Latijn · 5e declinatie · uitgangen",
+      "id": "french-travel-7",
+      "title": "Unité 1 · Apprendre 7 · phrases Parler",
+      "reverse": true,
       "cards": [
-        {"id":"lat-5-nom-sg","question":"Nominativus enkelvoud","answer":"-ēs"},
-        {"id":"lat-5-gen-sg","question":"Genitivus enkelvoud","answer":"-eī / -ēī"},
-        {"id":"lat-5-dat-sg","question":"Dativus enkelvoud","answer":"-eī / -ēī"},
-        {"id":"lat-5-acc-sg","question":"Accusativus enkelvoud","answer":"-em"},
-        {"id":"lat-5-abl-sg","question":"Ablativus enkelvoud","answer":"-ē"},
-        {"id":"lat-5-voc-sg","question":"Vocativus enkelvoud","answer":"-ēs"},
-        {"id":"lat-5-nom-pl","question":"Nominativus meervoud","answer":"-ēs"},
-        {"id":"lat-5-gen-pl","question":"Genitivus meervoud","answer":"-ērum"},
-        {"id":"lat-5-dat-pl","question":"Dativus meervoud","answer":"-ēbus"},
-        {"id":"lat-5-acc-pl","question":"Accusativus meervoud","answer":"-ēs"},
-        {"id":"lat-5-abl-pl","question":"Ablativus meervoud","answer":"-ēbus"},
-        {"id":"lat-5-voc-pl","question":"Vocativus meervoud","answer":"-ēs"}
-      ]
+        {
+          "id": "fr-t7-01",
+          "question": "Vous pouvez m'aider, s'il vous plait ?",
+          "answer": "Kunt u mij alstublieft helpen?"
+        },
+        {
+          "id": "fr-t7-02",
+          "question": "Le train s'arrête à Poitiers ?",
+          "answer": "Stopt de trein in Poitiers?"
+        },
+        {
+          "id": "fr-t7-03",
+          "question": "Dans cinq minutes, il faut changer à Belleville.",
+          "answer": "Over vijf minuten moeten we overstappen bij Belleville."
+        },
+        {
+          "id": "fr-t7-04",
+          "question": "On descend où ?",
+          "answer": "Waar stappen we uit?"
+        },
+        {
+          "id": "fr-t7-05",
+          "question": "Tu dois payer par carte bancaire.",
+          "answer": "Je moet met een pinpas betalen."
+        },
+        {
+          "id": "fr-t7-06",
+          "question": "Le RER part de quelle voie ?",
+          "answer": "Vanaf welk spoor vertrekt de RER?"
+        },
+        {
+          "id": "fr-t7-07",
+          "question": "Cela prend combien de temps ? Environ trente minutes ?",
+          "answer": "Hoeveel tijd kost dat? Ongeveer dertig minuten?"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "greek-declension-1",
-      "title": "Grieks · 1e declinatie · uitgangen",
+      "id": "french-etre-avoir",
+      "title": "Unité 1 · Apprendre 3 · être & avoir",
       "cards": [
-        {"id":"grc-1-nom-sg","question":"Nominativus enkelvoud","answer":"-η/-α (v.), -ης/-ας (m.)"},
-        {"id":"grc-1-gen-sg","question":"Genitivus enkelvoud","answer":"-ης/-ας (v.), -ου (m.)"},
-        {"id":"grc-1-dat-sg","question":"Dativus enkelvoud","answer":"-ῃ / -ᾳ"},
-        {"id":"grc-1-acc-sg","question":"Accusativus enkelvoud","answer":"-ην / -αν"},
-        {"id":"grc-1-voc-sg","question":"Vocativus enkelvoud","answer":"-η/-α (v.), meestal -α (m.)"},
-        {"id":"grc-1-nom-pl","question":"Nominativus meervoud","answer":"-αι"},
-        {"id":"grc-1-gen-pl","question":"Genitivus meervoud","answer":"-ῶν"},
-        {"id":"grc-1-dat-pl","question":"Dativus meervoud","answer":"-αις"},
-        {"id":"grc-1-acc-pl","question":"Accusativus meervoud","answer":"-ας"},
-        {"id":"grc-1-voc-pl","question":"Vocativus meervoud","answer":"-αι"}
-      ]
+        {
+          "id": "fr-g1-01",
+          "question": "je suis",
+          "answer": "ik ben",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "ik ben"
+          ]
+        },
+        {
+          "id": "fr-g1-02",
+          "question": "tu es",
+          "answer": "jij bent"
+        },
+        {
+          "id": "fr-g1-03",
+          "question": "il / elle / on est",
+          "answer": "hij / zij / men is"
+        },
+        {
+          "id": "fr-g1-04",
+          "question": "nous sommes",
+          "answer": "wij zijn"
+        },
+        {
+          "id": "fr-g1-05",
+          "question": "vous êtes",
+          "answer": "jullie zijn, u bent"
+        },
+        {
+          "id": "fr-g1-06",
+          "question": "ils / elles sont",
+          "answer": "zij zijn"
+        },
+        {
+          "id": "fr-g1-07",
+          "question": "j’ai",
+          "answer": "ik heb",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "ik heb"
+          ]
+        },
+        {
+          "id": "fr-g1-08",
+          "question": "tu as",
+          "answer": "jij hebt"
+        },
+        {
+          "id": "fr-g1-09",
+          "question": "il / elle / on a",
+          "answer": "hij / zij / men heeft"
+        },
+        {
+          "id": "fr-g1-10",
+          "question": "nous avons",
+          "answer": "wij hebben"
+        },
+        {
+          "id": "fr-g1-11",
+          "question": "vous avez",
+          "answer": "jullie hebben, u heeft"
+        },
+        {
+          "id": "fr-g1-12",
+          "question": "ils / elles ont",
+          "answer": "zij hebben"
+        },
+        {
+          "id": "fr-g1-13",
+          "question": "Het is",
+          "answer": "c’est"
+        },
+        {
+          "id": "fr-g1-14",
+          "question": "Wij zijn (twee mogelijkheden)",
+          "answer": "on est / nous sommes"
+        },
+        {
+          "id": "fr-g1-15",
+          "question": "j’ai été",
+          "answer": "ik ben geweest"
+        },
+        {
+          "id": "fr-g1-16",
+          "question": "nous avons eu",
+          "answer": "wij hebben gehad"
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "greek-declension-2",
-      "title": "Grieks · 2e declinatie · uitgangen",
+      "id": "french-passe-compose",
+      "title": "Unité 1 · Apprendre 5 · passé composé avec avoir",
       "cards": [
-        {"id":"grc-2-nom-sg","question":"Nominativus enkelvoud","answer":"-ος (m./v.), -ον (o.)"},
-        {"id":"grc-2-gen-sg","question":"Genitivus enkelvoud","answer":"-ου"},
-        {"id":"grc-2-dat-sg","question":"Dativus enkelvoud","answer":"-ῳ"},
-        {"id":"grc-2-acc-sg","question":"Accusativus enkelvoud","answer":"-ον"},
-        {"id":"grc-2-voc-sg","question":"Vocativus enkelvoud","answer":"-ε (m./v.), -ον (o.)"},
-        {"id":"grc-2-nom-pl","question":"Nominativus meervoud","answer":"-οι (m./v.), -α (o.)"},
-        {"id":"grc-2-gen-pl","question":"Genitivus meervoud","answer":"-ων"},
-        {"id":"grc-2-dat-pl","question":"Dativus meervoud","answer":"-οις"},
-        {"id":"grc-2-acc-pl","question":"Accusativus meervoud","answer":"-ους (m./v.), -α (o.)"},
-        {"id":"grc-2-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
-      ]
+        {
+          "id": "fr-g2-01",
+          "question": "Waaruit bestaat de pa/ssé composé?",
+          "answer": "een hulpwerkwoord + een voltooid deelwoord"
+        },
+        {
+          "id": "fr-g2-02",
+          "question": "Welk hulpwerkwoord gebruik je meestal?",
+          "answer": "avoir"
+        },
+        {
+          "id": "fr-g2-03",
+          "question": "voltooid deelwoord van danser",
+          "answer": "dansé",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "dansé"
+          ]
+        },
+        {
+          "id": "fr-g2-04",
+          "question": "voltooid deelwoord van jouer",
+          "answer": "joué"
+        },
+        {
+          "id": "fr-g2-05",
+          "question": "voltooid deelwoord van acheter",
+          "answer": "acheté"
+        },
+        {
+          "id": "fr-g2-06",
+          "question": "voltooid deelwoord van avoir",
+          "answer": "eu"
+        },
+        {
+          "id": "fr-g2-07",
+          "question": "voltooid deelwoord van être",
+          "answer": "été"
+        },
+        {
+          "id": "fr-g2-08",
+          "question": "voltooid deelwoord van faire",
+          "answer": "fait"
+        },
+        {
+          "id": "fr-g2-09",
+          "question": "voltooid deelwoord van mettre",
+          "answer": "mis"
+        },
+        {
+          "id": "fr-g2-10",
+          "question": "voltooid deelwoord van prendre",
+          "answer": "pris"
+        },
+        {
+          "id": "fr-g2-11",
+          "question": "voltooid deelwoord van vouloir",
+          "answer": "voulu"
+        },
+        {
+          "id": "fr-g2-12",
+          "question": "Nous avons regardé la télé.",
+          "answer": "Wij hebben naar de tv gekeken."
+        },
+        {
+          "id": "fr-g2-13",
+          "question": "Tu as fait des photos ?",
+          "answer": "Heb je foto's gemaakt?"
+        },
+        {
+          "id": "fr-g2-14",
+          "question": "Elle a voulu avoir un chien.",
+          "answer": "Ze wilde een hond hebben."
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     },
     {
-      "id": "greek-declension-3",
-      "title": "Grieks · 3e declinatie · uitgangen",
+      "id": "french-passe-etre",
+      "title": "Unité 1 · Apprendre 5 · passé composé avec être",
       "cards": [
-        {"id":"grc-3-nom-sg","question":"Nominativus enkelvoud","answer":"wisselend: de woordenboekvorm"},
-        {"id":"grc-3-gen-sg","question":"Genitivus enkelvoud","answer":"-ος"},
-        {"id":"grc-3-dat-sg","question":"Dativus enkelvoud","answer":"-ι"},
-        {"id":"grc-3-acc-sg","question":"Accusativus enkelvoud","answer":"-α of -ν (m./v.), = nominativus (o.)"},
-        {"id":"grc-3-voc-sg","question":"Vocativus enkelvoud","answer":"wisselend; vaak = nominativus"},
-        {"id":"grc-3-nom-pl","question":"Nominativus meervoud","answer":"-ες (m./v.), -α (o.)"},
-        {"id":"grc-3-gen-pl","question":"Genitivus meervoud","answer":"-ων"},
-        {"id":"grc-3-dat-pl","question":"Dativus meervoud","answer":"-σι(ν)"},
-        {"id":"grc-3-acc-pl","question":"Accusativus meervoud","answer":"-ας (m./v.), -α (o.)"},
-        {"id":"grc-3-voc-pl","question":"Vocativus meervoud","answer":"= nominativus meervoud"}
-      ]
-    },
-    {
-      "id":"greek-new-nl","title":"Grieks · woordenschat · Grieks → NL","cards":[
-        {"id":"grc-new-01","question":"μαχη","answer":"strijd, gevecht"},{"id":"grc-new-02","question":"ο, η, το","answer":"de, het"},{"id":"grc-new-03","question":"ου, ουκ, ουχ","answer":"niet"},{"id":"grc-new-04","question":"πετρα","answer":"rots, rotsblok"},{"id":"grc-new-05","question":"ποταμος","answer":"rivier"},{"id":"grc-new-06","question":"πρωτον bijw","answer":"eerst"},{"id":"grc-new-07","question":"τοτε bijw","answer":"dan, toen, op dat moment"}
-      ]
-    },
-    {
-      "id":"greek-new-gr","title":"Grieks · woordenschat · NL → Grieks","cards":[
-        {"id":"grc-rev-01","question":"strijd, gevecht","answer":"μαχη","exercise":"typing","acceptedAnswers":["μαχη","μάχη"]},{"id":"grc-rev-02","question":"de, het","answer":"ο, η, το","exercise":"typing","acceptedAnswers":["ο η το","ο, η, το"]},{"id":"grc-rev-03","question":"niet","answer":"ου, ουκ, ουχ","exercise":"typing","acceptedAnswers":["ου ουκ ουχ","ου, ουκ, ουχ"]},{"id":"grc-rev-04","question":"rots, rotsblok","answer":"πετρα","exercise":"typing","acceptedAnswers":["πετρα","πέτρα"]},{"id":"grc-rev-05","question":"rivier","answer":"ποταμος","exercise":"typing","acceptedAnswers":["ποταμος","ποταμός"]},{"id":"grc-rev-06","question":"eerst","answer":"πρωτον","exercise":"typing","acceptedAnswers":["πρωτον","πρῶτον"]},{"id":"grc-rev-07","question":"dan, toen, op dat moment","answer":"τοτε","exercise":"typing","acceptedAnswers":["τοτε","τότε"]}
-      ]
-    },
-    {
-      "id":"french-travel-1","title":"Unité 1 · Apprendre 1 · vocabulaire thématique","reverse":true,"cards":[
-        {"id":"fr-t1-01","question":"arriver","answer":"aankomen","exercise":"listening"},{"id":"fr-t1-02","question":"partir","answer":"vertrekken"},{"id":"fr-t1-03","question":"voyager","answer":"reizen","exercise":"typing","acceptedAnswers":["reizen"]},{"id":"fr-t1-04","question":"l’autoroute (f)","answer":"de autoweg"},{"id":"fr-t1-05","question":"la destination","answer":"de bestemming"},{"id":"fr-t1-06","question":"l’aéroport (m)","answer":"het vliegveld"},{"id":"fr-t1-07","question":"l’avion (m)","answer":"het vliegtuig","exercise":"listening"},{"id":"fr-t1-08","question":"le train","answer":"de trein"},{"id":"fr-t1-09","question":"la voiture","answer":"de auto"},{"id":"fr-t1-10","question":"le bateau","answer":"de boot"},{"id":"fr-t1-11","question":"la météo","answer":"het weerbericht"},{"id":"fr-t1-12","question":"la Belgique","answer":"België"},{"id":"fr-t1-13","question":"le Luxembourg","answer":"Luxemburg"},{"id":"fr-t1-14","question":"la Suisse","answer":"Zwitserland"},{"id":"fr-t1-15","question":"les Pays-Bas / la Hollande","answer":"Nederland"},{"id":"fr-t1-16","question":"le Maroc","answer":"Marokko"},{"id":"fr-t1-17","question":"la Turquie","answer":"Turkije"},{"id":"fr-t1-18","question":"la France","answer":"Frankrijk"},{"id":"fr-t1-19","question":"l’Espagne (f)","answer":"Spanje"},{"id":"fr-t1-20","question":"l'Allemagne (f)","answer":"Duitsland"},{"id":"fr-t1-21","question":"les États-Unis (m pl)","answer":"de VS"},{"id":"fr-t1-22","question":"la bicyclette","answer":"de fiets"},{"id":"fr-t1-23","question":"la température","answer":"de temperatuur"},{"id":"fr-t1-24","question":"le touriste","answer":"de toerist"},{"id":"fr-t1-25","question":"le plan","answer":"de plattegrond"}
-      ]
-    },
-    {
-      "id":"french-travel-2","title":"Unité 1 · Apprendre 2 · vocabulaire Lire","reverse":true,"cards":[
-        {"id":"fr-t2-01","question":"le désastre","answer":"de ramp"},{"id":"fr-t2-02","question":"le début","answer":"het begin"},{"id":"fr-t2-03","question":"le voyage","answer":"de reis"},{"id":"fr-t2-04","question":"rouler","answer":"rijden","exercise":"listening"},{"id":"fr-t2-05","question":"la frontière","answer":"de grens"},{"id":"fr-t2-06","question":"le péage","answer":"de tol"},{"id":"fr-t2-07","question":"l’arrivée (f)","answer":"de aankomst"},{"id":"fr-t2-08","question":"avoir mal au cœur","answer":"misselijk zijn"},{"id":"fr-t2-09","question":"garer","answer":"parkeren","exercise":"typing","acceptedAnswers":["parkeren"]},{"id":"fr-t2-10","question":"à cause de","answer":"vanwege"},{"id":"fr-t2-11","question":"les travaux (m pl)","answer":"de wegwerkzaamheden"},{"id":"fr-t2-12","question":"le bouchon","answer":"de file"},{"id":"fr-t2-13","question":"le départ","answer":"het vertrek"},{"id":"fr-t2-14","question":"prendre un ticket","answer":"een kaartje nemen"},{"id":"fr-t2-15","question":"le panneau","answer":"het (verkeers)bord"},{"id":"fr-t2-16","question":"quitter","answer":"verlaten"},{"id":"fr-t2-17","question":"la route","answer":"de weg"},{"id":"fr-t2-18","question":"la sortie","answer":"de afrit"},{"id":"fr-t2-19","question":"la déviation","answer":"de omleiding"},{"id":"fr-t2-20","question":"sortir","answer":"uitgaan, naar buiten gaan","exercise":"listening"},{"id":"fr-t2-21","question":"la station-service","answer":"het tankstation"},{"id":"fr-t2-22","question":"le retour","answer":"de terugkeer, terugreis"}
-      ]
-    },
-    {
-      "id":"french-travel-3","title":"Unité 1 · Apprendre 4 · vocabulaire Écouter","reverse":true,"cards":[
-        {"id":"fr-t3-01","question":"le guichet","answer":"het loket"},{"id":"fr-t3-02","question":"dépêche-toi !","answer":"haast je!"},{"id":"fr-t3-03","question":"la queue","answer":"de rij"},{"id":"fr-t3-04","question":"la direction","answer":"de richting"},{"id":"fr-t3-05","question":"changer","answer":"overstappen"},{"id":"fr-t3-06","question":"descendre","answer":"uitstappen","exercise":"listening"},{"id":"fr-t3-07","question":"la gare","answer":"het (trein)station"},{"id":"fr-t3-08","question":"rater","answer":"missen"},{"id":"fr-t3-09","question":"traverser","answer":"oversteken"},{"id":"fr-t3-10","question":"la ligne","answer":"de lijn (metro, bus, tram)"},{"id":"fr-t3-11","question":"l’itinéraire (m)","answer":"de reisroute"},{"id":"fr-t3-12","question":"l’aller-simple (m)","answer":"het enkeltje"},{"id":"fr-t3-13","question":"l’aller-retour (m)","answer":"het retourtje"},{"id":"fr-t3-14","question":"le billet","answer":"het (trein)kaartje"},{"id":"fr-t3-15","question":"le quai","answer":"het perron"},{"id":"fr-t3-16","question":"la voie","answer":"het spoor"},{"id":"fr-t3-17","question":"le retard","answer":"de vertraging"},{"id":"fr-t3-18","question":"le vol","answer":"de vlucht"},{"id":"fr-t3-19","question":"direct","answer":"rechtstreeks"},{"id":"fr-t3-20","question":"occupé","answer":"bezet"},{"id":"fr-t3-21","question":"une place debout","answer":"een staanplaats"},{"id":"fr-t3-22","question":"une place assise","answer":"een zitplaats"}
-      ]
-    },
-    {
-      "id":"french-travel-4","title":"Unité 1 · Apprendre 6 · vocabulaire Parler","reverse":true,"cards":[
-        {"id":"fr-t4-01","question":"le terminus","answer":"het eindpunt"},{"id":"fr-t4-02","question":"dormir","answer":"slapen","exercise":"listening"},{"id":"fr-t4-03","question":"fatigué(e)","answer":"vermoeid"},{"id":"fr-t4-04","question":"assieds-toi !","answer":"ga zitten"},{"id":"fr-t4-05","question":"la carte Navigo","answer":"de OV-chipkaart"},{"id":"fr-t4-06","question":"être pressé","answer":"haast hebben"},{"id":"fr-t4-07","question":"j’ouvre (ouvrir)","answer":"ik open (openen)"},{"id":"fr-t4-08","question":"le voyageur","answer":"de reiziger"},{"id":"fr-t4-09","question":"simple","answer":"eenvoudig"},{"id":"fr-t4-10","question":"l’escalator (m)","answer":"de roltrap"},{"id":"fr-t4-11","question":"de rien","answer":"geen dank"},{"id":"fr-t4-12","question":"être en retard","answer":"te laat zijn"},{"id":"fr-t4-13","question":"le distributeur (automatique)","answer":"de kaartjesautomaat"},{"id":"fr-t4-14","question":"la carte bancaire","answer":"de bankpas"},{"id":"fr-t4-15","question":"avoir envie de","answer":"zin hebben om"},{"id":"fr-t4-16","question":"j’en ai marre","answer":"ik ben het zat"},{"id":"fr-t4-17","question":"le trajet","answer":"het traject, de route"},{"id":"fr-t4-18","question":"le pont","answer":"de brug"},{"id":"fr-t4-19","question":"le carrefour","answer":"het kruispunt"},{"id":"fr-t4-20","question":"le rondpoint","answer":"de rotonde"},{"id":"fr-t4-21","question":"quinze jours","answer":"twee weken"},{"id":"fr-t4-22","question":"l’avantage (m)","answer":"het voordeel"},{"id":"fr-t4-23","question":"bronzer","answer":"bruin worden"},{"id":"fr-t4-24","question":"la randonnée","answer":"de wandeltocht"},{"id":"fr-t4-25","question":"profiter de","answer":"genieten van"},{"id":"fr-t4-26","question":"revenir","answer":"terugkomen"},{"id":"fr-t4-27","question":"faire de l’escalade","answer":"klimmen"},{"id":"fr-t4-28","question":"c’était (être)","answer":"het was"},{"id":"fr-t4-29","question":"j’avais (avoir)","answer":"ik had"},{"id":"fr-t4-30","question":"tout le temps","answer":"de hele tijd"},{"id":"fr-t4-31","question":"louer","answer":"huren"},{"id":"fr-t4-32","question":"bref","answer":"kortom"},{"id":"fr-t4-33","question":"les jeunes (m pl)","answer":"de jongeren"},{"id":"fr-t4-34","question":"l’étranger (m)","answer":"het buitenland"},{"id":"fr-t4-35","question":"rester","answer":"blijven"},{"id":"fr-t4-36","question":"la montagne","answer":"de bergen, het gebergte"},{"id":"fr-t4-37","question":"rencontrer","answer":"ontmoeten"},{"id":"fr-t4-38","question":"faire du camping","answer":"kamperen"},{"id":"fr-t4-39","question":"la tente","answer":"de tent"},{"id":"fr-t4-40","question":"se baigner","answer":"zwemmen"},{"id":"fr-t4-41","question":"le soleil","answer":"de zon"}
-      ]
-    },
-    {
-      "id":"french-travel-7","title":"Unité 1 · Apprendre 7 · phrases Parler","reverse":true,"cards":[
-        {"id":"fr-t7-01","question":"Vous pouvez m'aider, s'il vous plait ?","answer":"Kunt u mij alstublieft helpen?"},{"id":"fr-t7-02","question":"Le train s'arrête à Poitiers ?","answer":"Stopt de trein in Poitiers?"},{"id":"fr-t7-03","question":"Dans cinq minutes, il faut changer à Belleville.","answer":"Over vijf minuten moeten we overstappen bij Belleville."},{"id":"fr-t7-04","question":"On descend où ?","answer":"Waar stappen we uit?"},{"id":"fr-t7-05","question":"Tu dois payer par carte bancaire.","answer":"Je moet met een pinpas betalen."},{"id":"fr-t7-06","question":"Le RER part de quelle voie ?","answer":"Vanaf welk spoor vertrekt de RER?"},{"id":"fr-t7-07","question":"Cela prend combien de temps ? Environ trente minutes ?","answer":"Hoeveel tijd kost dat? Ongeveer dertig minuten?"}
-      ]
-    },
-    {
-      "id":"french-etre-avoir","title":"Unité 1 · Apprendre 3 · être & avoir","cards":[
-        {"id":"fr-g1-01","question":"je suis","answer":"ik ben","exercise":"typing","acceptedAnswers":["ik ben"]},{"id":"fr-g1-02","question":"tu es","answer":"jij bent"},{"id":"fr-g1-03","question":"il / elle / on est","answer":"hij / zij / men is"},{"id":"fr-g1-04","question":"nous sommes","answer":"wij zijn"},{"id":"fr-g1-05","question":"vous êtes","answer":"jullie zijn, u bent"},{"id":"fr-g1-06","question":"ils / elles sont","answer":"zij zijn"},{"id":"fr-g1-07","question":"j’ai","answer":"ik heb","exercise":"typing","acceptedAnswers":["ik heb"]},{"id":"fr-g1-08","question":"tu as","answer":"jij hebt"},{"id":"fr-g1-09","question":"il / elle / on a","answer":"hij / zij / men heeft"},{"id":"fr-g1-10","question":"nous avons","answer":"wij hebben"},{"id":"fr-g1-11","question":"vous avez","answer":"jullie hebben, u heeft"},{"id":"fr-g1-12","question":"ils / elles ont","answer":"zij hebben"},{"id":"fr-g1-13","question":"Het is","answer":"c’est"},{"id":"fr-g1-14","question":"Wij zijn (twee mogelijkheden)","answer":"on est / nous sommes"},{"id":"fr-g1-15","question":"j’ai été","answer":"ik ben geweest"},{"id":"fr-g1-16","question":"nous avons eu","answer":"wij hebben gehad"}
-      ]
-    },
-    {
-      "id":"french-passe-compose","title":"Unité 1 · Apprendre 5 · passé composé avec avoir","cards":[
-        {"id":"fr-g2-01","question":"Waaruit bestaat de passé composé?","answer":"een hulpwerkwoord + een voltooid deelwoord"},{"id":"fr-g2-02","question":"Welk hulpwerkwoord gebruik je meestal?","answer":"avoir"},{"id":"fr-g2-03","question":"voltooid deelwoord van danser","answer":"dansé","exercise":"typing","acceptedAnswers":["dansé"]},{"id":"fr-g2-04","question":"voltooid deelwoord van jouer","answer":"joué"},{"id":"fr-g2-05","question":"voltooid deelwoord van acheter","answer":"acheté"},{"id":"fr-g2-06","question":"voltooid deelwoord van avoir","answer":"eu"},{"id":"fr-g2-07","question":"voltooid deelwoord van être","answer":"été"},{"id":"fr-g2-08","question":"voltooid deelwoord van faire","answer":"fait"},{"id":"fr-g2-09","question":"voltooid deelwoord van mettre","answer":"mis"},{"id":"fr-g2-10","question":"voltooid deelwoord van prendre","answer":"pris"},{"id":"fr-g2-11","question":"voltooid deelwoord van vouloir","answer":"voulu"},{"id":"fr-g2-12","question":"Nous avons regardé la télé.","answer":"Wij hebben naar de tv gekeken."},{"id":"fr-g2-13","question":"Tu as fait des photos ?","answer":"Heb je foto's gemaakt?"},{"id":"fr-g2-14","question":"Elle a voulu avoir un chien.","answer":"Ze wilde een hond hebben."}
-      ]
-    },
-    {
-      "id":"french-passe-etre","title":"Unité 1 · Apprendre 5 · passé composé avec être","cards":[
-        {"id":"fr-g3-01","question":"aller → voltooid deelwoord","answer":"allé"},{"id":"fr-g3-02","question":"venir → voltooid deelwoord","answer":"venu"},{"id":"fr-g3-03","question":"arriver → voltooid deelwoord","answer":"arrivé"},{"id":"fr-g3-04","question":"partir → voltooid deelwoord","answer":"parti","exercise":"typing","acceptedAnswers":["parti"]},{"id":"fr-g3-05","question":"entrer → voltooid deelwoord","answer":"entré"},{"id":"fr-g3-06","question":"sortir → voltooid deelwoord","answer":"sorti"},{"id":"fr-g3-07","question":"monter → voltooid deelwoord","answer":"monté"},{"id":"fr-g3-08","question":"descendre → voltooid deelwoord","answer":"descendu"},{"id":"fr-g3-09","question":"rester → voltooid deelwoord","answer":"resté"},{"id":"fr-g3-10","question":"rentrer → voltooid deelwoord","answer":"rentré"},{"id":"fr-g3-11","question":"retourner → voltooid deelwoord","answer":"retourné"},{"id":"fr-g3-12","question":"tomber → voltooid deelwoord","answer":"tombé"},{"id":"fr-g3-13","question":"Julie est partie en vacances.","answer":"Julie is op vakantie vertrokken."},{"id":"fr-g3-14","question":"Mes copains sont partis en vacances.","answer":"Mijn vrienden zijn op vakantie vertrokken."},{"id":"fr-g3-15","question":"Mes sœurs sont parties en vacances.","answer":"Mijn zussen zijn op vakantie vertrokken."},{"id":"fr-g3-16","question":"Hoe verandert het voltooid deelwoord bij être?","answer":"vrouwelijk: +e; meervoud: +s"},{"id":"fr-g3-17","question":"Il est parti.","answer":"Hij is vertrokken."},{"id":"fr-g3-18","question":"Il est sorti.","answer":"Hij is uitgegaan."}
-      ]
+        {
+          "id": "fr-g3-01",
+          "question": "aller → voltooid deelwoord",
+          "answer": "allé"
+        },
+        {
+          "id": "fr-g3-02",
+          "question": "venir → voltooid deelwoord",
+          "answer": "venu"
+        },
+        {
+          "id": "fr-g3-03",
+          "question": "arriver → voltooid deelwoord",
+          "answer": "arrivé"
+        },
+        {
+          "id": "fr-g3-04",
+          "question": "partir → voltooid deelwoord",
+          "answer": "parti",
+          "exercise": "typing",
+          "acceptedAnswers": [
+            "parti"
+          ]
+        },
+        {
+          "id": "fr-g3-05",
+          "question": "entrer → voltooid deelwoord",
+          "answer": "entré"
+        },
+        {
+          "id": "fr-g3-06",
+          "question": "sortir → voltooid deelwoord",
+          "answer": "sorti"
+        },
+        {
+          "id": "fr-g3-07",
+          "question": "monter → voltooid deelwoord",
+          "answer": "monté"
+        },
+        {
+          "id": "fr-g3-08",
+          "question": "descendre → voltooid deelwoord",
+          "answer": "descendu"
+        },
+        {
+          "id": "fr-g3-09",
+          "question": "rester → voltooid deelwoord",
+          "answer": "resté"
+        },
+        {
+          "id": "fr-g3-10",
+          "question": "rentrer → voltooid deelwoord",
+          "answer": "rentré"
+        },
+        {
+          "id": "fr-g3-11",
+          "question": "retourner → voltooid deelwoord",
+          "answer": "retourné"
+        },
+        {
+          "id": "fr-g3-12",
+          "question": "tomber → voltooid deelwoord",
+          "answer": "tombé"
+        },
+        {
+          "id": "fr-g3-13",
+          "question": "Julie est partie en vacances.",
+          "answer": "Julie is op vakantie vertrokken."
+        },
+        {
+          "id": "fr-g3-14",
+          "question": "Mes copains sont partis en vacances.",
+          "answer": "Mijn vrienden zijn op vakantie vertrokken."
+        },
+        {
+          "id": "fr-g3-15",
+          "question": "Mes sœurs sont parties en vacances.",
+          "answer": "Mijn zussen zijn op vakantie vertrokken."
+        },
+        {
+          "id": "fr-g3-16",
+          "question": "Hoe verandert het voltooid deelwoord bij être?",
+          "answer": "vrouwelijk: +e; meervoud: +s"
+        },
+        {
+          "id": "fr-g3-17",
+          "question": "Il est parti.",
+          "answer": "Hij is vertrokken."
+        },
+        {
+          "id": "fr-g3-18",
+          "question": "Il est sorti.",
+          "answer": "Hij is uitgegaan."
+        }
+      ],
+      "subject": "french",
+      "kind": "vocabulary"
     }
   ],
-  "version": 1
+  "version": 1,
+  "schemaVersion": 2
 }
