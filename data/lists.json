@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-29T13:58:11.905Z",
+  "exportedAt": "2026-09-29T14:27:58.806Z",
   "lists": [
     {
       "id": "latin-start-from-zero",
@@ -16,6 +16,11 @@
           "answer": "De naamval van het onderwerp: wie of wat doet iets?"
         },
         {
+          "id": "latin-zero-gen",
+          "question": "Wat is de genitivus?",
+          "answer": "De naamval van bezit of verbondenheid: van wie of waarvan?"
+        },
+        {
           "id": "latin-zero-2",
           "question": "Wat is de dativus?",
           "answer": "De naamval van het meewerkend voorwerp: aan of voor wie?"
@@ -24,6 +29,11 @@
           "id": "latin-zero-3",
           "question": "Wat is de accusativus?",
           "answer": "De naamval van het lijdend voorwerp: wie of wat ondergaat de handeling?"
+        },
+        {
+          "id": "latin-zero-abl",
+          "question": "Wat is de ablativus?",
+          "answer": "De naamval die vaak een bepaling aangeeft, bijvoorbeeld met, door, van of in."
         },
         {
           "id": "latin-zero-4",
@@ -53,139 +63,126 @@
       "kind": "declension",
       "group": "Verbuigingsgroep 1",
       "stage": "Stap 2",
-      "title": "Groep 1 · nom., dat. & acc.",
-      "summary": "Herken eerst naamval en getal; vul daarna de uitgang van groep 1 in.",
+      "title": "Groep 1 · aqua",
+      "summary": "Oefen de vijf naamvallen in enkelvoud en meervoud.",
       "entries": [
         {
           "lemma": "aqua, aquae",
           "forms": {
             "nominative_singular": "aqua",
+            "genitive_singular": "aquae",
             "dative_singular": "aquae",
             "accusative_singular": "aquam",
+            "ablative_singular": "aqua",
             "nominative_plural": "aquae",
+            "genitive_plural": "aquarum",
             "dative_plural": "aquis",
-            "accusative_plural": "aquas"
-          }
-        },
-        {
-          "lemma": "femina, feminae",
-          "forms": {
-            "nominative_singular": "femina",
-            "dative_singular": "feminae",
-            "accusative_singular": "feminam",
-            "nominative_plural": "feminae",
-            "dative_plural": "feminis",
-            "accusative_plural": "feminas"
+            "accusative_plural": "aquas",
+            "ablative_plural": "aquis"
           }
         }
       ]
     },
     {
-      "id": "latin-declension-group-2",
+      "id": "latin-declension-group-2a",
       "subject": "latin",
       "kind": "declension",
-      "group": "Verbuigingsgroep 2",
+      "group": "Verbuigingsgroep 2A",
       "stage": "Stap 2",
-      "title": "Groep 2 · nom., dat. & acc.",
-      "summary": "Oefen mannelijke én onzijdige woorden uit groep 2.",
+      "title": "Groep 2A · servus",
+      "summary": "Mannelijk: servus, servi, servo, servum, servo.",
       "entries": [
         {
           "lemma": "servus, servi",
           "forms": {
             "nominative_singular": "servus",
+            "genitive_singular": "servi",
             "dative_singular": "servo",
             "accusative_singular": "servum",
+            "ablative_singular": "servo",
             "nominative_plural": "servi",
+            "genitive_plural": "servorum",
             "dative_plural": "servis",
-            "accusative_plural": "servos"
-          }
-        },
-        {
-          "lemma": "filius, filii",
-          "forms": {
-            "nominative_singular": "filius",
-            "dative_singular": "filio",
-            "accusative_singular": "filium",
-            "nominative_plural": "filii",
-            "dative_plural": "filiis",
-            "accusative_plural": "filios"
-          }
-        },
-        {
-          "lemma": "puer, pueri",
-          "forms": {
-            "nominative_singular": "puer",
-            "dative_singular": "puero",
-            "accusative_singular": "puerum",
-            "nominative_plural": "pueri",
-            "dative_plural": "pueris",
-            "accusative_plural": "pueros"
-          }
-        },
-        {
-          "lemma": "mandatum, mandati",
-          "forms": {
-            "nominative_singular": "mandatum",
-            "dative_singular": "mandato",
-            "accusative_singular": "mandatum",
-            "nominative_plural": "mandata",
-            "dative_plural": "mandatis",
-            "accusative_plural": "mandata"
+            "accusative_plural": "servos",
+            "ablative_plural": "servis"
           }
         }
       ]
     },
     {
-      "id": "latin-declension-group-3",
+      "id": "latin-declension-group-2b",
       "subject": "latin",
       "kind": "declension",
-      "group": "Verbuigingsgroep 3",
+      "group": "Verbuigingsgroep 2B",
       "stage": "Stap 2",
-      "title": "Groep 3 · nom., dat. & acc.",
-      "summary": "Let op de stam uit de genitivus en op onzijdige woorden.",
+      "title": "Groep 2B · donum",
+      "summary": "Onzijdig: donum, doni, dono, donum, dono.",
+      "entries": [
+        {
+          "lemma": "donum, doni",
+          "forms": {
+            "nominative_singular": "donum",
+            "genitive_singular": "doni",
+            "dative_singular": "dono",
+            "accusative_singular": "donum",
+            "ablative_singular": "dono",
+            "nominative_plural": "dona",
+            "genitive_plural": "donorum",
+            "dative_plural": "donis",
+            "accusative_plural": "dona",
+            "ablative_plural": "donis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-declension-group-3a",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Verbuigingsgroep 3A",
+      "stage": "Stap 2",
+      "title": "Groep 3A · rex",
+      "summary": "Mannelijk/vrouwelijk: rex, regis, regi, regem, rege.",
       "entries": [
         {
           "lemma": "rex, regis",
           "forms": {
             "nominative_singular": "rex",
+            "genitive_singular": "regis",
             "dative_singular": "regi",
             "accusative_singular": "regem",
+            "ablative_singular": "rege",
             "nominative_plural": "reges",
+            "genitive_plural": "regum",
             "dative_plural": "regibus",
-            "accusative_plural": "reges"
+            "accusative_plural": "reges",
+            "ablative_plural": "regibus"
           }
-        },
-        {
-          "lemma": "arbor, arboris",
-          "forms": {
-            "nominative_singular": "arbor",
-            "dative_singular": "arbori",
-            "accusative_singular": "arborem",
-            "nominative_plural": "arbores",
-            "dative_plural": "arboribus",
-            "accusative_plural": "arbores"
-          }
-        },
+        }
+      ]
+    },
+    {
+      "id": "latin-declension-group-3b",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Verbuigingsgroep 3B",
+      "stage": "Stap 2",
+      "title": "Groep 3B · flumen",
+      "summary": "Onzijdig: flumen, fluminis, flumini, flumen, flumine.",
+      "entries": [
         {
           "lemma": "flumen, fluminis",
           "forms": {
             "nominative_singular": "flumen",
+            "genitive_singular": "fluminis",
             "dative_singular": "flumini",
             "accusative_singular": "flumen",
+            "ablative_singular": "flumine",
             "nominative_plural": "flumina",
+            "genitive_plural": "fluminum",
             "dative_plural": "fluminibus",
-            "accusative_plural": "flumina"
-          }
-        },
-        {
-          "lemma": "nomen, nominis",
-          "forms": {
-            "nominative_singular": "nomen",
-            "dative_singular": "nomini",
-            "accusative_singular": "nomen",
-            "nominative_plural": "nomina",
-            "dative_plural": "nominibus",
-            "accusative_plural": "nomina"
+            "accusative_plural": "flumina",
+            "ablative_plural": "fluminibus"
           }
         }
       ]
@@ -437,6 +434,7 @@
           "id": "latin-v1-01",
           "question": "ad + acc",
           "answer": "naar, tot / bij",
+          "hint": "Wij lopen <ad + acc> de rivier.",
           "acceptedAnswers": [
             "naar",
             "tot",
@@ -450,30 +448,35 @@
           "id": "latin-v1-02",
           "question": "aqua",
           "answer": "water",
+          "hint": "Na het sporten drink ik een glas <aqua>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-03",
           "question": "arbor, arbores",
           "answer": "boom",
+          "hint": "De <arbor> heeft takken en bladeren.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-04",
           "question": "audire",
           "answer": "horen",
+          "hint": "Ik <audire> de baby naast mij.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-05",
           "question": "clamare",
           "answer": "schreeuwen",
+          "hint": "De boze man gaat luid <clamare>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-06",
           "question": "et",
           "answer": "en / ook",
+          "hint": "Marcus <et> Julia zitten samen aan tafel.",
           "acceptedAnswers": [
             "en",
             "ook",
@@ -485,30 +488,35 @@
           "id": "latin-v1-07",
           "question": "flumen, flumina",
           "answer": "rivier",
+          "hint": "Het <flumen> stroomt door het landschap.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-08",
           "question": "iacere",
           "answer": "liggen",
+          "hint": "Na de val blijf ik op de grond <iacere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-09",
           "question": "ibi",
           "answer": "daar",
+          "hint": "Niet hier maar <ibi> bij die boom.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-10",
           "question": "ideo",
           "answer": "daarom",
+          "hint": "Het regent; <ideo> pak ik mijn paraplu.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-11",
           "question": "in + acc",
           "answer": "in, naar",
+          "hint": "We lopen <in + acc> urbem.",
           "acceptedAnswers": [
             "in",
             "naar",
@@ -520,6 +528,7 @@
           "id": "latin-v1-12",
           "question": "inter + acc",
           "answer": "tussen / tijdens",
+          "hint": "Ik zit <inter + acc> mijn twee vrienden.",
           "acceptedAnswers": [
             "tussen",
             "tijdens",
@@ -531,84 +540,98 @@
           "id": "latin-v1-13",
           "question": "iubere",
           "answer": "bevelen",
+          "hint": "De generaal gaat zijn soldaten <iubere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-14",
           "question": "lacrimare",
           "answer": "huilen",
+          "hint": "Bij de droevige film moet ik <lacrimare>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-15",
           "question": "locus",
           "answer": "plaats",
+          "hint": "Dit is een rustige <locus> om te zitten.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-16",
           "question": "mandatum",
           "answer": "opdracht",
+          "hint": "De baas geeft mij een <mandatum> dat vandaag af moet.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-17",
           "question": "necare",
           "answer": "doden",
+          "hint": "De gifslang kan haar prooi <necare>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-18",
           "question": "non",
           "answer": "niet",
+          "hint": "Ik ga <non> mee naar het feest.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-19",
           "question": "ponere",
           "answer": "plaatsen",
+          "hint": "Ik ga het boek op tafel <ponere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-20",
           "question": "portare",
           "answer": "dragen",
+          "hint": "Ik <portare> de zware tas naar huis.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-21",
           "question": "puer, pueri",
           "answer": "jongen",
+          "hint": "De <puer> speelt met een bal op het schoolplein.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-22",
           "question": "recusare",
           "answer": "weigeren",
+          "hint": "Ik wil het aanbod <recusare>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-23",
           "question": "rex, reges",
           "answer": "koning",
+          "hint": "De <rex> draagt een kroon en zit op de troon.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-24",
           "question": "servus",
           "answer": "slaaf",
+          "hint": "De <servus> werkt zonder vrijheid voor zijn meester.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-25",
           "question": "tamen",
           "answer": "toch",
+          "hint": "Het regent; <tamen> ga ik naar buiten.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-26",
           "question": "timere",
           "answer": "vrezen, bang zijn voor",
+          "hint": "In het donker moet ik de vreemde geluiden <timere>.",
           "acceptedAnswers": [
             "vrezen",
             "bang zijn voor",
@@ -620,30 +643,35 @@
           "id": "latin-v1-27",
           "question": "tollere",
           "answer": "optillen",
+          "hint": "Ik buk om de zware doos <tollere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-28",
           "question": "ubi",
           "answer": "waar",
+          "hint": "<ubi> heb ik mijn tas gelaten?",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-29",
           "question": "venire",
           "answer": "komen",
+          "hint": "Zie je hem <venire> vanuit de verte?",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-30",
           "question": "videre",
           "answer": "zien",
+          "hint": "Met mijn bril kan ik alles goed <videre>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v1-31",
           "question": "vocare",
           "answer": "roepen / noemen",
+          "hint": "Ik <vocare> mijn vriend bij zijn naam.",
           "acceptedAnswers": [
             "roepen",
             "noemen",
@@ -666,6 +694,7 @@
           "id": "latin-v2-01",
           "question": "accedere",
           "answer": "gaan naar / naderen",
+          "hint": "Ik zie de halte en blijf haar <accedere>.",
           "acceptedAnswers": [
             "gaan naar",
             "naderen",
@@ -677,12 +706,14 @@
           "id": "latin-v2-02",
           "question": "bibere",
           "answer": "drinken",
+          "hint": "Na het sporten wil ik uit mijn fles <bibere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-03",
           "question": "cogitare",
           "answer": "(na)denken",
+          "hint": "Voor ik antwoord, moet ik even <cogitare>.",
           "acceptedAnswers": [
             "denken",
             "nadenken",
@@ -694,30 +725,35 @@
           "id": "latin-v2-04",
           "question": "custodire",
           "answer": "bewaken",
+          "hint": "De hond moet 's nachts het huis <custodire>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-05",
           "question": "dare",
           "answer": "geven",
+          "hint": "Voor haar verjaardag wil ik haar een cadeau <dare>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-06",
           "question": "deus",
           "answer": "god",
+          "hint": "In de tempel brengen mensen offers aan de <deus>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-07",
           "question": "dicere",
           "answer": "zeggen",
+          "hint": "Wat wil je tegen mij <dicere>?",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-08",
           "question": "esse",
           "answer": "zijn (infinitivus)",
+          "hint": "Ik wil gewoon mezelf <esse>.",
           "acceptedAnswers": [
             "zijn",
             "zijn (infinitivus)"
@@ -728,54 +764,63 @@
           "id": "latin-v2-09",
           "question": "favere + dat",
           "answer": "steun geven aan",
+          "hint": "De supporters <favere + dat> hun favoriete team vanaf de tribune.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-10",
           "question": "femina",
           "answer": "vrouw",
+          "hint": "De <femina> loopt met haar dochter.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-11",
           "question": "filius",
           "answer": "zoon",
+          "hint": "De <filius> lijkt precies op zijn vader.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-12",
           "question": "haud",
           "answer": "helemaal niet",
+          "hint": "Dat is <haud> wat ik bedoelde!",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-13",
           "question": "mater, matres",
           "answer": "moeder",
+          "hint": "Mijn <mater> brengt mij naar school.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-14",
           "question": "nam",
           "answer": "want",
+          "hint": "Ik blijf thuis, <nam> ik ben moe.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-15",
           "question": "nomen, nomina",
           "answer": "naam",
+          "hint": "Boven aan het formulier schrijf ik mijn <nomen>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-16",
           "question": "pater, patres",
           "answer": "vader",
+          "hint": "Mijn <pater> leest de krant aan tafel.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-17",
           "question": "praebere",
           "answer": "(aan)bieden",
+          "hint": "De winkel kan klanten hulp <praebere>.",
           "acceptedAnswers": [
             "aanbieden",
             "bieden",
@@ -787,42 +832,49 @@
           "id": "latin-v2-18",
           "question": "protegere",
           "answer": "beschermen",
+          "hint": "Een helm kan je hoofd <protegere> bij een val.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-19",
           "question": "ridere",
           "answer": "lachen",
+          "hint": "Om de grap moet iedereen <ridere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-20",
           "question": "sic",
           "answer": "zo",
+          "hint": "Doe het <sic> en niet anders.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-21",
           "question": "sicut",
           "answer": "zoals",
+          "hint": "Hij rent <sicut> een leeuw.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-22",
           "question": "subito",
           "answer": "plotseling",
+          "hint": "<subito> springt de kat op tafel.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-23",
           "question": "tradere",
           "answer": "overhandigen",
+          "hint": "Na ondertekening moet ik het pakket aan jou <tradere>.",
           "exercise": "typing"
         },
         {
           "id": "latin-v2-24",
           "question": "uxor, uxores",
           "answer": "echtgenote",
+          "hint": "Zijn <uxor> draagt een trouwring en woont met hem.",
           "exercise": "typing"
         }
       ]
