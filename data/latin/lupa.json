@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 3,
+  "subject": "latin",
+  "lists": [
+    {
+      "id": "latin-vocabulary-lupa",
+      "subject": "latin",
+      "kind": "vocabulary",
+      "group": "Basiswoorden",
+      "stage": "Stap 5",
+      "title": "Basiswoorden 2 · Lupa",
+      "summary": "Alleen de woorden uit deze les op de foto.",
+      "cards": [
+        {
+          "id": "latin-v2-01",
+          "question": "accedere",
+          "answer": "gaan naar / naderen",
+          "hint": "Ik zie de halte en blijf haar <accedere>.",
+          "acceptedAnswers": [
+            "gaan naar",
+            "naderen",
+            "gaan naar / naderen"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-02",
+          "question": "bibere",
+          "answer": "drinken",
+          "hint": "Na het sporten wil ik uit mijn fles <bibere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-03",
+          "question": "cogitare",
+          "answer": "(na)denken",
+          "hint": "Voor ik antwoord, moet ik even <cogitare>.",
+          "acceptedAnswers": [
+            "denken",
+            "nadenken",
+            "(na)denken"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-04",
+          "question": "custodire",
+          "answer": "bewaken",
+          "hint": "De hond moet 's nachts het huis <custodire>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-05",
+          "question": "dare",
+          "answer": "geven",
+          "hint": "Voor haar verjaardag wil ik haar een cadeau <dare>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-06",
+          "question": "deus",
+          "answer": "god",
+          "hint": "In de tempel brengen mensen offers aan de <deus>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-07",
+          "question": "dicere",
+          "answer": "zeggen",
+          "hint": "Wat wil je tegen mij <dicere>?",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-08",
+          "question": "esse",
+          "answer": "zijn (infinitivus)",
+          "hint": "Ik wil gewoon mezelf <esse>.",
+          "acceptedAnswers": [
+            "zijn",
+            "zijn (infinitivus)"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-09",
+          "question": "favere + dat",
+          "answer": "steun geven aan",
+          "hint": "De supporters <favere + dat> hun favoriete team vanaf de tribune.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-10",
+          "question": "femina",
+          "answer": "vrouw",
+          "hint": "De <femina> loopt met haar dochter.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-11",
+          "question": "filius",
+          "answer": "zoon",
+          "hint": "De <filius> lijkt precies op zijn vader.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-12",
+          "question": "haud",
+          "answer": "helemaal niet",
+          "hint": "Dat is <haud> wat ik bedoelde!",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-13",
+          "question": "mater, matres",
+          "answer": "moeder",
+          "hint": "Mijn <mater> brengt mij naar school.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-14",
+          "question": "nam",
+          "answer": "want",
+          "hint": "Ik blijf thuis, <nam> ik ben moe.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-15",
+          "question": "nomen, nomina",
+          "answer": "naam",
+          "hint": "Boven aan het formulier schrijf ik mijn <nomen>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-16",
+          "question": "pater, patres",
+          "answer": "vader",
+          "hint": "Mijn <pater> leest de krant aan tafel.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-17",
+          "question": "praebere",
+          "answer": "(aan)bieden",
+          "hint": "De winkel kan klanten hulp <praebere>.",
+          "acceptedAnswers": [
+            "aanbieden",
+            "bieden",
+            "(aan)bieden"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-18",
+          "question": "protegere",
+          "answer": "beschermen",
+          "hint": "Een helm kan je hoofd <protegere> bij een val.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-19",
+          "question": "ridere",
+          "answer": "lachen",
+          "hint": "Om de grap moet iedereen <ridere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-20",
+          "question": "sic",
+          "answer": "zo",
+          "hint": "Doe het <sic> en niet anders.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-21",
+          "question": "sicut",
+          "answer": "zoals",
+          "hint": "Hij rent <sicut> een leeuw.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-22",
+          "question": "subito",
+          "answer": "plotseling",
+          "hint": "<subito> springt de kat op tafel.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-23",
+          "question": "tradere",
+          "answer": "overhandigen",
+          "hint": "Na ondertekening moet ik het pakket aan jou <tradere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v2-24",
+          "question": "uxor, uxores",
+          "answer": "echtgenote",
+          "hint": "Zijn <uxor> draagt een trouwring en woont met hem.",
+          "exercise": "typing"
+        }
+      ]
+    }
+  ]
+}

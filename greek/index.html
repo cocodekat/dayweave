@@ -7,7 +7,7 @@
   <meta name="description" content="Choose a language, review your progress, and practise focused study sets.">
   <title>Dayweave Learn</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c5cfc'/%3E%3Crect x='15' y='17' width='34' height='25' rx='7' fill='white' opacity='.45'/%3E%3Crect x='11' y='23' width='42' height='27' rx='8' fill='white'/%3E%3Cpath d='M23 36h18' stroke='%237c5cfc' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/styles.css?v=11">
+  <link rel="stylesheet" href="/styles.css?v=19">
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -73,17 +73,27 @@
     <div class="practice-shell" role="dialog" aria-modal="true" aria-labelledby="roundTitle">
       <div class="round-bar"><button class="icon-button overlay-close" id="closeRoundButton" type="button" aria-label="Close practice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="round-title"><strong id="roundTitle">Practice</strong><span id="roundCounter">1 of 1</span></div><div class="round-score" id="liveScore">0 correct</div></div>
       <div class="round-progress"><i id="roundProgress"></i></div>
-      <button class="study-card" id="studyCard" type="button" aria-label="Reveal answer"><span class="card-side-label" id="sideLabel">Question</span><strong id="questionText"></strong><span class="answer-divider" id="answerDivider" hidden></span><span class="answer-text" id="answerText" hidden></span><span class="reveal-hint" id="revealHint">Tap to reveal</span></button>
+      <button class="study-card" id="studyCard" type="button" aria-label="Reveal answer"><span class="card-side-label" id="sideLabel">Question</span><strong id="questionText"></strong><span class="card-context" id="questionContext" hidden></span><span class="answer-divider" id="answerDivider" hidden></span><span class="answer-text" id="answerText" hidden></span><span class="reveal-hint" id="revealHint">Tap to reveal</span></button>
       <button class="listen-button" id="listenButton" type="button" hidden>🔊 Listen again</button>
       <div class="typing-area" id="typingArea" hidden>
         <label for="typedAnswer">Type your answer</label><div class="typing-row"><input id="typedAnswer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Write the answer…"><button class="primary-button" id="checkAnswerButton" type="button">Check</button></div>
         <div class="typing-tools"><button class="text-button reveal-answer-button" id="revealAnswerButton" type="button">Reveal answer</button><span>Space always types a space.</span></div><p id="typingFeedback" aria-live="polite"></p>
+      </div>
+      <div class="declension-area" id="declensionArea" hidden>
+        <p class="classifier-instruction">Zet alle opties aan die bij deze vorm horen.</p>
+        <div class="classifier-grid">
+          <section><strong>Naamval</strong><div class="classifier-options"><button type="button" aria-pressed="false" data-classifier-group="case" data-value="nominative">nom</button><button type="button" aria-pressed="false" data-classifier-group="case" data-value="dative">dat</button><button type="button" aria-pressed="false" data-classifier-group="case" data-value="accusative">acc</button></div></section>
+          <section><strong>Getal</strong><div class="classifier-options"><button type="button" aria-pressed="false" data-classifier-group="number" data-value="singular">ev</button><button type="button" aria-pressed="false" data-classifier-group="number" data-value="plural">mv</button></div></section>
+          <section><strong>Geslacht</strong><div class="classifier-options"><button type="button" aria-pressed="false" data-classifier-group="gender" data-value="masculine">mannelijk</button><button type="button" aria-pressed="false" data-classifier-group="gender" data-value="feminine">vrouwelijk</button><button type="button" aria-pressed="false" data-classifier-group="gender" data-value="neuter">onzijdig</button></div></section>
+        </div>
+        <div class="classifier-actions"><button class="primary-button" id="checkDeclensionButton" type="button">Controleren</button><button class="primary-button" id="nextDeclensionButton" type="button" hidden>Volgende</button></div>
+        <p id="declensionFeedback" aria-live="polite"></p>
       </div>
       <div class="answer-actions" id="answerActions" hidden><button class="again-button" id="againButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8v5h5M5.2 13a7 7 0 1 0 1.6-6.6L4 9"/></svg>Again</button><button class="correct-button" id="correctButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Got it</button></div>
       <div class="round-summary" id="roundSummary" hidden><span class="summary-spark">✦</span><h2>Round complete</h2><p id="summaryScore"></p><button class="primary-button" id="finishButton" type="button">Back to this subject</button></div>
     </div>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="/app.js?v=12" defer></script>
+  <script src="/app.js?v=19" defer></script>
 </body>
 </html>

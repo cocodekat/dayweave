@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 3,
+  "subject": "latin",
+  "lists": [
+    {
+      "id": "latin-vocabulary-flumen",
+      "subject": "latin",
+      "kind": "vocabulary",
+      "group": "Basiswoorden",
+      "stage": "Stap 5",
+      "title": "Basiswoorden 1 · Flumen",
+      "summary": "Alleen de woorden uit deze les op de foto.",
+      "cards": [
+        {
+          "id": "latin-v1-01",
+          "question": "ad + acc",
+          "answer": "naar, tot / bij",
+          "hint": "Wij lopen <ad + acc> de rivier.",
+          "acceptedAnswers": [
+            "naar",
+            "tot",
+            "bij",
+            "naar, tot",
+            "naar, tot / bij"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-02",
+          "question": "aqua",
+          "answer": "water",
+          "hint": "Na het sporten drink ik een glas <aqua>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-03",
+          "question": "arbor, arbores",
+          "answer": "boom",
+          "hint": "De <arbor> heeft takken en bladeren.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-04",
+          "question": "audire",
+          "answer": "horen",
+          "hint": "Ik <audire> de baby naast mij.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-05",
+          "question": "clamare",
+          "answer": "schreeuwen",
+          "hint": "De boze man gaat luid <clamare>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-06",
+          "question": "et",
+          "answer": "en / ook",
+          "hint": "Marcus <et> Julia zitten samen aan tafel.",
+          "acceptedAnswers": [
+            "en",
+            "ook",
+            "en / ook"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-07",
+          "question": "flumen, flumina",
+          "answer": "rivier",
+          "hint": "Het <flumen> stroomt door het landschap.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-08",
+          "question": "iacere",
+          "answer": "liggen",
+          "hint": "Na de val blijf ik op de grond <iacere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-09",
+          "question": "ibi",
+          "answer": "daar",
+          "hint": "Niet hier maar <ibi> bij die boom.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-10",
+          "question": "ideo",
+          "answer": "daarom",
+          "hint": "Het regent; <ideo> pak ik mijn paraplu.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-11",
+          "question": "in + acc",
+          "answer": "in, naar",
+          "hint": "We lopen <in + acc> urbem.",
+          "acceptedAnswers": [
+            "in",
+            "naar",
+            "in, naar"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-12",
+          "question": "inter + acc",
+          "answer": "tussen / tijdens",
+          "hint": "Ik zit <inter + acc> mijn twee vrienden.",
+          "acceptedAnswers": [
+            "tussen",
+            "tijdens",
+            "tussen / tijdens"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-13",
+          "question": "iubere",
+          "answer": "bevelen",
+          "hint": "De generaal gaat zijn soldaten <iubere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-14",
+          "question": "lacrimare",
+          "answer": "huilen",
+          "hint": "Bij de droevige film moet ik <lacrimare>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-15",
+          "question": "locus",
+          "answer": "plaats",
+          "hint": "Dit is een rustige <locus> om te zitten.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-16",
+          "question": "mandatum",
+          "answer": "opdracht",
+          "hint": "De baas geeft mij een <mandatum> dat vandaag af moet.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-17",
+          "question": "necare",
+          "answer": "doden",
+          "hint": "De gifslang kan haar prooi <necare>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-18",
+          "question": "non",
+          "answer": "niet",
+          "hint": "Ik ga <non> mee naar het feest.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-19",
+          "question": "ponere",
+          "answer": "plaatsen",
+          "hint": "Ik ga het boek op tafel <ponere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-20",
+          "question": "portare",
+          "answer": "dragen",
+          "hint": "Ik <portare> de zware tas naar huis.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-21",
+          "question": "puer, pueri",
+          "answer": "jongen",
+          "hint": "De <puer> speelt met een bal op het schoolplein.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-22",
+          "question": "recusare",
+          "answer": "weigeren",
+          "hint": "Ik wil het aanbod <recusare>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-23",
+          "question": "rex, reges",
+          "answer": "koning",
+          "hint": "De <rex> draagt een kroon en zit op de troon.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-24",
+          "question": "servus",
+          "answer": "slaaf",
+          "hint": "De <servus> werkt zonder vrijheid voor zijn meester.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-25",
+          "question": "tamen",
+          "answer": "toch",
+          "hint": "Het regent; <tamen> ga ik naar buiten.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-26",
+          "question": "timere",
+          "answer": "vrezen, bang zijn voor",
+          "hint": "Zij <timere> de horrorfilm.",
+          "acceptedAnswers": [
+            "vrezen",
+            "bang zijn voor",
+            "vrezen, bang zijn voor"
+          ],
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-27",
+          "question": "tollere",
+          "answer": "optillen",
+          "hint": "Ik buk om de zware doos <tollere>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-28",
+          "question": "ubi",
+          "answer": "waar",
+          "hint": "<ubi> heb ik mijn tas gelaten?",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-29",
+          "question": "venire",
+          "answer": "komen",
+          "hint": "Zie je hem <venire> vanuit de verte?",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-30",
+          "question": "videre",
+          "answer": "zien",
+          "hint": "Met mijn bril kan ik alles goed <videre>.",
+          "exercise": "typing"
+        },
+        {
+          "id": "latin-v1-31",
+          "question": "vocare",
+          "answer": "roepen / noemen",
+          "hint": "Ik <vocare> mijn vriend bij zijn naam.",
+          "acceptedAnswers": [
+            "roepen",
+            "noemen",
+            "roepen / noemen"
+          ],
+          "exercise": "typing"
+        }
+      ]
+    }
+  ]
+}

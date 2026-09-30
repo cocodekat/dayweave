@@ -30,9 +30,10 @@ const els = Object.fromEntries([
   "dropDeck", "deckTitle", "deckSubtitle", "weakButton", "clearButton", "startButton", "pulseText",
   "progressRing", "accuracyValue", "selectedListTitle", "addAllButton", "cardPanelHint", "wordStack",
   "practiceOverlay", "closeRoundButton", "roundTitle", "roundCounter", "liveScore", "roundProgress",
-  "studyCard", "sideLabel", "questionText", "answerDivider", "answerText", "revealHint", "answerActions",
+  "studyCard", "sideLabel", "questionText", "questionContext", "answerDivider", "answerText", "revealHint", "answerActions",
   "againButton", "correctButton", "roundSummary", "summaryScore", "finishButton", "toast", "typingArea",
-  "typedAnswer", "checkAnswerButton", "revealAnswerButton", "listenButton", "typingFeedback", "practiceMode", "mobileNav"
+  "typedAnswer", "checkAnswerButton", "revealAnswerButton", "listenButton", "typingFeedback", "practiceMode", "mobileNav",
+  "declensionArea", "checkDeclensionButton", "nextDeclensionButton", "declensionFeedback"
 ].map(id => [id, document.getElementById(id)]));
 
 const icons = {
@@ -55,7 +56,16 @@ async function loadLists() {
     const response = await fetch("/data/lists.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Could not load lists");
     const payload = await response.json();
-    state.lists = Array.isArray(payload.lists) ? payload.lists.map(normalizeList) : [];
+    let lists = Array.isArray(payload.lists) ? payload.lists : [];
+    if (Array.isArray(payload.sources)) {
+      const subjectPayloads = await Promise.all(payload.sources.map(async source => {
+        const subjectResponse = await fetch(`/data/${source}`, { cache: "no-store" });
+        if (!subjectResponse.ok) throw new Error(`Could not load ${source}`);
+        return subjectResponse.json();
+      }));
+      lists = subjectPayloads.flatMap(subjectPayload => Array.isArray(subjectPayload.lists) ? subjectPayload.lists : []);
+    }
+    state.lists = lists.map(normalizeList);
   } catch {
     state.lists = [];
     showToast("The shared lists could not be loaded.");
@@ -85,7 +95,7 @@ function normalizeList(list, listIndex) {
 function normalCards(list, id, subject) {
   return Array.isArray(list.cards) ? list.cards.map((card, cardIndex) => ({
     id: String(card.id || `${id}-${cardIndex}`), listId: id, subject,
-    question: String(card.question || ""), answer: String(card.answer || ""),
+    question: String(card.question || ""), answer: String(card.answer || ""), hint: card.hint ? String(card.hint) : "",
     acceptedAnswers: Array.isArray(card.acceptedAnswers) ? card.acceptedAnswers.map(String) : undefined,
     exercise: ["flashcard", "typing", "listening"].includes(card.exercise) ? card.exercise : "flashcard"
   })).filter(card => card.question && card.answer) : [];
@@ -94,6 +104,24 @@ function normalCards(list, id, subject) {
 function declensionCards(list, id, subject) {
   const caseLabels = { nominative: "nominativus", genitive: "genitivus", dative: "dativus", accusative: "accusativus", ablative: "ablativus", vocative: "vocativus" };
   const numberLabels = { singular: "enkelvoud", plural: "meervoud" };
+  const genderLabels = { masculine: "mannelijk", feminine: "vrouwelijk", neuter: "onzijdig" };
+  if (String(list.group || "").startsWith("Verbuigingsgroep")) {
+    return (Array.isArray(list.entries) ? list.entries : []).flatMap((entry, entryIndex) => {
+      const forms = new Map();
+      Object.entries(entry.forms || {}).forEach(([formKey, value]) => {
+        const answer = String(value || "");
+        if (!answer) return;
+        const [caseName, numberName] = formKey.split("_");
+        if (!forms.has(answer)) forms.set(answer, { cases: new Set(), numbers: new Set() });
+        forms.get(answer).cases.add(caseName); forms.get(answer).numbers.add(numberName);
+      });
+      return [...forms.entries()].map(([form, traits], formIndex) => {
+        const cases = [...traits.cases]; const numbers = [...traits.numbers]; const genders = [String(entry.gender || "")].filter(Boolean);
+        const answer = `${cases.map(value => caseLabels[value] || value).join(" / ")} · ${numbers.map(value => numberLabels[value] || value).join(" / ")} · ${genders.map(value => genderLabels[value] || value).join(" / ")}`;
+        return { id: `${id}-${entryIndex}-classify-${formIndex}`, listId: id, subject, question: form, answer, classification: { cases, numbers, genders }, exercise: "classification" };
+      });
+    });
+  }
   return (Array.isArray(list.entries) ? list.entries : []).flatMap((entry, entryIndex) =>
     Object.entries(entry.forms || {}).map(([formKey, answer]) => {
       const [caseName, numberName] = formKey.split("_");
@@ -251,12 +279,19 @@ function latinGuideHTML() {
       <p><b>1. Zoek de functie.</b> Nominativus = onderwerp, dativus = aan/voor wie, accusativus = lijdend voorwerp.</p>
       <p><b>2. Kies het getal.</b> Enkelvoud is één; meervoud is meer dan één.</p>
       <p><b>3. Vind groep en stam.</b> Gebruik de tweede woordenboekvorm. Oefen daarna pas de juiste uitgang.</p>
-      <div class="ending-table-wrap"><table class="ending-table"><thead><tr><th>Groep</th><th>nom. ev.</th><th>dat. ev.</th><th>acc. ev.</th><th>nom. mv.</th><th>dat. mv.</th><th>acc. mv.</th></tr></thead><tbody>
-        <tr><th>1</th><td>-a</td><td>-ae</td><td>-am</td><td>-ae</td><td>-is</td><td>-as</td></tr>
-        <tr><th>2 m.</th><td>-us/-er</td><td>-o</td><td>-um</td><td>-i</td><td>-is</td><td>-os</td></tr>
-        <tr><th>2 o.</th><td>-um</td><td>-o</td><td>-um</td><td>-a</td><td>-is</td><td>-a</td></tr>
-        <tr><th>3 m./v.</th><td>—</td><td>-i</td><td>-em</td><td>-es</td><td>-ibus</td><td>-es</td></tr>
-        <tr><th>3 o.</th><td>—</td><td>-i</td><td>zelfde als nom.</td><td>-a</td><td>-ibus</td><td>zelfde als nom.</td></tr>
+      <div class="ending-table-wrap"><table class="ending-table"><caption>Enkelvoud</caption><thead><tr><th>Groep</th><th>nom.</th><th>dat.</th><th>acc.</th></tr></thead><tbody>
+        <tr><th>1</th><td>-a</td><td>-ae</td><td>-am</td></tr>
+        <tr><th>2A</th><td>-us/-er</td><td>-o</td><td>-um</td></tr>
+        <tr><th>2B</th><td>-um</td><td>-o</td><td>-um</td></tr>
+        <tr><th>3A</th><td>—</td><td>-i</td><td>-em</td></tr>
+        <tr><th>3B</th><td>—</td><td>-i</td><td>zelfde als nom.</td></tr>
+      </tbody></table></div>
+      <div class="ending-table-wrap"><table class="ending-table"><caption>Meervoud</caption><thead><tr><th>Groep</th><th>nom.</th><th>dat.</th><th>acc.</th></tr></thead><tbody>
+        <tr><th>1</th><td>-ae</td><td>-is</td><td>-as</td></tr>
+        <tr><th>2A</th><td>-i</td><td>-is</td><td>-os</td></tr>
+        <tr><th>2B</th><td>-a</td><td>-is</td><td>-a</td></tr>
+        <tr><th>3A</th><td>-es</td><td>-ibus</td><td>-es</td></tr>
+        <tr><th>3B</th><td>-a</td><td>-ibus</td><td>-a</td></tr>
       </tbody></table></div>
       <p class="guide-tip">Begin met <b>Stap 1</b>. Oefen daarna één verbuigingsgroep tegelijk in de open-vraagmodus.</p>
     </div>
@@ -298,7 +333,7 @@ function renderCards() {
   if (!list) { els.wordStack.innerHTML = ""; return; }
   els.wordStack.innerHTML = list.cards.map(card => {
     const added = queueHas(card.id);
-    return `<article class="word-card"><div class="word-copy"><strong>${escapeHTML(card.question)}</strong><span>${escapeHTML(card.answer)}</span></div><button class="add-card-button ${added ? "added" : ""}" type="button" data-card-id="${escapeAttr(card.id)}" aria-label="${added ? "Remove" : "Add"} ${escapeAttr(card.question)}">${added ? `${icons.check}<span>Added</span>` : `${icons.plus}<span>Add</span>`}</button></article>`;
+    return `<article class="word-card"><div class="word-copy"><strong>${escapeHTML(card.question)}</strong>${card.hint ? `<em>${escapeHTML(card.hint)}</em>` : ""}<span>${escapeHTML(card.answer)}</span></div><button class="add-card-button ${added ? "added" : ""}" type="button" data-card-id="${escapeAttr(card.id)}" aria-label="${added ? "Remove" : "Add"} ${escapeAttr(card.question)}">${added ? `${icons.check}<span>Added</span>` : `${icons.plus}<span>Add</span>`}</button></article>`;
   }).join("");
   els.wordStack.querySelectorAll("[data-card-id]").forEach(button => button.addEventListener("click", () => toggleCard(button.dataset.cardId)));
 }
@@ -385,7 +420,7 @@ function prepareWeakWords() {
 
 function startRound(forcedTitle) {
   if (!state.queue.length) return;
-  state.round = { title: forcedTitle || queueName(), subject: state.activeSubjectId, cards: shuffle(state.queue), mode: state.practiceMode, index: 0, revealed: false, results: [], typedChecked: false };
+  state.round = { title: forcedTitle || queueName(), subject: state.activeSubjectId, cards: shuffle(state.queue), mode: state.practiceMode, index: 0, revealed: false, results: [], typedChecked: false, classificationGraded: false, classificationEvaluation: null };
   els.practiceOverlay.hidden = false; document.body.style.overflow = "hidden"; renderRound();
 }
 
@@ -393,12 +428,18 @@ function renderRound() {
   const round = state.round;
   if (!round) return;
   const complete = round.index >= round.cards.length;
-  const openWaiting = !complete && round.mode === "open" && !round.revealed;
+  const card = complete ? null : round.cards[round.index];
+  const isClassification = !complete && Boolean(card.classification);
+  const classificationWaiting = isClassification && !round.classificationGraded;
+  const openWaiting = !complete && !card.classification && round.mode === "open" && !round.revealed;
   els.studyCard.hidden = complete;
-  els.studyCard.disabled = openWaiting;
-  els.studyCard.classList.toggle("noninteractive", openWaiting);
-  els.answerActions.hidden = complete || !round.revealed;
-  els.typingArea.hidden = complete || round.mode !== "open" || round.revealed;
+  els.studyCard.disabled = openWaiting || classificationWaiting;
+  els.studyCard.classList.toggle("noninteractive", openWaiting || classificationWaiting);
+  els.answerActions.hidden = complete || !round.revealed || isClassification;
+  els.typingArea.hidden = complete || Boolean(card?.classification) || round.mode !== "open" || round.revealed;
+  els.declensionArea.hidden = complete || !isClassification;
+  els.checkDeclensionButton.hidden = !classificationWaiting;
+  els.nextDeclensionButton.hidden = !isClassification || !round.classificationGraded;
   els.revealAnswerButton.hidden = complete || round.mode !== "open" || round.revealed;
   els.roundSummary.hidden = !complete;
   els.roundTitle.textContent = round.title;
@@ -408,18 +449,23 @@ function renderRound() {
     const correct = round.results.filter(item => item.correct).length;
     els.roundCounter.textContent = `${round.cards.length} cards`; els.summaryScore.textContent = `${correct} of ${round.cards.length} correct`; saveRound(); return;
   }
-  const card = round.cards[round.index];
   els.roundCounter.textContent = `${round.index + 1} of ${round.cards.length}`;
-  els.questionText.textContent = card.question; els.answerText.textContent = card.answer;
+  els.questionText.textContent = card.question; els.questionContext.textContent = card.hint || ""; els.questionContext.hidden = !card.hint; els.answerText.textContent = card.answer;
   els.answerText.hidden = !round.revealed; els.answerDivider.hidden = !round.revealed;
-  els.revealHint.hidden = round.revealed; els.revealHint.textContent = openWaiting ? "Type your answer below" : "Tap to reveal";
+  els.revealHint.hidden = round.revealed; els.revealHint.textContent = classificationWaiting ? "Kies hieronder alle juiste kenmerken" : openWaiting ? "Type your answer below" : "Tap to reveal";
   els.sideLabel.textContent = round.revealed ? "Answer" : "Question";
   els.studyCard.setAttribute("aria-label", openWaiting ? "Question" : round.revealed ? `Answer: ${card.answer}` : "Reveal answer");
   if (!round.revealed) {
     els.typedAnswer.value = ""; els.typingFeedback.textContent = ""; els.typingFeedback.classList.remove("correct");
+    els.declensionFeedback.textContent = ""; els.declensionFeedback.classList.remove("correct");
+    els.declensionArea.querySelectorAll("[data-classifier-group]").forEach(button => {
+      button.disabled = false;
+      button.classList.remove("active", "correct-option", "wrong-option", "missed-option");
+      button.setAttribute("aria-pressed", "false");
+    });
     els.listenButton.hidden = cardExercise(card) !== "listening";
-    if (round.mode === "open") requestAnimationFrame(() => els.typedAnswer.focus());
-  }
+    if (round.mode === "open" && !card.classification) requestAnimationFrame(() => els.typedAnswer.focus());
+  } else if (isClassification) renderClassificationEvaluation(card, round.classificationEvaluation);
 }
 
 function cardExercise(card) { return card.exercise || "flashcard"; }
@@ -436,6 +482,56 @@ function checkTypedAnswer() {
   round.typedChecked = correct;
   els.typingFeedback.textContent = correct ? "Correct — reveal the answer when you are ready." : "Not quite. Try again or reveal the answer deliberately.";
   els.typingFeedback.classList.toggle("correct", correct);
+}
+
+function toggleClassification(button) {
+  const active = !button.classList.contains("active");
+  button.classList.toggle("active", active); button.setAttribute("aria-pressed", String(active));
+}
+
+function checkDeclensionAnswer() {
+  const round = state.round;
+  const card = round?.cards[round.index];
+  if (!round || round.classificationGraded || !card?.classification) return;
+  const expected = { case: card.classification.cases, number: card.classification.numbers, gender: card.classification.genders };
+  const selected = Object.fromEntries(Object.keys(expected).map(group => [group, [...els.declensionArea.querySelectorAll(`[data-classifier-group="${group}"].active`)].map(button => button.dataset.value)]));
+  const same = Object.keys(expected).every(group => [...expected[group]].sort().join("|") === selected[group].sort().join("|"));
+  round.classificationGraded = true;
+  round.classificationEvaluation = { expected, selected, correct: same };
+  round.revealed = true;
+  recordResult(round, card, same);
+  renderRound();
+}
+
+function renderClassificationEvaluation(card, evaluation) {
+  if (!evaluation) return;
+  els.declensionArea.querySelectorAll("[data-classifier-group]").forEach(button => {
+    const group = button.dataset.classifierGroup;
+    const value = button.dataset.value;
+    const expected = evaluation.expected[group].includes(value);
+    const selected = evaluation.selected[group].includes(value);
+    button.disabled = true;
+    button.classList.toggle("correct-option", expected && selected);
+    button.classList.toggle("wrong-option", !expected && selected);
+    button.classList.toggle("missed-option", expected && !selected);
+  });
+  els.declensionFeedback.textContent = evaluation.correct
+    ? "Helemaal goed."
+    : `Onjuist. Het juiste antwoord is: ${card.answer}.`;
+  els.declensionFeedback.classList.toggle("correct", evaluation.correct);
+}
+
+function recordResult(round, card, correct) {
+  round.results.push({ cardId: card.id, question: card.question, correct });
+  const stat = state.stats[card.id] || { correct: 0, incorrect: 0 };
+  if (correct) stat.correct += 1; else stat.incorrect += 1;
+  stat.lastPracticed = new Date().toISOString(); state.stats[card.id] = stat; writeLocal("dayweaveLearnStats", state.stats);
+}
+
+function nextClassificationCard() {
+  const round = state.round;
+  if (!round?.classificationGraded) return;
+  round.index += 1; round.revealed = false; round.typedChecked = false; round.classificationGraded = false; round.classificationEvaluation = null; renderRound();
 }
 
 function speakCurrentCard() {
@@ -455,10 +551,7 @@ function answer(correct) {
   const round = state.round;
   if (!round || !round.revealed) return;
   const card = round.cards[round.index];
-  round.results.push({ cardId: card.id, question: card.question, correct });
-  const stat = state.stats[card.id] || { correct: 0, incorrect: 0 };
-  if (correct) stat.correct += 1; else stat.incorrect += 1;
-  stat.lastPracticed = new Date().toISOString(); state.stats[card.id] = stat; writeLocal("dayweaveLearnStats", state.stats);
+  recordResult(round, card, correct);
   round.index += 1; round.revealed = false; round.typedChecked = false; renderRound();
 }
 
@@ -508,6 +601,9 @@ els.dropDeck.addEventListener("drop", event => { event.preventDefault(); els.dro
 els.studyCard.addEventListener("click", () => { if (state.round?.mode === "flashcard") revealAnswer(); });
 els.checkAnswerButton.addEventListener("click", checkTypedAnswer);
 els.revealAnswerButton.addEventListener("click", revealAnswer);
+els.checkDeclensionButton.addEventListener("click", checkDeclensionAnswer);
+els.nextDeclensionButton.addEventListener("click", nextClassificationCard);
+els.declensionArea.querySelectorAll("[data-classifier-group]").forEach(button => button.addEventListener("click", () => toggleClassification(button)));
 els.typedAnswer.addEventListener("keydown", event => { if (event.key === "Enter") { event.preventDefault(); checkTypedAnswer(); } });
 els.listenButton.addEventListener("click", speakCurrentCard);
 els.againButton.addEventListener("click", () => answer(false));
@@ -519,6 +615,8 @@ document.addEventListener("keydown", event => {
   if (els.practiceOverlay.hidden || !state.round) return;
   const isTyping = event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement || event.target?.isContentEditable;
   if (isTyping) { if (event.key === "Escape") closeRound(); return; }
+  const isInteractiveControl = event.target instanceof HTMLButtonElement || event.target instanceof HTMLAnchorElement || event.target?.matches?.("[role='button']");
+  if (isInteractiveControl && event.key !== "Escape") return;
   if (event.key === "Escape") closeRound();
   else if (event.key === " " && state.round.mode === "flashcard" && !state.round.revealed) { event.preventDefault(); revealAnswer(); }
   else if (event.key === "Enter" && state.round.mode === "open" && !state.round.revealed) checkTypedAnswer();
