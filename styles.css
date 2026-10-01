@@ -477,6 +477,8 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
 .list-row-item + .list-row-item { margin-top: 7px; }
 .list-practice-button { min-width: 82px; padding: 0 11px; border: 1px solid color-mix(in srgb, var(--mint) 55%, var(--line)); border-radius: 13px; color: var(--mint); background: color-mix(in srgb, var(--mint) 9%, var(--surface)); font-weight: 850; cursor: pointer; }
 .list-practice-button:hover { color: #09251d; background: var(--mint); }
+.list-practice-button.added, .group-practice-button.added { border-color: var(--mint); color: #09251d; background: var(--mint); }
+.mobile-list-action, .mobile-selection-bar { display: none; }
 
 /* Mobile uses normal page scrolling. This avoids nested, invisible scroll areas. */
 @media (max-width: 760px) {
@@ -569,6 +571,7 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
   .subject-workspace { padding: 10px 10px 16px; }
   .subject-workspace > .panel, .subject-workspace > .practice-column { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
   .library-panel, .cards-panel, .practice-column { padding: 4px 2px 10px; }
+  .library-panel { padding-bottom: 82px; }
   .segmented { position: sticky; z-index: 5; top: 0; margin: 0 0 14px; padding: 4px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel-solid); }
   .segment { min-height: 40px; border-radius: 10px; }
   .section-heading { padding: 0 3px; }
@@ -577,15 +580,20 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
   .small-button { min-height: 38px; }
   .subject-lists { display: grid; gap: 8px; }
 
-  .list-row-item { grid-template-columns: minmax(0, 1fr) 78px; gap: 6px; padding: 5px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+  .list-row-item { grid-template-columns: minmax(0, 1fr) 46px; gap: 5px; padding: 4px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); transition: border-color .18s, background .18s; }
+  .list-row-item.queued { border-color: color-mix(in srgb, var(--mint) 72%, var(--line)); background: color-mix(in srgb, var(--mint) 8%, var(--panel)); }
   .list-row-item + .list-row-item { margin-top: 0; }
-  .subject-workspace .list-item { min-height: 62px; padding: 8px; border: 0; border-radius: 12px; background: transparent; }
+  .subject-workspace .list-item { min-height: 50px; padding: 6px 7px; border: 0; border-radius: 10px; background: transparent; }
   .subject-workspace .list-item.selected { background: var(--violet-soft); }
-  .subject-workspace .list-icon { flex-basis: 36px; height: 36px; border-radius: 11px; }
-  .list-copy strong { font-size: .88rem; line-height: 1.2; }
-  .list-copy span { margin-top: 4px; font-size: .71rem; }
+  .subject-workspace .list-icon { flex-basis: 32px; height: 32px; border-radius: 9px; }
+  .subject-workspace .list-icon svg { width: 17px; height: 17px; }
+  .list-copy strong { font-size: .84rem; line-height: 1.18; }
+  .list-copy span { margin-top: 3px; font-size: .67rem; }
   .chevron { display: none; }
-  .list-practice-button { min-width: 0; min-height: 62px; padding: 0 7px; border: 0; border-radius: 12px; color: white; background: var(--violet-strong); font-size: .75rem; }
+  .list-practice-button { min-width: 0; min-height: 46px; width: 46px; align-self: center; padding: 0; border: 0; border-radius: 11px; color: white; background: var(--violet-strong); font-size: 1.2rem; }
+  .list-practice-button.added { color: #09251d; background: var(--mint); }
+  .desktop-list-action { display: none; }
+  .mobile-list-action { display: inline; }
 
   .list-group { border-radius: 16px; background: var(--panel); }
   .list-group-head { gap: 6px; padding: 5px; }
@@ -595,6 +603,15 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
   .group-list-items { gap: 7px; padding: 2px 5px 5px; }
   .group-list-items .list-row-item { background: var(--surface); }
   .latin-guide { border-radius: 15px; }
+
+  .mobile-selection-bar { position: fixed; z-index: 44; left: 8px; right: 8px; bottom: calc(66px + env(safe-area-inset-bottom)); min-height: 62px; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 7px; padding: 7px 8px 7px 12px; border: 1px solid color-mix(in srgb, var(--violet) 45%, var(--line)); border-radius: 17px; background: color-mix(in srgb, var(--panel-solid) 96%, transparent); box-shadow: 0 13px 34px rgba(0,0,0,.32); backdrop-filter: blur(22px); }
+  .mobile-selection-bar strong, .mobile-selection-bar span { display: block; }
+  .mobile-selection-bar strong { font-size: .86rem; }
+  .mobile-selection-bar span { margin-top: 2px; color: var(--muted); font-size: .66rem; }
+  .mobile-selection-bar button { min-height: 46px; padding: 0 12px; border: 0; border-radius: 12px; font-weight: 850; }
+  .mobile-selection-bar [data-clear-selection] { color: var(--muted); background: var(--surface); }
+  .mobile-selection-bar .selection-practice-button { min-width: 88px; color: white; background: var(--violet-strong); }
+  .mobile-selection-bar .selection-practice-button:disabled { opacity: .38; }
 
   .cards-panel .section-heading { margin-bottom: 10px; }
   .word-stack { gap: 7px; }

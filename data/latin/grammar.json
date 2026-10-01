@@ -169,67 +169,108 @@
       "kind": "declension",
       "group": "Persoonlijke voornaamwoorden",
       "stage": "Stap 3",
-      "title": "Persoonlijke voornaamwoorden",
-      "summary": "1e, 2e en 3e persoon in enkelvoud en meervoud; bij de 3e persoon ook mannelijk en vrouwelijk.",
+      "title": "Persoonlijke voornaamwoorden · enkelvoud (ev)",
+      "summary": "Enkelvoud: nominativus, accusativus en dativus voor de 1e, 2e en 3e persoon.",
       "entries": [
         {
-          "lemma": "1e persoon",
+          "lemma": "1e persoon enkelvoud",
           "forms": {
             "nominative_singular": "ego",
-            "dative_singular": "mihi",
             "accusative_singular": "me",
-            "nominative_plural": "nos",
-            "dative_plural": "nobis",
-            "accusative_plural": "nos"
+            "dative_singular": "mihi"
           }
         },
         {
-          "lemma": "2e persoon",
+          "lemma": "2e persoon enkelvoud",
           "forms": {
             "nominative_singular": "tu",
-            "dative_singular": "tibi",
             "accusative_singular": "te",
-            "nominative_plural": "vos",
-            "dative_plural": "vobis",
-            "accusative_plural": "vos"
+            "dative_singular": "tibi"
           }
         },
         {
-          "lemma": "3e persoon mannelijk",
+          "lemma": "3e persoon enkelvoud mannelijk",
           "forms": {
             "nominative_singular": "is",
-            "dative_singular": "ei",
             "accusative_singular": "eum",
-            "nominative_plural": "ei",
-            "dative_plural": "eis",
-            "accusative_plural": "eos"
-          },
-          "acceptedAnswers": {
-            "nominative_plural": [
-              "ei",
-              "ii"
-            ],
-            "dative_plural": [
-              "eis",
-              "iis"
-            ]
+            "dative_singular": "ei"
           }
         },
         {
-          "lemma": "3e persoon vrouwelijk",
+          "lemma": "3e persoon enkelvoud vrouwelijk",
           "forms": {
             "nominative_singular": "ea",
-            "dative_singular": "ei",
             "accusative_singular": "eam",
-            "nominative_plural": "eae",
-            "dative_plural": "eis",
-            "accusative_plural": "eas"
+            "dative_singular": "ei"
+          }
+        },
+        {
+          "lemma": "3e persoon enkelvoud onzijdig",
+          "forms": {
+            "nominative_singular": "id",
+            "accusative_singular": "id",
+            "dative_singular": "ei"
+          }
+        }
+      ]
+    },
+    {
+      "id": "latin-personal-pronouns-plural",
+      "subject": "latin",
+      "kind": "declension",
+      "group": "Persoonlijke voornaamwoorden",
+      "stage": "Stap 3",
+      "title": "Persoonlijke voornaamwoorden · meervoud (mv)",
+      "summary": "Meervoud: nominativus, accusativus en dativus voor de 1e, 2e en 3e persoon.",
+      "entries": [
+        {
+          "lemma": "1e persoon meervoud",
+          "forms": {
+            "nominative_plural": "nos",
+            "accusative_plural": "nos",
+            "dative_plural": "nobis"
+          }
+        },
+        {
+          "lemma": "2e persoon meervoud",
+          "forms": {
+            "nominative_plural": "vos",
+            "accusative_plural": "vos",
+            "dative_plural": "vobis"
+          }
+        },
+        {
+          "lemma": "3e persoon meervoud mannelijk",
+          "forms": {
+            "nominative_plural": "ei",
+            "accusative_plural": "eos",
+            "dative_plural": "eis"
           },
           "acceptedAnswers": {
-            "dative_plural": [
-              "eis",
-              "iis"
-            ]
+            "nominative_plural": ["ei", "ii"],
+            "dative_plural": ["eis", "iis"]
+          }
+        },
+        {
+          "lemma": "3e persoon meervoud vrouwelijk",
+          "forms": {
+            "nominative_plural": "eae",
+            "accusative_plural": "eas",
+            "dative_plural": "eis"
+          },
+          "acceptedAnswers": {
+            "dative_plural": ["eis", "iis"]
+          }
+        },
+        {
+          "lemma": "3e persoon meervoud onzijdig",
+          "forms": {
+            "nominative_plural": "ea",
+            "accusative_plural": "ea",
+            "dative_plural": "eis"
+          },
+          "acceptedAnswers": {
+            "dative_plural": ["eis", "iis"]
           }
         }
       ]

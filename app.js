@@ -301,11 +301,12 @@ function latinGuideHTML() {
 
 function listItemHTML(list) {
   const display = listDisplay(list);
-  return `<div class="list-row-item">
+  const added = list.cards.length > 0 && list.cards.every(card => queueHas(card.id));
+  return `<div class="list-row-item ${added ? "queued" : ""}">
     <button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
       <span class="list-icon">${icons.stack}</span><span class="list-copy"><strong>${escapeHTML(display.title)}</strong><span>${list.stage ? `<b class="stage-badge">${escapeHTML(list.stage)}</b>` : ""}${display.direction ? `<b class="direction-badge">${escapeHTML(display.direction)}</b>` : ""}${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span><span class="chevron">›</span>
     </button>
-    <button class="list-practice-button" type="button" data-list-practice="${escapeAttr(list.id)}" aria-label="Practice ${escapeAttr(display.title)}">Practice</button>
+    <button class="list-practice-button ${added ? "added" : ""}" type="button" data-list-practice="${escapeAttr(list.id)}" aria-pressed="${added}" aria-label="${added ? "Remove" : "Add"} ${escapeAttr(display.title)}"><span class="desktop-list-action">${added ? "Added" : "Add"}</span><span class="mobile-list-action">${added ? "✓" : "+"}</span></button>
   </div>`;
 }
 
@@ -324,10 +325,11 @@ function groupedListHTML(lists, subjectId) {
     const key = `${subjectId}:${group}`;
     const open = state.openGroups.has(key);
     const cardCount = groupLists.reduce((total, list) => total + list.cards.length, 0);
+    const added = groupLists.every(list => list.cards.every(card => queueHas(card.id)));
     return `<section class="list-group ${open ? "open" : ""}">
       <div class="list-group-head">
         <button class="list-group-toggle" type="button" data-group-toggle="${escapeAttr(group)}" aria-expanded="${open}"><span><strong>${escapeHTML(group)}</strong><small>${groupLists.length} list${groupLists.length === 1 ? "" : "s"} · ${cardCount} cards</small></span><span class="folder-chevron" aria-hidden="true">›</span></button>
-        <button class="group-practice-button" type="button" data-group-practice="${escapeAttr(group)}">Practice</button>
+        <button class="group-practice-button ${added ? "added" : ""}" type="button" data-group-practice="${escapeAttr(group)}" aria-pressed="${added}">${added ? "Added" : "Add group"}</button>
       </div>
       <div class="group-list-items" ${open ? "" : "hidden"}>${groupLists.map(listItemHTML).join("")}</div>
     </section>`;
@@ -343,23 +345,27 @@ function renderLists() {
     els.listStack.innerHTML = `<div class="empty-state"><strong>No material yet</strong><br>This route is ready for compact study sets when you add them.</div>`;
     return;
   }
-  els.listStack.innerHTML = `${subject.id === "latin" ? latinGuideHTML() : ""}<div class="list-toolbar"><span>${lists.reduce((sum, list) => sum + list.cards.length, 0)} cards available</span><button class="small-button" type="button" data-subject-all="${escapeAttr(subject.id)}">Use all</button></div>
-    <div class="subject-lists">${groupedListHTML(lists, subject.id)}</div>`;
+  const selectedLists = lists.filter(list => list.cards.length && list.cards.every(card => queueHas(card.id)));
+  els.listStack.innerHTML = `${subject.id === "latin" ? latinGuideHTML() : ""}<div class="list-toolbar"><span>${lists.reduce((sum, list) => sum + list.cards.length, 0)} cards available</span><button class="small-button" type="button" data-subject-all="${escapeAttr(subject.id)}">${selectedLists.length === lists.length ? "Clear all" : "Add all"}</button></div>
+    <div class="subject-lists">${groupedListHTML(lists, subject.id)}</div>
+    <div class="mobile-selection-bar" aria-live="polite"><div><strong>${state.queue.length} card${state.queue.length === 1 ? "" : "s"}</strong><span>${selectedLists.length} list${selectedLists.length === 1 ? "" : "s"} selected</span></div><button type="button" data-clear-selection ${state.queue.length ? "" : "hidden"}>Clear</button><button class="selection-practice-button" type="button" data-start-selection ${state.queue.length ? "" : "disabled"}>Practice</button></div>`;
   const guide = els.listStack.querySelector(".latin-guide");
   guide?.querySelector("summary")?.addEventListener("click", event => {
     event.preventDefault();
     guide.open = !guide.open;
   });
-  els.listStack.querySelector("[data-subject-all]")?.addEventListener("click", () => addSubject(subject.id));
+  els.listStack.querySelector("[data-subject-all]")?.addEventListener("click", () => toggleSubject(subject.id));
   els.listStack.querySelectorAll("[data-group-toggle]").forEach(button => button.addEventListener("click", () => {
     const key = `${subject.id}:${button.dataset.groupToggle}`;
     if (state.openGroups.has(key)) state.openGroups.delete(key); else state.openGroups.add(key);
     renderLists();
   }));
-  els.listStack.querySelectorAll("[data-group-practice]").forEach(button => button.addEventListener("click", () => addGroup(subject.id, button.dataset.groupPractice)));
-  els.listStack.querySelectorAll("[data-list-practice]").forEach(button => button.addEventListener("click", () => addList(button.dataset.listPractice)));
+  els.listStack.querySelectorAll("[data-group-practice]").forEach(button => button.addEventListener("click", () => toggleGroup(subject.id, button.dataset.groupPractice)));
+  els.listStack.querySelectorAll("[data-list-practice]").forEach(button => button.addEventListener("click", () => toggleList(button.dataset.listPractice)));
+  els.listStack.querySelector("[data-clear-selection]")?.addEventListener("click", clearQueue);
+  els.listStack.querySelector("[data-start-selection]")?.addEventListener("click", () => startRound());
   els.listStack.querySelectorAll("[data-list-id]").forEach(button => {
-    button.addEventListener("click", () => selectList(button.dataset.listId));
+    button.addEventListener("click", () => window.matchMedia("(max-width: 760px)").matches ? toggleList(button.dataset.listId) : selectList(button.dataset.listId));
     button.addEventListener("dragstart", event => { event.dataTransfer.effectAllowed = "copy"; event.dataTransfer.setData("text/dayweave-list", button.dataset.listId); });
   });
 }
@@ -436,6 +442,39 @@ function addSubject(id) {
   const subject = groupedSubjects().find(item => item.id === id);
   if (!subject) return;
   state.queue = subject.lists.flatMap(list => list.cards); state.queueLabel = `${subject.name} · all lists`; renderCards(); renderQueue(); setMobileView("practice"); showToast(`${state.queue.length} cards are ready.`);
+}
+
+function setListsQueued(lists, add) {
+  const ids = new Set(lists.flatMap(list => list.cards).map(card => card.id));
+  state.queue = add ? [...state.queue, ...lists.flatMap(list => list.cards).filter(card => !queueHas(card.id))] : state.queue.filter(card => !ids.has(card.id));
+  state.queueLabel = null;
+  renderLists(); renderCards(); renderQueue();
+}
+
+function toggleList(id) {
+  const list = expandedLists().find(item => item.id === id && item.subject === state.activeSubjectId);
+  if (!list) return;
+  state.selectedListId = id;
+  const added = list.cards.length > 0 && list.cards.every(card => queueHas(card.id));
+  setListsQueued([list], !added);
+}
+
+function toggleGroup(subjectId, group) {
+  const lists = expandedLists().filter(list => list.subject === subjectId && list.group === group);
+  if (!lists.length) return;
+  const added = lists.every(list => list.cards.every(card => queueHas(card.id)));
+  setListsQueued(lists, !added);
+}
+
+function toggleSubject(id) {
+  const subject = groupedSubjects().find(item => item.id === id);
+  if (!subject) return;
+  const added = subject.lists.every(list => list.cards.every(card => queueHas(card.id)));
+  setListsQueued(subject.lists, !added);
+}
+
+function clearQueue() {
+  state.queue = []; state.queueLabel = null; renderLists(); renderCards(); renderQueue();
 }
 
 function addGroup(subjectId, group) {
@@ -639,7 +678,7 @@ els.libraryTab.addEventListener("click", () => switchTab(false));
 els.historyTab.addEventListener("click", () => switchTab(true));
 els.themeButton.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "butter" ? "dark" : "butter"));
 els.addAllButton.addEventListener("click", () => addList(state.selectedListId));
-els.clearButton.addEventListener("click", () => { state.queue = []; state.queueLabel = null; renderCards(); renderQueue(); });
+els.clearButton.addEventListener("click", clearQueue);
 els.startButton.addEventListener("click", () => startRound());
 els.practiceMode.addEventListener("change", () => { state.practiceMode = els.practiceMode.value; });
 els.weakButton.addEventListener("click", prepareWeakWords);
