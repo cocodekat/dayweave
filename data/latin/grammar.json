@@ -166,113 +166,53 @@
     {
       "id": "latin-personal-pronouns",
       "subject": "latin",
-      "kind": "declension",
+      "kind": "vocabulary",
       "group": "Persoonlijke voornaamwoorden",
       "stage": "Stap 3",
       "title": "Persoonlijke voornaamwoorden · enkelvoud (ev)",
-      "summary": "Enkelvoud: nominativus, accusativus en dativus voor de 1e, 2e en 3e persoon.",
-      "entries": [
-        {
-          "lemma": "1e persoon enkelvoud",
-          "forms": {
-            "nominative_singular": "ego",
-            "accusative_singular": "me",
-            "dative_singular": "mihi"
-          }
-        },
-        {
-          "lemma": "2e persoon enkelvoud",
-          "forms": {
-            "nominative_singular": "tu",
-            "accusative_singular": "te",
-            "dative_singular": "tibi"
-          }
-        },
-        {
-          "lemma": "3e persoon enkelvoud mannelijk",
-          "forms": {
-            "nominative_singular": "is",
-            "accusative_singular": "eum",
-            "dative_singular": "ei"
-          }
-        },
-        {
-          "lemma": "3e persoon enkelvoud vrouwelijk",
-          "forms": {
-            "nominative_singular": "ea",
-            "accusative_singular": "eam",
-            "dative_singular": "ei"
-          }
-        },
-        {
-          "lemma": "3e persoon enkelvoud onzijdig",
-          "forms": {
-            "nominative_singular": "id",
-            "accusative_singular": "id",
-            "dative_singular": "ei"
-          }
-        }
+      "summary": "Latijn → Nederlands: enkelvoud in de nominativus, accusativus en dativus.",
+      "cards": [
+        { "id": "pron-ev-1-nom", "question": "ego", "answer": "ik", "hint": "1e persoon · nominativus · ev" },
+        { "id": "pron-ev-1-acc", "question": "me", "answer": "mij", "hint": "1e persoon · accusativus · ev" },
+        { "id": "pron-ev-1-dat", "question": "mihi", "answer": "(aan) mij", "hint": "1e persoon · dativus · ev", "acceptedAnswers": ["mij", "aan mij"] },
+        { "id": "pron-ev-2-nom", "question": "tu", "answer": "jij", "hint": "2e persoon · nominativus · ev", "acceptedAnswers": ["jij", "je"] },
+        { "id": "pron-ev-2-acc", "question": "te", "answer": "jou", "hint": "2e persoon · accusativus · ev", "acceptedAnswers": ["jou", "je"] },
+        { "id": "pron-ev-2-dat", "question": "tibi", "answer": "(aan) jou", "hint": "2e persoon · dativus · ev", "acceptedAnswers": ["jou", "aan jou", "je", "aan je"] },
+        { "id": "pron-ev-3m-nom", "question": "is", "answer": "hij", "hint": "3e persoon mannelijk · nominativus · ev" },
+        { "id": "pron-ev-3m-acc", "question": "eum", "answer": "hem", "hint": "3e persoon mannelijk · accusativus · ev" },
+        { "id": "pron-ev-3m-dat", "question": "ei", "answer": "(aan) hem", "hint": "3e persoon mannelijk · dativus · ev", "acceptedAnswers": ["hem", "aan hem"] },
+        { "id": "pron-ev-3f-nom", "question": "ea", "answer": "zij", "hint": "3e persoon vrouwelijk · nominativus · ev", "acceptedAnswers": ["zij", "ze"] },
+        { "id": "pron-ev-3f-acc", "question": "eam", "answer": "haar", "hint": "3e persoon vrouwelijk · accusativus · ev" },
+        { "id": "pron-ev-3f-dat", "question": "ei", "answer": "(aan) haar", "hint": "3e persoon vrouwelijk · dativus · ev", "acceptedAnswers": ["haar", "aan haar"] },
+        { "id": "pron-ev-3n-nom", "question": "id", "answer": "het", "hint": "3e persoon onzijdig · nominativus · ev" },
+        { "id": "pron-ev-3n-acc", "question": "id", "answer": "het", "hint": "3e persoon onzijdig · accusativus · ev" },
+        { "id": "pron-ev-3n-dat", "question": "ei", "answer": "(aan) het", "hint": "3e persoon onzijdig · dativus · ev", "acceptedAnswers": ["het", "aan het"] }
       ]
     },
     {
       "id": "latin-personal-pronouns-plural",
       "subject": "latin",
-      "kind": "declension",
+      "kind": "vocabulary",
       "group": "Persoonlijke voornaamwoorden",
       "stage": "Stap 3",
       "title": "Persoonlijke voornaamwoorden · meervoud (mv)",
-      "summary": "Meervoud: nominativus, accusativus en dativus voor de 1e, 2e en 3e persoon.",
-      "entries": [
-        {
-          "lemma": "1e persoon meervoud",
-          "forms": {
-            "nominative_plural": "nos",
-            "accusative_plural": "nos",
-            "dative_plural": "nobis"
-          }
-        },
-        {
-          "lemma": "2e persoon meervoud",
-          "forms": {
-            "nominative_plural": "vos",
-            "accusative_plural": "vos",
-            "dative_plural": "vobis"
-          }
-        },
-        {
-          "lemma": "3e persoon meervoud mannelijk",
-          "forms": {
-            "nominative_plural": "ei",
-            "accusative_plural": "eos",
-            "dative_plural": "eis"
-          },
-          "acceptedAnswers": {
-            "nominative_plural": ["ei", "ii"],
-            "dative_plural": ["eis", "iis"]
-          }
-        },
-        {
-          "lemma": "3e persoon meervoud vrouwelijk",
-          "forms": {
-            "nominative_plural": "eae",
-            "accusative_plural": "eas",
-            "dative_plural": "eis"
-          },
-          "acceptedAnswers": {
-            "dative_plural": ["eis", "iis"]
-          }
-        },
-        {
-          "lemma": "3e persoon meervoud onzijdig",
-          "forms": {
-            "nominative_plural": "ea",
-            "accusative_plural": "ea",
-            "dative_plural": "eis"
-          },
-          "acceptedAnswers": {
-            "dative_plural": ["eis", "iis"]
-          }
-        }
+      "summary": "Latijn → Nederlands: meervoud in de nominativus, accusativus en dativus.",
+      "cards": [
+        { "id": "pron-mv-1-nom", "question": "nos", "answer": "wij", "hint": "1e persoon · nominativus · mv", "acceptedAnswers": ["wij", "we"] },
+        { "id": "pron-mv-1-acc", "question": "nos", "answer": "ons", "hint": "1e persoon · accusativus · mv" },
+        { "id": "pron-mv-1-dat", "question": "nobis", "answer": "(aan) ons", "hint": "1e persoon · dativus · mv", "acceptedAnswers": ["ons", "aan ons"] },
+        { "id": "pron-mv-2-nom", "question": "vos", "answer": "jullie", "hint": "2e persoon · nominativus · mv" },
+        { "id": "pron-mv-2-acc", "question": "vos", "answer": "jullie", "hint": "2e persoon · accusativus · mv" },
+        { "id": "pron-mv-2-dat", "question": "vobis", "answer": "(aan) jullie", "hint": "2e persoon · dativus · mv", "acceptedAnswers": ["jullie", "aan jullie"] },
+        { "id": "pron-mv-3m-nom", "question": "ei / ii", "answer": "zij", "hint": "3e persoon mannelijk · nominativus · mv", "acceptedAnswers": ["zij", "ze"] },
+        { "id": "pron-mv-3m-acc", "question": "eos", "answer": "hen", "hint": "3e persoon mannelijk · accusativus · mv", "acceptedAnswers": ["hen", "ze"] },
+        { "id": "pron-mv-3m-dat", "question": "eis / iis", "answer": "hun / aan hen", "hint": "3e persoon mannelijk · dativus · mv", "acceptedAnswers": ["hun", "aan hen"] },
+        { "id": "pron-mv-3f-nom", "question": "eae", "answer": "zij", "hint": "3e persoon vrouwelijk · nominativus · mv", "acceptedAnswers": ["zij", "ze"] },
+        { "id": "pron-mv-3f-acc", "question": "eas", "answer": "hen", "hint": "3e persoon vrouwelijk · accusativus · mv", "acceptedAnswers": ["hen", "ze"] },
+        { "id": "pron-mv-3f-dat", "question": "eis / iis", "answer": "hun / aan hen", "hint": "3e persoon vrouwelijk · dativus · mv", "acceptedAnswers": ["hun", "aan hen"] },
+        { "id": "pron-mv-3n-nom", "question": "ea", "answer": "zij / ze", "hint": "3e persoon onzijdig · nominativus · mv", "acceptedAnswers": ["zij", "ze"] },
+        { "id": "pron-mv-3n-acc", "question": "ea", "answer": "hen / ze", "hint": "3e persoon onzijdig · accusativus · mv", "acceptedAnswers": ["hen", "ze"] },
+        { "id": "pron-mv-3n-dat", "question": "eis / iis", "answer": "hun / aan hen", "hint": "3e persoon onzijdig · dativus · mv", "acceptedAnswers": ["hun", "aan hen"] }
       ]
     },
     {
