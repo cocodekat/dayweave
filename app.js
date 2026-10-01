@@ -348,7 +348,7 @@ function renderLists() {
   const selectedLists = lists.filter(list => list.cards.length && list.cards.every(card => queueHas(card.id)));
   els.listStack.innerHTML = `${subject.id === "latin" ? latinGuideHTML() : ""}<div class="list-toolbar"><span>${lists.reduce((sum, list) => sum + list.cards.length, 0)} cards available</span><button class="small-button" type="button" data-subject-all="${escapeAttr(subject.id)}">${selectedLists.length === lists.length ? "Clear all" : "Add all"}</button></div>
     <div class="subject-lists">${groupedListHTML(lists, subject.id)}</div>
-    <div class="mobile-selection-bar" aria-live="polite"><div><strong>${state.queue.length} card${state.queue.length === 1 ? "" : "s"}</strong><span>${selectedLists.length} list${selectedLists.length === 1 ? "" : "s"} selected</span></div><button type="button" data-clear-selection ${state.queue.length ? "" : "hidden"}>Clear</button><button class="selection-practice-button" type="button" data-start-selection ${state.queue.length ? "" : "disabled"}>Practice</button></div>`;
+    <div class="mobile-selection-bar ${state.queue.length ? "" : "empty"}" aria-live="polite"><div><strong>${state.queue.length} card${state.queue.length === 1 ? "" : "s"}</strong><span>${selectedLists.length} list${selectedLists.length === 1 ? "" : "s"} selected</span></div><button type="button" data-clear-selection>Clear</button><button class="selection-practice-button" type="button" data-start-selection>Practice</button></div>`;
   const guide = els.listStack.querySelector(".latin-guide");
   guide?.querySelector("summary")?.addEventListener("click", event => {
     event.preventDefault();
