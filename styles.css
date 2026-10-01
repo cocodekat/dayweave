@@ -456,3 +456,49 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
   .classifier-grid section { grid-template-columns: 1fr; gap: 6px; }
   .classifier-actions { align-items: stretch; flex-direction: column; }
 }
+
+/* Tappable study groups */
+.list-group { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: color-mix(in srgb, var(--surface) 72%, transparent); }
+.list-group + .list-group, .list-group + .list-item, .list-item + .list-group { margin-top: 9px; }
+.list-group.open { border-color: color-mix(in srgb, var(--violet) 48%, var(--line)); }
+.list-group-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: stretch; gap: 7px; padding: 7px; }
+.list-group-toggle { min-width: 0; min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 10px; border: 0; border-radius: 12px; color: var(--text); background: transparent; text-align: left; cursor: pointer; }
+.list-group-toggle:hover { background: var(--surface-hover); }
+.list-group-toggle strong, .list-group-toggle small { display: block; }
+.list-group-toggle strong { font-size: .93rem; }
+.list-group-toggle small { margin-top: 4px; color: var(--muted); font-size: .74rem; }
+.list-group.open .folder-chevron { transform: rotate(90deg); }
+.group-practice-button { min-width: 82px; border: 0; border-radius: 12px; color: white; background: var(--violet-strong); font-weight: 850; cursor: pointer; }
+.group-practice-button:hover { filter: brightness(1.08); }
+.group-list-items { display: grid; gap: 7px; padding: 0 7px 7px 18px; }
+.group-list-items[hidden] { display: none; }
+.group-list-items .list-item { background: color-mix(in srgb, var(--surface) 86%, transparent); }
+.list-row-item { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: stretch; gap: 7px; }
+.list-row-item + .list-row-item { margin-top: 7px; }
+.list-practice-button { min-width: 82px; padding: 0 11px; border: 1px solid color-mix(in srgb, var(--mint) 55%, var(--line)); border-radius: 13px; color: var(--mint); background: color-mix(in srgb, var(--mint) 9%, var(--surface)); font-weight: 850; cursor: pointer; }
+.list-practice-button:hover { color: #09251d; background: var(--mint); }
+
+/* Mobile uses normal page scrolling. This avoids nested, invisible scroll areas. */
+@media (max-width: 760px) {
+  html, body { height: auto; min-height: 100%; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: auto; }
+  body[data-page="subject"] { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+  .topbar { position: sticky; top: 0; z-index: 20; }
+  .subject-page-head,
+  .subject-page-head.german-subject-head { position: sticky; top: 70px; grid-template-columns: auto auto minmax(0, 1fr); min-height: 76px; }
+  .subject-page-head.german-subject-head .dialogue-trainer-link { grid-column: 1 / -1; min-height: 44px; justify-content: center; }
+  .subject-page-head.german-subject-head .dialogue-trainer-link small,
+  .subject-page-head.german-subject-head .dialogue-trainer-link > span:first-child { display: block; }
+  .subject-workspace { position: static; inset: auto; height: auto; min-height: 0; padding: 10px 10px 22px; }
+  .workspace > .panel, .workspace > .practice-column { height: auto; min-height: 0; overflow: visible; overscroll-behavior: auto; }
+  .subject-workspace #libraryView, .subject-workspace #historyView { min-height: 0; }
+  .subject-workspace .list-stack, .subject-workspace .word-stack, .subject-workspace .history-stack { min-height: 0; overflow: visible; padding-right: 0; }
+  .library-panel, .cards-panel, .practice-column { min-height: 0; }
+  .list-item, .list-practice-button, .list-group-toggle, .group-practice-button, .add-card-button { touch-action: manipulation; }
+  .list-practice-button { min-width: 84px; min-height: 58px; }
+  .group-practice-button { min-width: 88px; min-height: 56px; }
+  .group-list-items { padding-left: 7px; }
+  .practice-overlay { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .practice-shell { height: auto; min-height: 100%; }
+  .study-card { min-height: min(52vh, 360px); }
+  .answer-actions { position: static; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+}

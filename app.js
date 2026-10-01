@@ -19,7 +19,8 @@ const state = {
   activeSubjectId: routeSubjectId,
   history: readLocal("dayweaveLearnHistory", readLocal("dayflowLearnHistory", [])),
   stats: readLocal("dayweaveLearnStats", readLocal("dayflowLearnStats", {})),
-  round: null
+  round: null,
+  openGroups: new Set()
 };
 
 const els = Object.fromEntries([
@@ -298,6 +299,42 @@ function latinGuideHTML() {
   </details>`;
 }
 
+function listItemHTML(list) {
+  const display = listDisplay(list);
+  return `<div class="list-row-item">
+    <button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
+      <span class="list-icon">${icons.stack}</span><span class="list-copy"><strong>${escapeHTML(display.title)}</strong><span>${list.stage ? `<b class="stage-badge">${escapeHTML(list.stage)}</b>` : ""}${display.direction ? `<b class="direction-badge">${escapeHTML(display.direction)}</b>` : ""}${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span><span class="chevron">›</span>
+    </button>
+    <button class="list-practice-button" type="button" data-list-practice="${escapeAttr(list.id)}" aria-label="Practice ${escapeAttr(display.title)}">Practice</button>
+  </div>`;
+}
+
+function groupedListHTML(lists, subjectId) {
+  const groups = new Map();
+  const ungrouped = [];
+  lists.forEach(list => {
+    if (!list.group) { ungrouped.push(list); return; }
+    if (!groups.has(list.group)) groups.set(list.group, []);
+    groups.get(list.group).push(list);
+  });
+  if (groups.size && ![...state.openGroups].some(key => key.startsWith(`${subjectId}:`))) {
+    state.openGroups.add(`${subjectId}:${groups.keys().next().value}`);
+  }
+  const grouped = [...groups.entries()].map(([group, groupLists]) => {
+    const key = `${subjectId}:${group}`;
+    const open = state.openGroups.has(key);
+    const cardCount = groupLists.reduce((total, list) => total + list.cards.length, 0);
+    return `<section class="list-group ${open ? "open" : ""}">
+      <div class="list-group-head">
+        <button class="list-group-toggle" type="button" data-group-toggle="${escapeAttr(group)}" aria-expanded="${open}"><span><strong>${escapeHTML(group)}</strong><small>${groupLists.length} list${groupLists.length === 1 ? "" : "s"} · ${cardCount} cards</small></span><span class="folder-chevron" aria-hidden="true">›</span></button>
+        <button class="group-practice-button" type="button" data-group-practice="${escapeAttr(group)}">Practice</button>
+      </div>
+      <div class="group-list-items" ${open ? "" : "hidden"}>${groupLists.map(listItemHTML).join("")}</div>
+    </section>`;
+  }).join("");
+  return grouped + ungrouped.map(listItemHTML).join("");
+}
+
 function renderLists() {
   const subject = activeSubject();
   const lists = subject?.lists || [];
@@ -307,18 +344,20 @@ function renderLists() {
     return;
   }
   els.listStack.innerHTML = `${subject.id === "latin" ? latinGuideHTML() : ""}<div class="list-toolbar"><span>${lists.reduce((sum, list) => sum + list.cards.length, 0)} cards available</span><button class="small-button" type="button" data-subject-all="${escapeAttr(subject.id)}">Use all</button></div>
-    <div class="subject-lists">${lists.map(list => {
-      const display = listDisplay(list);
-      return `<button class="list-item ${list.id === state.selectedListId ? "selected" : ""}" type="button" data-list-id="${escapeAttr(list.id)}" draggable="true">
-        <span class="list-icon">${icons.stack}</span><span class="list-copy"><strong>${escapeHTML(display.title)}</strong><span>${list.stage ? `<b class="stage-badge">${escapeHTML(list.stage)}</b>` : ""}${display.direction ? `<b class="direction-badge">${escapeHTML(display.direction)}</b>` : ""}${list.cards.length} card${list.cards.length === 1 ? "" : "s"}</span></span><span class="chevron">›</span>
-      </button>`;
-    }).join("")}</div>`;
+    <div class="subject-lists">${groupedListHTML(lists, subject.id)}</div>`;
   const guide = els.listStack.querySelector(".latin-guide");
   guide?.querySelector("summary")?.addEventListener("click", event => {
     event.preventDefault();
     guide.open = !guide.open;
   });
   els.listStack.querySelector("[data-subject-all]")?.addEventListener("click", () => addSubject(subject.id));
+  els.listStack.querySelectorAll("[data-group-toggle]").forEach(button => button.addEventListener("click", () => {
+    const key = `${subject.id}:${button.dataset.groupToggle}`;
+    if (state.openGroups.has(key)) state.openGroups.delete(key); else state.openGroups.add(key);
+    renderLists();
+  }));
+  els.listStack.querySelectorAll("[data-group-practice]").forEach(button => button.addEventListener("click", () => addGroup(subject.id, button.dataset.groupPractice)));
+  els.listStack.querySelectorAll("[data-list-practice]").forEach(button => button.addEventListener("click", () => addList(button.dataset.listPractice)));
   els.listStack.querySelectorAll("[data-list-id]").forEach(button => {
     button.addEventListener("click", () => selectList(button.dataset.listId));
     button.addEventListener("dragstart", event => { event.dataTransfer.effectAllowed = "copy"; event.dataTransfer.setData("text/dayweave-list", button.dataset.listId); });
@@ -397,6 +436,14 @@ function addSubject(id) {
   const subject = groupedSubjects().find(item => item.id === id);
   if (!subject) return;
   state.queue = subject.lists.flatMap(list => list.cards); state.queueLabel = `${subject.name} · all lists`; renderCards(); renderQueue(); setMobileView("practice"); showToast(`${state.queue.length} cards are ready.`);
+}
+
+function addGroup(subjectId, group) {
+  const lists = expandedLists().filter(list => list.subject === subjectId && list.group === group);
+  if (!lists.length) return;
+  state.queue = lists.flatMap(list => list.cards);
+  state.queueLabel = `${activeSubject().name} · ${group}`;
+  renderCards(); renderQueue(); setMobileView("practice"); showToast(`${state.queue.length} cards from ${group} are ready.`);
 }
 
 function toggleCard(id) {
