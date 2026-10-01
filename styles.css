@@ -1,4 +1,4 @@
-a:root {
+:root {
   color-scheme: dark;
   --canvas: #10172b;
   --canvas-2: #202a4a;
@@ -367,6 +367,7 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
 
 .subject-page { position: relative; z-index: 1; }
 .subject-page-head { width: min(1500px, 100%); min-height: 94px; display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; align-items: center; gap: 14px; margin: 0 auto; padding: 15px clamp(18px, 3vw, 42px); }
+.subject-page-head.german-subject-head { grid-template-columns: auto auto minmax(0, 1fr) auto auto; }
 .back-link { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 14px; color: var(--text); background: var(--surface); text-decoration: none; font-size: 1.25rem; }
 .back-link:hover { background: var(--surface-hover); }
 .subject-page-monogram { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; color: white; background: var(--violet-strong); font-size: .82rem; font-weight: 900; letter-spacing: .06em; }
@@ -375,6 +376,12 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
 .subject-page-summary strong, .subject-page-summary span { display: block; }
 .subject-page-summary strong { color: var(--mint); font-size: 1.25rem; }
 .subject-page-summary span { margin-top: 3px; color: var(--muted); font-size: .76rem; }
+.dialogue-trainer-link { min-height: 52px; display: flex; align-items: center; gap: 10px; padding: 7px 13px; border: 1px solid color-mix(in srgb, #3978dc 46%, var(--line)); border-radius: 15px; color: var(--text); background: color-mix(in srgb, #3978dc 12%, var(--surface)); text-decoration: none; transition: transform .2s, background .2s, border-color .2s; }
+.dialogue-trainer-link:hover { transform: translateY(-2px); border-color: #3978dc; background: color-mix(in srgb, #3978dc 18%, var(--surface)); }
+.dialogue-trainer-link > span:first-child { font-size: 1.3rem; }
+.dialogue-trainer-link strong, .dialogue-trainer-link small { display: block; white-space: nowrap; }
+.dialogue-trainer-link strong { font-size: .84rem; }
+.dialogue-trainer-link small { margin-top: 2px; color: var(--muted); font-size: .7rem; }
 .subject-workspace { height: calc(100vh - 176px); min-height: 570px; padding-top: 0; padding-bottom: 22px; }
 .subject-workspace > .panel, .subject-workspace > .practice-column { min-height: 0; overflow: hidden; }
 .subject-workspace .library-panel, .subject-workspace .cards-panel { display: flex; flex-direction: column; }
@@ -435,7 +442,10 @@ footer { position: relative; z-index: 1; display: flex; justify-content: space-b
   .subject-grid { grid-template-columns: 1fr; }
   .subject-card { min-height: 105px; }
   .subject-page-head { position: fixed; z-index: 8; top: 70px; left: 0; right: 0; min-height: 80px; grid-template-columns: auto auto minmax(0, 1fr); padding: 10px 14px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--canvas) 89%, transparent); backdrop-filter: blur(20px); }
+  .subject-page-head.german-subject-head { grid-template-columns: auto auto minmax(0, 1fr) auto; }
   .subject-page-summary { display: none; }
+  .dialogue-trainer-link { min-height: 42px; padding: 6px 10px; }
+  .dialogue-trainer-link small, .dialogue-trainer-link > span:first-child { display: none; }
   .subject-page-title h1 { font-size: 1.3rem; }
   .subject-page-monogram { width: 42px; height: 42px; }
   .subject-workspace { position: fixed; inset: 150px 0 0; height: auto; padding-top: 10px; }
