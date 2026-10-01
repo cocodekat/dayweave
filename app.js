@@ -628,6 +628,7 @@ function setTheme(theme) { document.documentElement.dataset.theme = theme; local
 function setMobileView(view) {
   document.body.dataset.mobileView = view;
   document.querySelectorAll("[data-mobile-target]").forEach(button => { const active = button.dataset.mobileTarget === view; button.classList.toggle("active", active); button.setAttribute("aria-current", active ? "page" : "false"); });
+  if (window.matchMedia("(max-width: 760px)").matches) requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
 }
 function showToast(message) { els.toast.textContent = message; els.toast.classList.add("show"); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => els.toast.classList.remove("show"), 2200); }
 function shuffle(items) { const copy = items.slice(); for (let index = copy.length - 1; index > 0; index--) { const swap = Math.floor(Math.random() * (index + 1)); [copy[index], copy[swap]] = [copy[swap], copy[index]]; } return copy; }
